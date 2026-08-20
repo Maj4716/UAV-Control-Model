@@ -14,7 +14,7 @@ dist/
 .ipynb_checkpoints/
 .claude/
 .agents/
-.vscode/*.local.json
+.vscode/
 
 # Local secrets
 .env
@@ -24,8 +24,7 @@ dist/
 *.key
 
 # Runtime datasets, checkpoints, and generated outputs
-output/*
-!output/README.md
+output/
 *.parquet
 *.pth
 *.pt
