@@ -1,0 +1,12 @@
+{
+  "experiment_id": "A10_ordinal_margin",
+  "description": "在天然单调输出之外额外启用class-1概率间隔约束，检验显式间隔塑形的净作用。",
+  "loss": {
+    "use_ordinal_penalty": false,
+    "use_class1_margin": true
+  },
+  "ablation": {
+    "components": ["class1_margin"],
+    "note": "Ordinal monotonicity is already guaranteed by the output parameterization, so the redundant monotonic penalty remains disabled."
+  }
+}

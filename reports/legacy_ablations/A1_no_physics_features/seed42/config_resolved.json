@@ -1,0 +1,44 @@
+{
+  "experiment_id": "A1_no_physics_features",
+  "description": "移除los_distance与impact_cosine，检验显式几何/碰撞物理先验对毁伤等级识别的贡献。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": false,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": true,
+    "use_ordinal_penalty": true,
+    "use_class1_margin": true,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "los_distance",
+      "impact_cosine"
+    ],
+    "note": "Input dimension changes from 15 to 13."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A1_no_physics_features\\seed42"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "stage0_nn_validation_promotion_v2",
+  "candidate": "A24_hard_boundary_residual_adapters",
+  "status": "FAIL",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_average_accuracy_drop_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_weak_objectives": 3,
+    "minimum_objective_improvement": 0.002,
+    "maximum_objective_degradation": 0.003,
+    "minimum_mean_objective_delta": 0.0005,
+    "gate_failure_count_may_increase": false
+  },
+  "metrics": {
+    "average_accuracy_delta_percentage_points": 0.0,
+    "baseline_gate_failures": 8,
+    "candidate_gate_failures": 8,
+    "small_k0_false_positive_percent": 0.46199075877666473,
+    "global_c0_false_positive_percent": 2.3673469200730324,
+    "objective_deltas": {
+      "Small/K": 0.0,
+      "Med-LM/K": 0.0,
+      "Med-RD/K": 0.0,
+      "Heavy/K": 0.0,
+      "Small/C": 0.0,
+      "Med-LM/C": 0.0,
+      "Med-RD/C": 0.0,
+      "Med-RD/M_L1_vs_L2": 0.0
+    },
+    "mean_objective_delta": 0.0,
+    "improved_objectives": [],
+    "degraded_objectives": []
+  },
+  "failures": [
+    "fewer than three weak-cell ranking objectives improved by 0.002",
+    "mean weak-cell ranking improvement is below 0.0005"
+  ]
+}

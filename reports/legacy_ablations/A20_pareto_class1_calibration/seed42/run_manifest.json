@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A20_pareto_class1_calibration",
+  "description": "复用A13权重的Pareto阈值校准：验证集精确L1召回目标87%，每单元三分类准确率下降预算1个百分点，用泛化余量争取低代价减少失败单元。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A20_pareto_class1_calibration.json",
+  "config_sha256": "c587b87e768c48ca4417a4650ba1910f9c2850fef9ff42376945b3b435a3ff2e",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A20_pareto_class1_calibration\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "98295febb54ac4c4d35bc66da0b7f43f6519aa83faf6eec6a01b29d75abbb0c3",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "b72eebd7144966840219e307b0599180690233920d2728bc49cebfa64fefe9b2",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "a65f44b5df46bb2d34fcfe69ac8ba8d68e88fe1456d1a4707f01090b88c8a124"
+  }
+}

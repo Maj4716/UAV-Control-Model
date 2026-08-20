@@ -1,0 +1,65 @@
+{
+  "experiment_id": "A23_frozen_cell_residual_adapters",
+  "description": "冻结A13主干，使用零初始化、多尺度终端几何残差专家只修正8个弱单元，避免A22观察到的共享表征负迁移。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "model": {
+    "residual_adapter_cells": [
+      [0, 0, 0],
+      [1, 0, 0],
+      [2, 0, 0],
+      [3, 0, 0],
+      [0, 3, 0],
+      [1, 3, 0],
+      [2, 3, 0],
+      [2, 1, 1]
+    ],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [0, 1, 2, 3, 4, 5],
+    "residual_adapter_frequencies": [1.0, 2.0, 4.0, 8.0],
+    "residual_adapter_max_logit": 2.0
+  },
+  "loss": {
+    "entry_ranking_weight": [
+      [0.04, 0.04, 0.04, 0.04],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.03, 0.03, 0.03, 0.0]
+    ],
+    "conditional_l1_l2_ranking_weight": [
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.04, 0.0],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0]
+    ],
+    "ranking_margin": 0.5,
+    "hard_negative_fraction": 0.1
+  },
+  "training": {
+    "initial_checkpoint": "output/experiments/A13_with_label_confidence/seed{seed}/output/models/best_model.pth",
+    "initial_manifest": "output/experiments/A13_with_label_confidence/seed{seed}/output/models/model_manifest.json",
+    "freeze_base_model": true,
+    "freeze_criterion_uncertainty": true,
+    "include_initial_candidate": true,
+    "epochs": 20,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "minimum_selection_epochs": 10,
+    "selection_patience": 6
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "ablation": {
+    "components": [
+      "verified_a13_warm_start",
+      "frozen_base_model",
+      "zero_initialized_cell_residual_adapters",
+      "terminal_state_fourier_expansion"
+    ],
+    "note": "架构、目标单元、频率、损失权重和训练预算均在seed42验证前冻结；A13初始状态始终参与最终候选选择，A23测试集只允许在预注册验证门禁通过后读取。"
+  }
+}

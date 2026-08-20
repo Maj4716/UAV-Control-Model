@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A5_shared_head",
+  "description": "取消四个分弹型专家头，改用单一共享毁伤头，检验弹型专家路由对条件毁伤边界的贡献。",
+  "model": {
+    "use_munition_experts": false
+  },
+  "ablation": {
+    "components": ["munition_expert_heads"],
+    "note": "Munition embedding is kept so the ablation targets the expert-head routing."
+  }
+}

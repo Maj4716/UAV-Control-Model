@@ -1,0 +1,43 @@
+{
+  "experiment_id": "A25_equal_weight_seed_ensemble",
+  "description": "固定等权平均A19的seed42/43/44概率输出；不按测试结果学习权重，验证晋级后才允许测试。",
+  "members": [
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 42,
+      "weight": 0.3333333333333333
+    },
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 43,
+      "weight": 0.3333333333333333
+    },
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 44,
+      "weight": 0.3333333333333333
+    }
+  ],
+  "calibration": {
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "promotion": {
+    "maximum_accuracy_drop_vs_member_mean_percentage_points": 0.02,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "gate_failure_count_may_exceed_best_member": false,
+    "minimum_improved_weak_objectives": 4,
+    "minimum_objective_improvement_vs_member_mean": 0.001,
+    "maximum_objective_degradation_vs_member_mean": 0.002,
+    "minimum_mean_objective_delta": 0.001
+  },
+  "ablation": {
+    "components": [
+      "equal_weight_probability_ensemble",
+      "validation_only_threshold_calibration",
+      "validation_only_promotion_gate"
+    ],
+    "note": "成员、权重和晋级条件在集成验证推理前冻结；validation_promotion=FAIL时禁止读取A25测试集。"
+  }
+}

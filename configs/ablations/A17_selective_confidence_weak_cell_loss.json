@@ -1,0 +1,28 @@
+{
+  "experiment_id": "A17_selective_confidence_weak_cell_loss",
+  "description": "下一轮候选基线：保留A13总体MC置信度收益，仅绕过Small×K置信度，并对弱单元精确L1三分类分布损失做不超过2倍的定向增强。",
+  "data": {
+    "use_label_uncertainty": true,
+    "label_confidence_strength_by_task_munition": [
+      [0.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0]
+    ]
+  },
+  "loss": {
+    "middle_class_distribution_multiplier": [
+      [2.0, 1.25, 1.5, 1.25],
+      [1.0, 1.0, 2.0, 1.5],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.5, 1.5, 1.25, 1.5]
+    ]
+  },
+  "ablation": {
+    "components": [
+      "selective_label_confidence",
+      "weak_cell_middle_class_distribution_multiplier"
+    ],
+    "note": "2x2 factorial candidate: compare with A13 (neither), A15 (selective confidence only), and A16 (middle-class multiplier only)."
+  }
+}

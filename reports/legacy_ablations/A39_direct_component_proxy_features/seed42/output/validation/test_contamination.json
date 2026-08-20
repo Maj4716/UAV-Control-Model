@@ -1,0 +1,14 @@
+{
+  "schema": "stage0_test_contamination_record_v1",
+  "status": "INVALID_TEST_CONTAMINATED",
+  "experiment_id": "A39_direct_component_proxy_features",
+  "seed": 42,
+  "formal_candidate_eligible": false,
+  "cause": "The smoke candidate was passed to run_ablations.py --eval-only before a validation-only promotion report existed.",
+  "test_artifacts_present": [
+    "output/eval/test_metrics.json",
+    "output/eval/predictions.csv"
+  ],
+  "handling": "Retain artifacts for audit. Do not read, compare, promote, ensemble, or cite their metric values.",
+  "runner_fix": "run_ablations.py now requires --allow-test-evaluation and a PASS promotion report with test_metrics_read=false."
+}

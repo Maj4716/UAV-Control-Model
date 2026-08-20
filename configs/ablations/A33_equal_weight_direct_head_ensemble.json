@@ -1,0 +1,39 @@
+{
+  "experiment_id": "A33_equal_weight_direct_head_ensemble",
+  "description": "对三个使用相同 terminal_geometry_v2 输入与直接综合毁伤主头、但训练监督不同的候选做固定等权概率集成；不包含已证实有固定 OR 偏差的 A29。",
+  "input_config": "A31_dual_target_with_terminal_physics",
+  "members": [
+    {
+      "experiment_id": "A28_terminal_physics_features",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "validation_report_source": "selection"
+    },
+    {
+      "experiment_id": "A31_dual_target_with_terminal_physics",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "validation_report_source": "selection"
+    },
+    {
+      "experiment_id": "A32_auxiliary_mechanism_terminal_physics",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "validation_report_source": "selection"
+    }
+  ],
+  "calibration": {
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "promotion": {
+    "maximum_accuracy_drop_vs_member_mean_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_weak_objectives": 3,
+    "minimum_objective_improvement_vs_member_mean": 0.002,
+    "maximum_objective_degradation_vs_member_mean": 0.003,
+    "minimum_mean_objective_delta": 0.0005
+  },
+  "note": "Weights and members are fixed before ensemble evaluation. A second promotion audit must compare the result directly with A31; the test split remains sealed unless both validation audits pass."
+}

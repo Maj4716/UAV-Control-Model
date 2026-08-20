@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A26_nominal_softmax_heads",
+  "description": "三类Softmax序数头：显式学习L0/L1/L2概率，再严格转换为单调累积概率，以检验窄L1等级的间接参数化是否是当前主要瓶颈。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A26_nominal_softmax_heads.json",
+  "config_sha256": "193437bf6993a75961bee06b7b807e85b746707130ef82fd812871a7e7c17b34",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A26_nominal_softmax_heads\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "c97aa08faedb27e2dfebff2b4eb9349a56ca22a0dce5acb1809e5a21bf88181e",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "10271d54c9b17e6c7ffb245b2e351dec5c700cae027ad1aebc270e460956d328",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "1d09bc0b269cb53451f74fe5fc7912fda5eb822e95b6194d6e48383bdef5135d"
+  }
+}

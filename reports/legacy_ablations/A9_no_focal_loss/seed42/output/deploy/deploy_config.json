@@ -1,0 +1,242 @@
+{
+  "version": "p0-deploy-bundle",
+  "threshold_schema": "v5_cellwise_thresholds",
+  "model_variant": "top5_soup",
+  "threshold_best_epoch": 25,
+  "threshold_raw_best_epoch": 25,
+  "threshold_soup_epochs": [
+    25,
+    34,
+    31,
+    30,
+    28
+  ],
+  "threshold_selection_score": 0.9588444871425629,
+  "threshold_metadata": {
+    "_schema": "v5_cellwise_thresholds",
+    "_note": "Checkpoint-aligned thresholds saved at the final selected model variant.",
+    "_model_variant": "top5_soup",
+    "_best_epoch": 25,
+    "_raw_best_epoch": 25,
+    "_soup_epochs": [
+      25,
+      34,
+      31,
+      30,
+      28
+    ],
+    "_selection_score": 0.9588444871425629,
+    "_val_loss": 3.309328479927127,
+    "_small_m_acc": 0.9185214638710022,
+    "_small_k1_recall": 1.0,
+    "_small_c1_recall": 0.9658702850341797,
+    "_small_k0_false_positive": 0.002526259748265147,
+    "_c0_false_positive": 0.02174600586295128,
+    "_small_c0_false_positive": 0.00758097879588604,
+    "_guardrail_penalty": 0.0,
+    "_non_target_cell_acc_mean": 0.96839599609375,
+    "_rare_cell_thresholds": {
+      "SmallK1": {
+        "name": "SmallK1",
+        "task": "K",
+        "munition": "Small",
+        "level": 1,
+        "n_samples": 7548,
+        "n_pos_L1": 27,
+        "n_pos_L2": 0,
+        "min_pos_L1": 15,
+        "mode": "l1_only",
+        "threshold_L1": 0.23999999463558197,
+        "threshold_L2": 0.8999999761581421,
+        "max_fp_rate": 0.005,
+        "recall_weight": 0.75,
+        "objective": "max 0.75*recall + 0.25*F1 under Small x K0 FP <= 0.5%"
+      }
+    },
+    "_low_class1_cells": []
+  },
+  "rare_cell_thresholds": {
+    "SmallK1": {
+      "name": "SmallK1",
+      "task": "K",
+      "munition": "Small",
+      "level": 1,
+      "n_samples": 7548,
+      "n_pos_L1": 27,
+      "n_pos_L2": 0,
+      "min_pos_L1": 15,
+      "mode": "l1_only",
+      "threshold_L1": 0.23999999463558197,
+      "threshold_L2": 0.8999999761581421,
+      "max_fp_rate": 0.005,
+      "recall_weight": 0.75,
+      "objective": "max 0.75*recall + 0.25*F1 under Small x K0 FP <= 0.5%"
+    }
+  },
+  "low_class1_cells": [],
+  "uses_per_munition_thresholds": true,
+  "description": "Damage assessment MTL deployment bundle (R15). 推理 5 步：MinMax 缩放 → ONNX 前向 → 减 logit_shifts → Sigmoid → 保序钳制 (p2←min(p1,p2)) → 阈值分界判定 (thr1, thr2)。",
+  "input_schema": {
+    "features_13d_order": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity",
+      "los_distance",
+      "impact_cosine"
+    ],
+    "features_active_order": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity",
+      "los_distance",
+      "impact_cosine"
+    ],
+    "munition_id_range": [
+      0,
+      3
+    ],
+    "munition_id_map": {
+      "0": "Small",
+      "1": "Med-LM",
+      "2": "Med-RD",
+      "3": "Heavy"
+    }
+  },
+  "output_schema": {
+    "logits_shape": [
+      4,
+      2
+    ],
+    "task_order": [
+      "K",
+      "M",
+      "F",
+      "C"
+    ],
+    "level_order": [
+      "P(y>=1)",
+      "P(y>=2)"
+    ]
+  },
+  "artifacts": {
+    "onnx_model": "damage_model.onnx",
+    "minmax_scaler_pkl": "minmax_scaler.pkl",
+    "minmax_scaler_json": "minmax_scaler.json",
+    "logit_adjustment": "logit_adjustment.json",
+    "thresholds": "best_thresholds.json"
+  },
+  "artifact_status": {
+    "damage_model.onnx": true,
+    "minmax_scaler.pkl": true,
+    "minmax_scaler.json": true,
+    "logit_adjustment.json": true,
+    "best_thresholds.json": true
+  },
+  "logit_shifts_matrix": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "thresholds": {
+    "K1": 0.47999998927116394,
+    "K2": 0.5,
+    "M1": 0.36000001430511475,
+    "M2": 0.25999999046325684,
+    "F1": 0.2800000011920929,
+    "F2": 0.3799999952316284,
+    "C1": 0.41999998688697815,
+    "C2": 0.3400000035762787
+  },
+  "per_munition_thresholds": {
+    "K1": {
+      "0": 0.23999999463558197,
+      "1": 0.18000000715255737,
+      "2": 0.30000001192092896,
+      "3": 0.5
+    },
+    "K2": {
+      "0": 0.8999999761581421,
+      "1": 0.8999999761581421,
+      "2": 0.8999999761581421,
+      "3": 0.46000000834465027
+    },
+    "M1": {
+      "0": 0.5,
+      "1": 0.23999999463558197,
+      "2": 0.30000001192092896,
+      "3": 0.20000000298023224
+    },
+    "M2": {
+      "0": 0.4000000059604645,
+      "1": 0.14000000059604645,
+      "2": 0.2199999988079071,
+      "3": 0.10000000149011612
+    },
+    "F1": {
+      "0": 0.46000000834465027,
+      "1": 0.20000000298023224,
+      "2": 0.2800000011920929,
+      "3": 0.11999999731779099
+    },
+    "F2": {
+      "0": 0.47999998927116394,
+      "1": 0.4000000059604645,
+      "2": 0.3799999952316284,
+      "3": 0.3799999952316284
+    },
+    "C1": {
+      "0": 0.3799999952316284,
+      "1": 0.41999998688697815,
+      "2": 0.4000000059604645,
+      "3": 0.3799999952316284
+    },
+    "C2": {
+      "0": 0.8999999761581421,
+      "1": 0.3799999952316284,
+      "2": 0.36000001430511475,
+      "3": 0.30000001192092896
+    }
+  },
+  "inference_steps": [
+    "1. features = MinMaxScaler.transform(raw_15d)              # 严格沿用训练 fit 的 (data_min_, data_max_)",
+    "2. logits = onnx.run({encounter_features_15d, munition_id}) # 输出 (N, 4, 2)",
+    "3. logits_adj = logits - logit_shifts_matrix               # 广播 (4,2)，抵消稀疏类 pos_weight 正向漂移",
+    "4. probs = sigmoid(logits_adj)                             # (N, 4, 2)",
+    "5. probs[:, :, 1] = min(probs[:, :, 1], probs[:, :, 0])    # 物理保序硬钳制",
+    "6. pred_level = 1·(p1>=thr1) + 1·((p1>=thr1) & (p2>=thr2)) # 返回 0/1/2 毁伤等级"
+  ],
+  "metrics_snapshot_note": "R15: 基于 R14 实证回退 + 精调，锁定 K class-1 recall 改善、避免 R14-C/D 引入的 Heavy × M class-1=22% / Small × M 3-class=88% 塌陷。 (A*) 联合 (thr1, thr2) 网格最大化 J = 0.7·3-class Acc + 0.3·mean(F1_h1, F1_h2)，并加单调约束 thr2 >= thr1 - 0.10 —— 防止 R14-A 出现的 (thr1=0.70, thr2=0.10) 简并解； (B*) composite 重平衡：0.60·acc3 + 0.15·cls1 + 0.20·F1 − 0.05·viol/100 − 0.30·max(0, 0.95 − min_cell_acc_3class)，后项对 16 格 (task × munition) 3-class Acc 最低格做 hinge 惩罚，逼迫 best-epoch 全面达标； (C 回退) 删除 R14-C 的 mfc_munition_weight：实证该权重把 Heavy × M class-1 recall 推到 22%，推理时梯度再平衡弊大于利； (D 回退) log_var 下限恢复 -1.0：实证 -3.0 让 Kendall 把 K 任务的 权重挤到最低（precision 仅 e^-2.3），反而牺牲 K class-1 目标。 || Schema 兼容：best_thresholds.json 仍 8-scalar，`_schema='v2_joint'` R14/R15 复用；旧版 (R13 或更早 schema='v1') 加载端 warn 但仍可运行。"
+}

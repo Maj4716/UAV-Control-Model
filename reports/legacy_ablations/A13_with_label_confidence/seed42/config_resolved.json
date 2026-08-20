@@ -1,0 +1,66 @@
+{
+  "experiment_id": "A13_with_label_confidence",
+  "description": "置信度消融：在改进A0的其他配置完全不变时，重新启用历史MC标准误置信度乘子，用于检验其对稀有正例召回、概率校准和误报的影响。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true,
+    "label_uncertainty_scale": 0.1,
+    "label_confidence_floor": 0.25,
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones",
+    "k_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "m_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "c_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "label_confidence_weighting"
+    ],
+    "note": "Single-variable reverse ablation: restore MC standard-error confidence weighting."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A13_with_label_confidence\\seed42"
+  }
+}

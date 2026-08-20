@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A14_no_class_distribution_loss",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A14_no_class_distribution_loss\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "488e3899867715eae932283d34d7427448019a189357d45a9c252194f0c2d672",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A14_no_class_distribution_loss\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "cfc7bf7b73ff37231334a5375c4546a289876fde06cde1a131ba84e7ea11d9ac",
+  "performance_gate_passed": false
+}

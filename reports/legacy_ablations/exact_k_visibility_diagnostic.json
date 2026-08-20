@@ -1,0 +1,36 @@
+{
+  "schema": "stage0_exact_k_visibility_probe_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "dataset": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "train_rows": 60225,
+  "validation_rows": 7409,
+  "validation_positive_rows": 266,
+  "exact_feature_count": 31,
+  "feature_derivation_seconds": 48.1602596,
+  "feature_rows_per_second": 1404.3528951409555,
+  "results": {
+    "terminal_geometry_v2": {
+      "feature_count": 194,
+      "full_auc": 0.9746991902267218,
+      "standardized_partial_auc_at_fpr_0p005": 0.6332944993916373,
+      "recall_at_fpr_0p005": {
+        "recall": 0.34210526315789475,
+        "false_positive_rate": 0.004759904801903962,
+        "threshold": 0.5069508938327679
+      }
+    },
+    "terminal_geometry_v2_plus_exact_k_visibility": {
+      "feature_count": 225,
+      "full_auc": 0.9766478354643434,
+      "standardized_partial_auc_at_fpr_0p005": 0.6430257386146302,
+      "recall_at_fpr_0p005": {
+        "recall": 0.37593984962406013,
+        "false_positive_rate": 0.004619907601847963,
+        "threshold": 0.48651007480455655
+      }
+    }
+  }
+}

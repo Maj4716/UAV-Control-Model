@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A19_bounded_class1_floor_calibration",
+  "description": "复用A13权重，在验证集执行受准确率预算约束的精确L1阈值校准：仅当单元三分类准确率下降不超过0.5个百分点时才优先满足85%召回。",
+  "seed": 44,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A19_bounded_class1_floor_calibration.json",
+  "config_sha256": "77b7aff9b4f23403200e5c270a167f9d0f5c5f0e216aafd964cfe55fb690dda5",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed44",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "45e7706f8f086cd8402d50d1696844b4124ef800b1033bc24071ae70d81f8129",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "6c66f942035679bb311eaf684713c0ca6504c8e8b59d61171c2b76ed419244a9",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "73d05bcbae5bdf68da7bff4bee479e904b63bc6eb7867e15bc286a15d9919987"
+  }
+}

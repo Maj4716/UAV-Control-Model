@@ -1,0 +1,56 @@
+{
+  "schema": "stage0_nn_multiseed_ensemble_promotion_v1",
+  "status": "FAIL",
+  "split": "validation",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_accuracy_drop_vs_member_mean_percentage_points": 0.02,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "gate_failure_count_may_exceed_best_member": false,
+    "minimum_improved_weak_objectives": 4,
+    "minimum_objective_improvement_vs_member_mean": 0.001,
+    "maximum_objective_degradation_vs_member_mean": 0.002,
+    "minimum_mean_objective_delta": 0.001
+  },
+  "metrics": {
+    "member_accuracy_percent": [
+      93.16521286964417,
+      93.08064579963684,
+      93.19227337837219
+    ],
+    "candidate_accuracy_percent": 93.27430725097656,
+    "accuracy_delta_vs_member_mean_percentage_points": 0.12826323509216309,
+    "member_gate_failure_counts": [
+      8,
+      9,
+      8
+    ],
+    "candidate_gate_failure_count": 9,
+    "objective_deltas_vs_member_mean": {
+      "Small/K": 0.0034276127123107347,
+      "Med-LM/K": 0.00242631550266581,
+      "Med-RD/K": 0.005857714157492366,
+      "Heavy/K": 0.003947570413243118,
+      "Small/C": 0.001060461960373127,
+      "Med-LM/C": 0.004671288284085473,
+      "Med-RD/C": 0.003985682511451816,
+      "Med-RD/M_L1_vs_L2": 0.0011960417219032404
+    },
+    "mean_objective_delta": 0.0033215859079407106,
+    "improved_objectives": [
+      "Small/K",
+      "Med-LM/K",
+      "Med-RD/K",
+      "Heavy/K",
+      "Small/C",
+      "Med-LM/C",
+      "Med-RD/C",
+      "Med-RD/M_L1_vs_L2"
+    ],
+    "degraded_objectives": []
+  },
+  "failures": [
+    "strict validation failures exceed the best member"
+  ]
+}

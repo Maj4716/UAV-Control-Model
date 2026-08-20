@@ -1,0 +1,35 @@
+{
+  "experiment_id": "A22_targeted_ranking",
+  "description": "预注册的定向排序候选：对Small/K及安全受限C单元优化高分难负例排序，对Med-RD/M优化条件L1-vs-L2排序；其余A13配置保持不变。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "loss": {
+    "entry_ranking_weight": [
+      [0.05, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.04, 0.04, 0.04, 0.0]
+    ],
+    "conditional_l1_l2_ranking_weight": [
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.05, 0.0],
+      [0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0]
+    ],
+    "ranking_margin": 0.5,
+    "hard_negative_fraction": 0.1
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "ablation": {
+    "components": [
+      "small_k_and_c_low_fpr_entry_ranking",
+      "med_rd_m_conditional_l1_l2_ranking"
+    ],
+    "note": "Weights and hard-negative fraction were frozen before A22 training; do not tune them against seed42 test."
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "schema": "stage0_high_mc_label_stability_v2",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "validation_scan_predicate": "split_role == 'val'",
+  "dataset": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "seed_namespace": "stage0-high-mc-audit-v1",
+  "antithetic_fragment_spread": true,
+  "selection_seed": 20260731,
+  "selection": {
+    "rows_per_munition": 128,
+    "total_rows": 512,
+    "roles": {
+      "boundary_or_l1": 256,
+      "random_validation": 256
+    },
+    "role": "diagnostic stratified sample; not an unbiased estimate of the full validation distribution"
+  },
+  "high_mc_replicates": 64,
+  "comparison_replicates": 32,
+  "workers": 12,
+  "elapsed_seconds": 367.9247928,
+  "simulator_evaluations": 32768,
+  "rows_per_second": 1.3915887431873006,
+  "overall": {
+    "hard_cell_agreement_percent": 93.994140625,
+    "ordinal_probability_mae": 0.013079167982286751,
+    "ordinal_probability_rmse": 0.03955735064487051,
+    "original_standard_error_mean": 0.012192898377944995,
+    "high_mc_standard_error_mean": 0.005079380367057484,
+    "standard_error_reduction_percent": 58.341485267807435,
+    "comparison_to_full_hard_cell_agreement_percent": 98.53515625,
+    "comparison_to_full_ordinal_probability_mae": 0.0037150531537789673,
+    "comparison_standard_error_mean": 0.007048202061393273
+  },
+  "cells": {
+    "Small": {
+      "K": {
+        "rows": 128,
+        "original_support": [
+          122,
+          6,
+          0
+        ],
+        "high_mc_support": [
+          121,
+          7,
+          0
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            119,
+            3,
+            0
+          ],
+          [
+            2,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "hard_level_agreement_percent": 96.09375,
+        "probability_mae": 0.007536001972003804,
+        "probability_rmse": 0.025100988178553427,
+        "high_mc_standard_error_mean": 0.0036734322794010617,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.002688505465458504
+      },
+      "M": {
+        "rows": 128,
+        "original_support": [
+          32,
+          34,
+          62
+        ],
+        "high_mc_support": [
+          29,
+          33,
+          66
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            29,
+            3,
+            0
+          ],
+          [
+            0,
+            30,
+            4
+          ],
+          [
+            0,
+            0,
+            62
+          ]
+        ],
+        "hard_level_agreement_percent": 94.53125,
+        "probability_mae": 0.010882932918396163,
+        "probability_rmse": 0.035205886769771495,
+        "high_mc_standard_error_mean": 0.003931642936015608,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0029167541253163768
+      },
+      "F": {
+        "rows": 128,
+        "original_support": [
+          42,
+          85,
+          1
+        ],
+        "high_mc_support": [
+          44,
+          82,
+          2
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            42,
+            0,
+            0
+          ],
+          [
+            2,
+            82,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "hard_level_agreement_percent": 97.65625,
+        "probability_mae": 0.006472855275050496,
+        "probability_rmse": 0.02540546375278187,
+        "high_mc_standard_error_mean": 0.0023368030226130435,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0018477109320534848
+      },
+      "C": {
+        "rows": 128,
+        "original_support": [
+          100,
+          28,
+          0
+        ],
+        "high_mc_support": [
+          102,
+          26,
+          0
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            98,
+            2,
+            0
+          ],
+          [
+            4,
+            24,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "hard_level_agreement_percent": 95.3125,
+        "probability_mae": 0.015292079740294808,
+        "probability_rmse": 0.043702598046389596,
+        "high_mc_standard_error_mean": 0.0059286216839729245,
+        "comparison_to_full_hard_level_agreement_percent": 96.875,
+        "comparison_to_full_probability_mae": 0.004757819214060351
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "rows": 128,
+        "original_support": [
+          106,
+          13,
+          9
+        ],
+        "high_mc_support": [
+          103,
+          16,
+          9
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            98,
+            5,
+            3
+          ],
+          [
+            4,
+            9,
+            0
+          ],
+          [
+            1,
+            2,
+            6
+          ]
+        ],
+        "hard_level_agreement_percent": 88.28125,
+        "probability_mae": 0.022710691818449983,
+        "probability_rmse": 0.05242149973879163,
+        "high_mc_standard_error_mean": 0.00909544987580035,
+        "comparison_to_full_hard_level_agreement_percent": 96.09375,
+        "comparison_to_full_probability_mae": 0.006797757082033678
+      },
+      "M": {
+        "rows": 128,
+        "original_support": [
+          8,
+          18,
+          102
+        ],
+        "high_mc_support": [
+          8,
+          18,
+          102
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            102
+          ]
+        ],
+        "hard_level_agreement_percent": 100.0,
+        "probability_mae": 0.000639899326197132,
+        "probability_rmse": 0.0022672757212915985,
+        "high_mc_standard_error_mean": 0.0002483362495632722,
+        "comparison_to_full_hard_level_agreement_percent": 100.0,
+        "comparison_to_full_probability_mae": 0.00015371978916519564
+      },
+      "F": {
+        "rows": 128,
+        "original_support": [
+          15,
+          107,
+          6
+        ],
+        "high_mc_support": [
+          16,
+          104,
+          8
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            1,
+            104,
+            2
+          ],
+          [
+            0,
+            0,
+            6
+          ]
+        ],
+        "hard_level_agreement_percent": 97.65625,
+        "probability_mae": 0.0028599952637832363,
+        "probability_rmse": 0.015751823065811077,
+        "high_mc_standard_error_mean": 0.0014698322980677548,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0008013914457157709
+      },
+      "C": {
+        "rows": 128,
+        "original_support": [
+          97,
+          31,
+          0
+        ],
+        "high_mc_support": [
+          98,
+          30,
+          0
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            90,
+            7,
+            0
+          ],
+          [
+            8,
+            23,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "hard_level_agreement_percent": 88.28125,
+        "probability_mae": 0.020389820599413005,
+        "probability_rmse": 0.05391146289950466,
+        "high_mc_standard_error_mean": 0.007114426539356856,
+        "comparison_to_full_hard_level_agreement_percent": 96.875,
+        "comparison_to_full_probability_mae": 0.005224018177358649
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "rows": 128,
+        "original_support": [
+          87,
+          27,
+          14
+        ],
+        "high_mc_support": [
+          89,
+          28,
+          11
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            85,
+            2,
+            0
+          ],
+          [
+            1,
+            25,
+            1
+          ],
+          [
+            3,
+            1,
+            10
+          ]
+        ],
+        "hard_level_agreement_percent": 93.75,
+        "probability_mae": 0.023022083589394622,
+        "probability_rmse": 0.05314026999477926,
+        "high_mc_standard_error_mean": 0.009981171240586732,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0066898802097966475
+      },
+      "M": {
+        "rows": 128,
+        "original_support": [
+          10,
+          12,
+          106
+        ],
+        "high_mc_support": [
+          9,
+          12,
+          107
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            7,
+            3,
+            0
+          ],
+          [
+            1,
+            9,
+            2
+          ],
+          [
+            1,
+            0,
+            105
+          ]
+        ],
+        "hard_level_agreement_percent": 94.53125,
+        "probability_mae": 0.006116297156844492,
+        "probability_rmse": 0.01898846626498706,
+        "high_mc_standard_error_mean": 0.0029738108344358164,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0022352411077526616
+      },
+      "F": {
+        "rows": 128,
+        "original_support": [
+          14,
+          102,
+          12
+        ],
+        "high_mc_support": [
+          12,
+          103,
+          13
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            11,
+            3,
+            0
+          ],
+          [
+            1,
+            98,
+            3
+          ],
+          [
+            0,
+            2,
+            10
+          ]
+        ],
+        "hard_level_agreement_percent": 92.96875,
+        "probability_mae": 0.016652568546589544,
+        "probability_rmse": 0.04033733168498975,
+        "high_mc_standard_error_mean": 0.006180510235256754,
+        "comparison_to_full_hard_level_agreement_percent": 98.4375,
+        "comparison_to_full_probability_mae": 0.004416152109814591
+      },
+      "C": {
+        "rows": 128,
+        "original_support": [
+          60,
+          66,
+          2
+        ],
+        "high_mc_support": [
+          61,
+          66,
+          1
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            54,
+            6,
+            0
+          ],
+          [
+            7,
+            59,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "hard_level_agreement_percent": 89.0625,
+        "probability_mae": 0.024549590046059,
+        "probability_rmse": 0.05701022707842186,
+        "high_mc_standard_error_mean": 0.009050561692846092,
+        "comparison_to_full_hard_level_agreement_percent": 97.65625,
+        "comparison_to_full_probability_mae": 0.007807114092798845
+      }
+    },
+    "Heavy": {
+      "K": {
+        "rows": 128,
+        "original_support": [
+          92,
+          17,
+          19
+        ],
+        "high_mc_support": [
+          91,
+          18,
+          19
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            83,
+            6,
+            3
+          ],
+          [
+            4,
+            12,
+            1
+          ],
+          [
+            4,
+            0,
+            15
+          ]
+        ],
+        "hard_level_agreement_percent": 85.9375,
+        "probability_mae": 0.03260845490454836,
+        "probability_rmse": 0.06877478555454836,
+        "high_mc_standard_error_mean": 0.011531495698612663,
+        "comparison_to_full_hard_level_agreement_percent": 96.09375,
+        "comparison_to_full_probability_mae": 0.008506232709704735
+      },
+      "M": {
+        "rows": 128,
+        "original_support": [
+          6,
+          13,
+          109
+        ],
+        "high_mc_support": [
+          6,
+          13,
+          109
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            0
+          ],
+          [
+            0,
+            0,
+            109
+          ]
+        ],
+        "hard_level_agreement_percent": 100.0,
+        "probability_mae": 5.707068888543025e-05,
+        "probability_rmse": 0.00017961195196817466,
+        "high_mc_standard_error_mean": 2.3068202249348816e-05,
+        "comparison_to_full_hard_level_agreement_percent": 100.0,
+        "comparison_to_full_probability_mae": 2.026782974270903e-05
+      },
+      "F": {
+        "rows": 128,
+        "original_support": [
+          5,
+          118,
+          5
+        ],
+        "high_mc_support": [
+          5,
+          115,
+          8
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            114,
+            4
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        "hard_level_agreement_percent": 96.09375,
+        "probability_mae": 0.004148090395509004,
+        "probability_rmse": 0.020073108699578835,
+        "high_mc_standard_error_mean": 0.0019115829231688755,
+        "comparison_to_full_hard_level_agreement_percent": 99.21875,
+        "comparison_to_full_probability_mae": 0.0011187829060835413
+      },
+      "C": {
+        "rows": 128,
+        "original_support": [
+          84,
+          43,
+          1
+        ],
+        "high_mc_support": [
+          85,
+          43,
+          0
+        ],
+        "original_rows_high_mc_columns_confusion": [
+          [
+            81,
+            3,
+            0
+          ],
+          [
+            4,
+            39,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "hard_level_agreement_percent": 93.75,
+        "probability_mae": 0.015328255475168966,
+        "probability_rmse": 0.03884978279023906,
+        "high_mc_standard_error_mean": 0.005819340160972597,
+        "comparison_to_full_hard_level_agreement_percent": 100.0,
+        "comparison_to_full_probability_mae": 0.0034595032636077377
+      }
+    }
+  }
+}

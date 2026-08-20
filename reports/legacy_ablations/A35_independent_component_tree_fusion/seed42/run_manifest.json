@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A35_independent_component_tree_fusion",
+  "description": "冻结并复用A31直接任务代理，使用独立弹型专家学习经校准的部件破片/冲击波概率，再以A34验证诊断预注册的稀疏凸融合矩阵将可微毁伤树信息注入弱任务头。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A35_independent_component_tree_fusion.json",
+  "config_sha256": "d2b94110d0c4ab97a576fc8c378684e2ecc461fc0807afbe2ec0eaae87aba435",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A35_independent_component_tree_fusion\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "3f68876810c95c2d360a71246addb1774b544e8cc91b40f7c3a88a372c14d4ae",
+    "nn_dataset.py": "f8f5f83036206cabc3b74f7f19e527826989ac341de9df2f9b2ace6f1bce882a",
+    "nn_feature_engineering.py": "2b202da47428dc786ed3798d9773ad4e18880d0a56fecd33f2e2254632afddc1",
+    "nn_model.py": "24c531507cf922d6b089e9eda72f385b92754de5f03c23fc7841c9bf16047590",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "da89de33979f66bb3d858ae6c498800d97f5c6ac60322b0693a097f1a5d47def",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

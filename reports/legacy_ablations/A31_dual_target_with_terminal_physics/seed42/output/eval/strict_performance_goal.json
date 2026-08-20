@@ -1,0 +1,1093 @@
+{
+  "schema": "stage0_nn_strict_performance_goal_v1",
+  "status": "FAIL",
+  "criteria": {
+    "comparison": "strictly_greater_than_for_minima",
+    "minimum_global_class_recall_percent": 90.0,
+    "minimum_munition_task_accuracy_percent": 94.0,
+    "minimum_munition_task_l1_recall_percent": 90.0,
+    "minimum_applicable_cell_diagonal_recall_percent": 90.0,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_global_class_support": 50,
+    "minimum_munition_l1_support": 100
+  },
+  "global_confusion_diagonal_recall": {
+    "K": {
+      "L0": {
+        "correct": 23256,
+        "support": 24206,
+        "percent": 96.07535321821037,
+        "wilson_95_percent": [
+          95.82333195124171,
+          96.31275261561098
+        ]
+      },
+      "L1": {
+        "correct": 2364,
+        "support": 3184,
+        "percent": 74.2462311557789,
+        "wilson_95_percent": [
+          72.6987829000877,
+          75.73524432318534
+        ]
+      },
+      "L2": {
+        "correct": 1654,
+        "support": 2086,
+        "percent": 79.29050814956855,
+        "wilson_95_percent": [
+          77.49848580896251,
+          80.97484932573137
+        ]
+      }
+    },
+    "M": {
+      "L0": {
+        "correct": 4043,
+        "support": 4135,
+        "percent": 97.77509068923821,
+        "wilson_95_percent": [
+          97.27922169228322,
+          98.18227494416399
+        ]
+      },
+      "L1": {
+        "correct": 1683,
+        "support": 1946,
+        "percent": 86.48509763617677,
+        "wilson_95_percent": [
+          84.8940264948372,
+          87.93240734552471
+        ]
+      },
+      "L2": {
+        "correct": 23135,
+        "support": 23395,
+        "percent": 98.88865142124385,
+        "wilson_95_percent": [
+          98.74606297943822,
+          99.01518746647555
+        ]
+      }
+    },
+    "F": {
+      "L0": {
+        "correct": 5184,
+        "support": 5360,
+        "percent": 96.71641791044776,
+        "wilson_95_percent": [
+          96.20488103460526,
+          97.16104035676022
+        ]
+      },
+      "L1": {
+        "correct": 21426,
+        "support": 21892,
+        "percent": 97.87136853645167,
+        "wilson_95_percent": [
+          97.67160421043415,
+          98.05433552757171
+        ]
+      },
+      "L2": {
+        "correct": 1741,
+        "support": 2224,
+        "percent": 78.28237410071942,
+        "wilson_95_percent": [
+          76.52075343420893,
+          79.94646038027504
+        ]
+      }
+    },
+    "C": {
+      "L0": {
+        "correct": 20263,
+        "support": 20720,
+        "percent": 97.79440154440154,
+        "wilson_95_percent": [
+          97.58539058302252,
+          97.9856937613328
+        ]
+      },
+      "L1": {
+        "correct": 5958,
+        "support": 8664,
+        "percent": 68.76731301939058,
+        "wilson_95_percent": [
+          67.78332305667892,
+          69.73466819234945
+        ]
+      },
+      "L2": {
+        "correct": 35,
+        "support": 92,
+        "percent": 38.04347826086956,
+        "wilson_95_percent": [
+          28.791157059835985,
+          48.25426746655931
+        ]
+      }
+    }
+  },
+  "munition_task_metrics": {
+    "Small": {
+      "K": {
+        "three_class_accuracy": {
+          "correct": 7150,
+          "support": 7366,
+          "percent": 97.0676079283193,
+          "wilson_95_percent": [
+            96.6571107937434,
+            97.42903798902245
+          ]
+        },
+        "class1_recall": {
+          "correct": 122,
+          "support": 289,
+          "percent": 42.21453287197232,
+          "wilson_95_percent": [
+            36.658922984070344,
+            47.97440039123992
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 7028,
+            "support": 7077,
+            "percent": 99.30761622156281,
+            "wilson_95_percent": [
+              99.08588328369851,
+              99.47584897068168
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 122,
+            "support": 289,
+            "percent": 42.21453287197232,
+            "wilson_95_percent": [
+              36.658922984070344,
+              47.97440039123992
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 0,
+            "support": 0,
+            "percent": null,
+            "wilson_95_percent": [
+              null,
+              null
+            ],
+            "applicable": false,
+            "status": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "M": {
+        "three_class_accuracy": {
+          "correct": 7066,
+          "support": 7366,
+          "percent": 95.92723323377682,
+          "wilson_95_percent": [
+            95.45139136647171,
+            96.35519684584352
+          ]
+        },
+        "class1_recall": {
+          "correct": 902,
+          "support": 1038,
+          "percent": 86.89788053949904,
+          "wilson_95_percent": [
+            84.70841055735922,
+            88.81525213764134
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 2993,
+            "support": 3043,
+            "percent": 98.35688465330266,
+            "wilson_95_percent": [
+              97.84041957778592,
+              98.7514129732623
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 902,
+            "support": 1038,
+            "percent": 86.89788053949904,
+            "wilson_95_percent": [
+              84.70841055735922,
+              88.81525213764134
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 3171,
+            "support": 3285,
+            "percent": 96.5296803652968,
+            "wilson_95_percent": [
+              95.84745498614076,
+              97.10320980802577
+            ],
+            "applicable": true,
+            "status": "PASS"
+          }
+        }
+      },
+      "F": {
+        "three_class_accuracy": {
+          "correct": 7138,
+          "support": 7366,
+          "percent": 96.90469725767038,
+          "wilson_95_percent": [
+            96.48408774024414,
+            97.27640953245734
+          ]
+        },
+        "class1_recall": {
+          "correct": 3724,
+          "support": 3860,
+          "percent": 96.47668393782384,
+          "wilson_95_percent": [
+            95.84730936858682,
+            97.01364360372057
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 3282,
+            "support": 3341,
+            "percent": 98.23406165818618,
+            "wilson_95_percent": [
+              97.72888811585466,
+              98.62844420256101
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 3724,
+            "support": 3860,
+            "percent": 96.47668393782384,
+            "wilson_95_percent": [
+              95.84730936858682,
+              97.01364360372057
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 132,
+            "support": 165,
+            "percent": 80.0,
+            "wilson_95_percent": [
+              73.24546945752665,
+              85.38941837836667
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "C": {
+        "three_class_accuracy": {
+          "correct": 6936,
+          "support": 7366,
+          "percent": 94.1623676350801,
+          "wilson_95_percent": [
+            93.60357978241166,
+            94.67511707087286
+          ]
+        },
+        "class1_recall": {
+          "correct": 351,
+          "support": 625,
+          "percent": 56.16,
+          "wilson_95_percent": [
+            52.24402188561148,
+            60.00071785282799
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 6585,
+            "support": 6741,
+            "percent": 97.68580329327993,
+            "wilson_95_percent": [
+              97.2987967632646,
+              98.01849185279848
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 351,
+            "support": 625,
+            "percent": 56.16,
+            "wilson_95_percent": [
+              52.24402188561148,
+              60.00071785282799
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 0,
+            "support": 0,
+            "percent": null,
+            "wilson_95_percent": [
+              null,
+              null
+            ],
+            "applicable": false,
+            "status": "NOT_APPLICABLE"
+          }
+        }
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "three_class_accuracy": {
+          "correct": 6910,
+          "support": 7454,
+          "percent": 92.7019050174403,
+          "wilson_95_percent": [
+            92.08917584859653,
+            93.2706435462053
+          ]
+        },
+        "class1_recall": {
+          "correct": 535,
+          "support": 776,
+          "percent": 68.94329896907216,
+          "wilson_95_percent": [
+            65.60099941697494,
+            72.09897109300512
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 6174,
+            "support": 6370,
+            "percent": 96.92307692307692,
+            "wilson_95_percent": [
+              96.46989999250916,
+              97.31969359280205
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 535,
+            "support": 776,
+            "percent": 68.94329896907216,
+            "wilson_95_percent": [
+              65.60099941697494,
+              72.09897109300512
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 201,
+            "support": 308,
+            "percent": 65.25974025974025,
+            "wilson_95_percent": [
+              59.783718683084686,
+              70.35980371944778
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "M": {
+        "three_class_accuracy": {
+          "correct": 7390,
+          "support": 7454,
+          "percent": 99.14140059028709,
+          "wilson_95_percent": [
+            98.90516993719486,
+            99.32700676502292
+          ]
+        },
+        "class1_recall": {
+          "correct": 519,
+          "support": 556,
+          "percent": 93.34532374100719,
+          "wilson_95_percent": [
+            90.96203845363974,
+            95.13376463592294
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 691,
+            "support": 697,
+            "percent": 99.13916786226686,
+            "wilson_95_percent": [
+              98.13475877157587,
+              99.60489281134409
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 519,
+            "support": 556,
+            "percent": 93.34532374100719,
+            "wilson_95_percent": [
+              90.96203845363974,
+              95.13376463592294
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 6180,
+            "support": 6201,
+            "percent": 99.66134494436382,
+            "wilson_95_percent": [
+              99.48281343725974,
+              99.77838511027886
+            ],
+            "applicable": true,
+            "status": "PASS"
+          }
+        }
+      },
+      "F": {
+        "three_class_accuracy": {
+          "correct": 7279,
+          "support": 7454,
+          "percent": 97.65226723906628,
+          "wilson_95_percent": [
+            97.28320394980227,
+            97.97224012507554
+          ]
+        },
+        "class1_recall": {
+          "correct": 5930,
+          "support": 5983,
+          "percent": 99.11415677753635,
+          "wilson_95_percent": [
+            98.8432062727954,
+            99.32207905209223
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 898,
+            "support": 931,
+            "percent": 96.45542427497314,
+            "wilson_95_percent": [
+              95.06396563645842,
+              97.46509282990448
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 5930,
+            "support": 5983,
+            "percent": 99.11415677753635,
+            "wilson_95_percent": [
+              98.8432062727954,
+              99.32207905209223
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 451,
+            "support": 540,
+            "percent": 83.51851851851852,
+            "wilson_95_percent": [
+              80.15460084843133,
+              86.40891580309196
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "C": {
+        "three_class_accuracy": {
+          "correct": 6629,
+          "support": 7454,
+          "percent": 88.93211698416957,
+          "wilson_95_percent": [
+            88.19974320620655,
+            89.62438368154557
+          ]
+        },
+        "class1_recall": {
+          "correct": 1299,
+          "support": 2020,
+          "percent": 64.3069306930693,
+          "wilson_95_percent": [
+            62.192318151482695,
+            66.36723118875092
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 5329,
+            "support": 5430,
+            "percent": 98.13996316758748,
+            "wilson_95_percent": [
+              97.74508738068978,
+              98.46677377903262
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 1299,
+            "support": 2020,
+            "percent": 64.3069306930693,
+            "wilson_95_percent": [
+              62.192318151482695,
+              66.36723118875092
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 1,
+            "support": 4,
+            "percent": 25.0,
+            "wilson_95_percent": [
+              4.558726080970055,
+              69.93581574175981
+            ],
+            "applicable": true,
+            "status": "INSUFFICIENT_EVIDENCE"
+          }
+        }
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "three_class_accuracy": {
+          "correct": 6489,
+          "support": 7365,
+          "percent": 88.10590631364562,
+          "wilson_95_percent": [
+            87.34665145239063,
+            88.82543111129505
+          ]
+        },
+        "class1_recall": {
+          "correct": 1090,
+          "support": 1327,
+          "percent": 82.14016578749057,
+          "wilson_95_percent": [
+            79.98751159509652,
+            84.10727552972551
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 4720,
+            "support": 5167,
+            "percent": 91.34894522934005,
+            "wilson_95_percent": [
+              90.55139073346726,
+              92.08506281145608
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 1090,
+            "support": 1327,
+            "percent": 82.14016578749057,
+            "wilson_95_percent": [
+              79.98751159509652,
+              84.10727552972551
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 679,
+            "support": 871,
+            "percent": 77.95637198622273,
+            "wilson_95_percent": [
+              75.08392300680174,
+              80.58330619110194
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "M": {
+        "three_class_accuracy": {
+          "correct": 7142,
+          "support": 7365,
+          "percent": 96.97216564833673,
+          "wilson_95_percent": [
+            96.5556776222313,
+            97.33967945208569
+          ]
+        },
+        "class1_recall": {
+          "correct": 123,
+          "support": 203,
+          "percent": 60.59113300492611,
+          "wilson_95_percent": [
+            53.73219605392886,
+            67.05667298865302
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 234,
+            "support": 266,
+            "percent": 87.96992481203007,
+            "wilson_95_percent": [
+              83.51046875956007,
+              91.3483023435958
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L1": {
+            "correct": 123,
+            "support": 203,
+            "percent": 60.59113300492611,
+            "wilson_95_percent": [
+              53.73219605392886,
+              67.05667298865302
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 6785,
+            "support": 6896,
+            "percent": 98.39037122969837,
+            "wilson_95_percent": [
+              98.06527110164907,
+              98.66158907088459
+            ],
+            "applicable": true,
+            "status": "PASS"
+          }
+        }
+      },
+      "F": {
+        "three_class_accuracy": {
+          "correct": 6815,
+          "support": 7365,
+          "percent": 92.53224711473185,
+          "wilson_95_percent": [
+            91.90947343676265,
+            93.11067572794265
+          ]
+        },
+        "class1_recall": {
+          "correct": 5689,
+          "support": 5912,
+          "percent": 96.22801082543978,
+          "wilson_95_percent": [
+            95.7115804789762,
+            96.68440474219689
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 538,
+            "support": 616,
+            "percent": 87.33766233766234,
+            "wilson_95_percent": [
+              84.4780809488879,
+              89.73444444029673
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L1": {
+            "correct": 5689,
+            "support": 5912,
+            "percent": 96.22801082543978,
+            "wilson_95_percent": [
+              95.7115804789762,
+              96.68440474219689
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 588,
+            "support": 837,
+            "percent": 70.25089605734767,
+            "wilson_95_percent": [
+              67.0670257949285,
+              73.24973028837142
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "C": {
+        "three_class_accuracy": {
+          "correct": 5873,
+          "support": 7365,
+          "percent": 79.74202308214528,
+          "wilson_95_percent": [
+            78.80870963120002,
+            80.64432683976153
+          ]
+        },
+        "class1_recall": {
+          "correct": 2206,
+          "support": 3588,
+          "percent": 61.482720178372354,
+          "wilson_95_percent": [
+            59.87893894658163,
+            63.06193997156926
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 3660,
+            "support": 3750,
+            "percent": 97.6,
+            "wilson_95_percent": [
+              97.059272626804,
+              98.04330533666572
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 2206,
+            "support": 3588,
+            "percent": 61.482720178372354,
+            "wilson_95_percent": [
+              59.87893894658163,
+              63.06193997156926
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 7,
+            "support": 27,
+            "percent": 25.925925925925927,
+            "wilson_95_percent": [
+              13.170374561907188,
+              44.67857131455307
+            ],
+            "applicable": true,
+            "status": "INSUFFICIENT_EVIDENCE"
+          }
+        }
+      }
+    },
+    "Heavy": {
+      "K": {
+        "three_class_accuracy": {
+          "correct": 6725,
+          "support": 7291,
+          "percent": 92.2370045261281,
+          "wilson_95_percent": [
+            91.60030464545736,
+            92.8292204479596
+          ]
+        },
+        "class1_recall": {
+          "correct": 617,
+          "support": 792,
+          "percent": 77.9040404040404,
+          "wilson_95_percent": [
+            74.88369213208634,
+            80.65500783146811
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 5334,
+            "support": 5592,
+            "percent": 95.3862660944206,
+            "wilson_95_percent": [
+              94.80457884312459,
+              95.9056394029397
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 617,
+            "support": 792,
+            "percent": 77.9040404040404,
+            "wilson_95_percent": [
+              74.88369213208634,
+              80.65500783146811
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 774,
+            "support": 907,
+            "percent": 85.33627342888644,
+            "wilson_95_percent": [
+              82.88512499409356,
+              87.48936156363631
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "M": {
+        "three_class_accuracy": {
+          "correct": 7263,
+          "support": 7291,
+          "percent": 99.61596488821836,
+          "wilson_95_percent": [
+            99.44551716687876,
+            99.73415713915655
+          ]
+        },
+        "class1_recall": {
+          "correct": 139,
+          "support": 149,
+          "percent": 93.28859060402685,
+          "wilson_95_percent": [
+            88.08721748001737,
+            96.31396593929053
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 125,
+            "support": 129,
+            "percent": 96.89922480620154,
+            "wilson_95_percent": [
+              92.29832552530715,
+              98.78769616866008
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 139,
+            "support": 149,
+            "percent": 93.28859060402685,
+            "wilson_95_percent": [
+              88.08721748001737,
+              96.31396593929053
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 6999,
+            "support": 7013,
+            "percent": 99.80037074005419,
+            "wilson_95_percent": [
+              99.66516961412341,
+              99.88104417725894
+            ],
+            "applicable": true,
+            "status": "PASS"
+          }
+        }
+      },
+      "F": {
+        "three_class_accuracy": {
+          "correct": 7119,
+          "support": 7291,
+          "percent": 97.64092717048416,
+          "wilson_95_percent": [
+            97.26665848774705,
+            97.9650204900038
+          ]
+        },
+        "class1_recall": {
+          "correct": 6083,
+          "support": 6137,
+          "percent": 99.12009124979632,
+          "wilson_95_percent": [
+            98.85377227714608,
+            99.32495518926578
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 466,
+            "support": 472,
+            "percent": 98.72881355932203,
+            "wilson_95_percent": [
+              97.25471673923116,
+              99.41613685558698
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 6083,
+            "support": 6137,
+            "percent": 99.12009124979632,
+            "wilson_95_percent": [
+              98.85377227714608,
+              99.32495518926578
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L2": {
+            "correct": 570,
+            "support": 682,
+            "percent": 83.57771260997067,
+            "wilson_95_percent": [
+              80.61059901107417,
+              86.16868271790325
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          }
+        }
+      },
+      "C": {
+        "three_class_accuracy": {
+          "correct": 6818,
+          "support": 7291,
+          "percent": 93.51254971883144,
+          "wilson_95_percent": [
+            92.92395878179535,
+            94.05531329447197
+          ]
+        },
+        "class1_recall": {
+          "correct": 2102,
+          "support": 2431,
+          "percent": 86.46647470176882,
+          "wilson_95_percent": [
+            85.04896596085696,
+            87.7689168453092
+          ]
+        },
+        "class_diagonal_recall": {
+          "L0": {
+            "correct": 4689,
+            "support": 4799,
+            "percent": 97.70785580329235,
+            "wilson_95_percent": [
+              97.24474293963816,
+              98.09465227588376
+            ],
+            "applicable": true,
+            "status": "PASS"
+          },
+          "L1": {
+            "correct": 2102,
+            "support": 2431,
+            "percent": 86.46647470176882,
+            "wilson_95_percent": [
+              85.04896596085696,
+              87.7689168453092
+            ],
+            "applicable": true,
+            "status": "FAIL"
+          },
+          "L2": {
+            "correct": 27,
+            "support": 61,
+            "percent": 44.26229508196721,
+            "wilson_95_percent": [
+              32.50780552148288,
+              56.696632306856124
+            ],
+            "applicable": true,
+            "status": "INSUFFICIENT_EVIDENCE"
+          }
+        }
+      }
+    }
+  },
+  "safety": {
+    "small_k0_false_positive": {
+      "correct": 49,
+      "support": 7077,
+      "percent": 0.6923837784371909,
+      "wilson_95_percent": [
+        0.5241510293183251,
+        0.9141167163014972
+      ]
+    },
+    "global_c0_false_positive": {
+      "correct": 457,
+      "support": 20720,
+      "percent": 2.2055984555984556,
+      "wilson_95_percent": [
+        2.0143062386671993,
+        2.4146094169774885
+      ]
+    }
+  },
+  "failure_count": 36,
+  "failures": [
+    "global K/L1 recall 74.25% <= 90.00% (n=3184)",
+    "global K/L2 recall 79.29% <= 90.00% (n=2086)",
+    "global M/L1 recall 86.49% <= 90.00% (n=1946)",
+    "global F/L2 recall 78.28% <= 90.00% (n=2224)",
+    "global C/L1 recall 68.77% <= 90.00% (n=8664)",
+    "global C/L2 recall 38.04% <= 90.00% (n=92)",
+    "Small/K/L1 diagonal recall 42.21% <= 90.00% (n=289)",
+    "Small/M/L1 diagonal recall 86.90% <= 90.00% (n=1038)",
+    "Small/F/L2 diagonal recall 80.00% <= 90.00% (n=165)",
+    "Small/C/L1 diagonal recall 56.16% <= 90.00% (n=625)",
+    "Med-LM/K/L1 diagonal recall 68.94% <= 90.00% (n=776)",
+    "Med-LM/K/L2 diagonal recall 65.26% <= 90.00% (n=308)",
+    "Med-LM/K accuracy 92.70% <= 94.00%",
+    "Med-LM/F/L2 diagonal recall 83.52% <= 90.00% (n=540)",
+    "Med-LM/C/L1 diagonal recall 64.31% <= 90.00% (n=2020)",
+    "Med-LM/C/L2 support 4 < 100",
+    "Med-LM/C accuracy 88.93% <= 94.00%",
+    "Med-RD/K/L1 diagonal recall 82.14% <= 90.00% (n=1327)",
+    "Med-RD/K/L2 diagonal recall 77.96% <= 90.00% (n=871)",
+    "Med-RD/K accuracy 88.11% <= 94.00%",
+    "Med-RD/M/L0 diagonal recall 87.97% <= 90.00% (n=266)",
+    "Med-RD/M/L1 diagonal recall 60.59% <= 90.00% (n=203)",
+    "Med-RD/F/L0 diagonal recall 87.34% <= 90.00% (n=616)",
+    "Med-RD/F/L2 diagonal recall 70.25% <= 90.00% (n=837)",
+    "Med-RD/F accuracy 92.53% <= 94.00%",
+    "Med-RD/C/L1 diagonal recall 61.48% <= 90.00% (n=3588)",
+    "Med-RD/C/L2 support 27 < 100",
+    "Med-RD/C accuracy 79.74% <= 94.00%",
+    "Heavy/K/L1 diagonal recall 77.90% <= 90.00% (n=792)",
+    "Heavy/K/L2 diagonal recall 85.34% <= 90.00% (n=907)",
+    "Heavy/K accuracy 92.24% <= 94.00%",
+    "Heavy/F/L2 diagonal recall 83.58% <= 90.00% (n=682)",
+    "Heavy/C/L1 diagonal recall 86.47% <= 90.00% (n=2431)",
+    "Heavy/C/L2 support 61 < 100",
+    "Heavy/C accuracy 93.51% <= 94.00%",
+    "Small/K L0 false-positive rate 0.692% > 0.500%"
+  ],
+  "artifact_identity": {
+    "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42",
+    "experiment_id": "A31_dual_target_with_terminal_physics",
+    "seed": 42,
+    "rows": 29476,
+    "unique_root_families": 29476,
+    "predictions_sha256": "50d3aeb87d9d94d117ce66372649bcbf802a551bbad3eb38428544a38ef32c3a",
+    "test_metrics_sha256": "3f565f3997e1fa3911a2b4194c41f85fb7e10c8550756789e17ed4b590a0b2c4",
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "model_sha256": "a051a931d4d623943239bb8d0d891ae2516ee98cdba18c6c59e2f8f666d6ba11"
+  }
+}

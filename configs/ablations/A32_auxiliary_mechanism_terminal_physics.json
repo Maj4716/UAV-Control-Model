@@ -1,0 +1,27 @@
+{
+  "experiment_id": "A32_auxiliary_mechanism_terminal_physics",
+  "description": "保留直接综合毁伤主头，同时用破片和冲击波序数概率作为训练期辅助监督；联合 terminal_geometry_v2 与硬等级目标，避免固定 OR 融合累积两个机制头的估计误差。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true,
+    "use_mechanism_supervision": true
+  },
+  "model": {
+    "use_mechanism_decomposition": false,
+    "use_mechanism_auxiliary_heads": true
+  },
+  "loss": {
+    "hard_level_classification_weight": 0.5,
+    "mechanism_auxiliary_weight": 0.2,
+    "mechanism_class_distribution_weight": 0.25
+  },
+  "ablation": {
+    "components": [
+      "direct_combined_damage_head",
+      "auxiliary_fragment_shock_heads",
+      "dual_target_hard_level_nll",
+      "terminal_geometry_v2_features"
+    ],
+    "note": "The deployed forward path remains a direct combined-damage predictor. Mechanism heads are training-only auxiliary tasks and never consume realized hits, penetration outcomes, component damage, target aim points or sampling provenance."
+  }
+}

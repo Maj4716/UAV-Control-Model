@@ -1,0 +1,13 @@
+{
+  "experiment_id": "A13_with_label_confidence",
+  "description": "置信度消融：在改进A0的其他配置完全不变时，重新启用历史MC标准误置信度乘子，用于检验其对稀有正例召回、概率校准和误报的影响。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "ablation": {
+    "components": [
+      "label_confidence_weighting"
+    ],
+    "note": "Single-variable reverse ablation: restore MC standard-error confidence weighting."
+  }
+}

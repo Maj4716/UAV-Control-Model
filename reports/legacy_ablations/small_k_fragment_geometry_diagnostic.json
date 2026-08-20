@@ -1,0 +1,31 @@
+{
+  "schema": "stage0_small_k_fragment_geometry_probe_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "train_rows": 60225,
+  "validation_rows": 7409,
+  "validation_positive_rows": 266,
+  "results": {
+    "terminal_geometry_v2": {
+      "feature_count": 194,
+      "full_auc": 0.9748157668425578,
+      "standardized_partial_auc_at_fpr_0p005": 0.6370712343041096,
+      "recall_at_fpr_0p005": {
+        "recall": 0.38721804511278196,
+        "false_positive_rate": 0.004899902001959961,
+        "threshold": 0.48819013661634947
+      }
+    },
+    "terminal_geometry_v2_plus_fuel_penetration": {
+      "feature_count": 204,
+      "full_auc": 0.9761662661483613,
+      "standardized_partial_auc_at_fpr_0p005": 0.6350662618722299,
+      "recall_at_fpr_0p005": {
+        "recall": 0.38721804511278196,
+        "false_positive_rate": 0.004899902001959961,
+        "threshold": 0.4765334506247587
+      }
+    }
+  }
+}

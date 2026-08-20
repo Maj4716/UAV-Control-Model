@@ -1,0 +1,205 @@
+{
+  "experiment_id": "A19_bounded_class1_floor_calibration",
+  "description": "复用A13权重，在验证集执行受准确率预算约束的精确L1阈值校准：仅当单元三分类准确率下降不超过0.5个百分点时才优先满足85%召回。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true,
+    "label_uncertainty_scale": 0.1,
+    "label_confidence_floor": 0.25,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones",
+    "k_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "m_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "c_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "residual_adapter_cells": [],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "residual_adapter_frequencies": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "residual_adapter_max_logit": 2.0
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25,
+    "middle_class_distribution_multiplier": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "entry_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "conditional_l1_l2_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ranking_margin": 0.5,
+    "hard_negative_fraction": 0.1
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "training": {
+    "epochs": 45,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "minimum_selection_epochs": 32,
+    "selection_patience": 10,
+    "freeze_base_model": false,
+    "freeze_criterion_uncertainty": false,
+    "include_initial_candidate": true
+  },
+  "ablation": {
+    "components": [
+      "validation_only_bounded_exact_class1_recall_floor_calibration"
+    ],
+    "note": "A13 weights remain byte-identical; validation calibration has a per-cell 0.5 percentage-point accuracy-loss budget."
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "resolved": {
+    "seed": 44,
+    "data": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed44"
+  }
+}

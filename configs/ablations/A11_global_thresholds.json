@@ -1,0 +1,14 @@
+{
+  "experiment_id": "A11_global_thresholds",
+  "description": "评估阶段忽略分弹型阈值，仅使用全局8头阈值，检验分弹型阈值校准的收益。",
+  "calibration": {
+    "threshold_strategy": "global"
+  },
+  "execution": {
+    "reuse_train_from": "A0_full"
+  },
+  "ablation": {
+    "components": ["per_munition_thresholds"],
+    "note": "Training still saves all thresholds; evaluation ignores per-munition entries."
+  }
+}

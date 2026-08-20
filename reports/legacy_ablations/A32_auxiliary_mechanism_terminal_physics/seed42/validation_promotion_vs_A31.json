@@ -1,0 +1,49 @@
+{
+  "schema": "stage0_nn_validation_promotion_v2",
+  "candidate": "A32_auxiliary_mechanism_terminal_physics_vs_A31",
+  "status": "FAIL",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_average_accuracy_drop_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_weak_objectives": 3,
+    "minimum_objective_improvement": 0.002,
+    "maximum_objective_degradation": 0.003,
+    "minimum_mean_objective_delta": 0.0005,
+    "gate_failure_count_may_increase": false
+  },
+  "metrics": {
+    "average_accuracy_delta_percentage_points": -0.09725689888000488,
+    "baseline_gate_failures": 8,
+    "candidate_gate_failures": 8,
+    "small_k0_false_positive_percent": 0.4899901803582907,
+    "global_c0_false_positive_percent": 2.314525842666626,
+    "objective_deltas": {
+      "Small/K": -0.01933400192304824,
+      "Med-LM/K": -0.005704758554291867,
+      "Med-RD/K": 0.0025613016957907186,
+      "Heavy/K": 0.0013310911579516027,
+      "Small/C": 0.006319364115634829,
+      "Med-LM/C": -0.014538168428965714,
+      "Med-RD/C": -0.0030891691052530312,
+      "Med-RD/M_L1_vs_L2": -0.0020669765327820944
+    },
+    "mean_objective_delta": -0.004315164696870474,
+    "improved_objectives": [
+      "Med-RD/K",
+      "Small/C"
+    ],
+    "degraded_objectives": [
+      "Small/K",
+      "Med-LM/K",
+      "Med-LM/C",
+      "Med-RD/C"
+    ]
+  },
+  "failures": [
+    "fewer than three weak-cell ranking objectives improved by 0.002",
+    "at least one weak-cell ranking objective degraded by over 0.003",
+    "mean weak-cell ranking improvement is below 0.0005"
+  ]
+}

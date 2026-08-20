@@ -1,0 +1,72 @@
+{
+  "experiment_id": "A35_independent_component_tree_fusion",
+  "description": "冻结并复用A31直接任务代理，使用独立弹型专家学习经校准的部件破片/冲击波概率，再以A34验证诊断预注册的稀疏凸融合矩阵将可微毁伤树信息注入弱任务头。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true,
+    "use_mechanism_supervision": false,
+    "use_component_supervision": true
+  },
+  "model": {
+    "use_mechanism_decomposition": false,
+    "use_mechanism_auxiliary_heads": false,
+    "use_component_auxiliary_heads": true,
+    "component_branch_mode": "independent_experts",
+    "component_branch_munition_emb_dim": 16,
+    "component_tree_fusion_alpha": [
+      [
+        [0.15, 0.0],
+        [0.0, 0.0],
+        [0.0, 0.0],
+        [0.525, 0.0]
+      ],
+      [
+        [0.45, 0.0],
+        [0.0, 0.0],
+        [0.0, 0.0],
+        [0.65, 0.0]
+      ],
+      [
+        [0.375, 0.0],
+        [0.0, 0.25],
+        [0.0, 0.0],
+        [0.525, 0.0]
+      ],
+      [
+        [0.525, 0.0],
+        [0.0, 0.0],
+        [0.0, 0.0],
+        [0.0, 0.0]
+      ]
+    ]
+  },
+  "loss": {
+    "hard_level_classification_weight": 0.5,
+    "component_auxiliary_weight": 1.0,
+    "component_rule_consistency_weight": 0.5,
+    "component_distribution_weight": 0.1,
+    "component_use_positive_weight": false
+  },
+  "training": {
+    "initial_checkpoint": "output/experiments/A31_dual_target_with_terminal_physics/seed{seed}/output/models/best_model.pth",
+    "initial_manifest": "output/experiments/A31_dual_target_with_terminal_physics/seed{seed}/output/models/model_manifest.json",
+    "freeze_base_model": true,
+    "freeze_criterion_uncertainty": true,
+    "epochs": 45,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "minimum_selection_epochs": 32,
+    "selection_patience": 10,
+    "include_initial_candidate": true
+  },
+  "ablation": {
+    "components": [
+      "frozen_A31_direct_surrogate",
+      "independent_munition_specific_component_experts",
+      "proper_component_probability_scoring",
+      "differentiable_damage_tree_fusion",
+      "preregistered_sparse_weak_head_fusion"
+    ],
+    "note": "Fusion alpha was fixed before A35 training from the sealed A31+A34 validation-only complementarity analysis. Test labels remain sealed. The A31 direct path and scaler are SHA-verified and frozen."
+  }
+}

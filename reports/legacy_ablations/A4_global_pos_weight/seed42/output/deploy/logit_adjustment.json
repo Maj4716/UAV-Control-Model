@@ -1,0 +1,48 @@
+{
+  "K1_prob": {
+    "pi_train": 0.050063333333333335,
+    "pi_true": 0.03,
+    "log_adjust": 0.5120914888872244
+  },
+  "K2_prob": {
+    "pi_train": 0.0051066666666666665,
+    "pi_true": 0.015,
+    "log_adjust": -1.0775033254578745
+  },
+  "M1_prob": {
+    "pi_train": 0.8207533333333333,
+    "pi_true": 0.45,
+    "log_adjust": 0.6009750349351124
+  },
+  "M2_prob": {
+    "pi_train": 0.75178,
+    "pi_true": 0.18,
+    "log_adjust": 1.429486877066107
+  },
+  "F1_prob": {
+    "pi_train": 0.8253833333333334,
+    "pi_true": 0.15,
+    "log_adjust": 1.7052126307883302
+  },
+  "F2_prob": {
+    "pi_train": 0.21632333333333334,
+    "pi_true": 0.04,
+    "log_adjust": 1.6878947478921584
+  },
+  "C1_prob": {
+    "pi_train": 0.16512,
+    "pi_true": 0.04,
+    "log_adjust": 1.4177930281792614
+  },
+  "C2_prob": {
+    "pi_train": 0.030793333333333332,
+    "pi_true": 0.012,
+    "log_adjust": 0.9423915665463491
+  },
+  "__meta__": {
+    "valid_threshold": 0.5,
+    "n_samples": 300000,
+    "usage": "推理时: logit_corrected = logit_train - log_adjust",
+    "reference": "Menon et al. 2020, Long-Tail Learning via Logit Adjustment"
+  }
+}

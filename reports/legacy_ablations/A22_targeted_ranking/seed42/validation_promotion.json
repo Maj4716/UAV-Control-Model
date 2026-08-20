@@ -1,0 +1,31 @@
+{
+  "schema": "stage0_nn_a22_validation_promotion_v1",
+  "status": "FAIL",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_average_accuracy_drop_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_ranking_objectives": 2,
+    "minimum_objective_improvement": 0.002,
+    "maximum_objective_degradation": 0.003,
+    "gate_failure_count_may_increase": false
+  },
+  "metrics": {
+    "average_accuracy_delta_percentage_points": -0.6071984767913818,
+    "small_k_partial_auc_delta": 0.0032559697045078106,
+    "mean_c_partial_auc_delta": -0.009408343465959979,
+    "med_rd_m_conditional_auc_delta": -0.005499537365200258,
+    "baseline_gate_failures": 8,
+    "candidate_gate_failures": 9,
+    "small_k0_false_positive_percent": 0.46199075877666473,
+    "global_c0_false_positive_percent": 2.4057622998952866
+  },
+  "improved_ranking_objectives": 1,
+  "failures": [
+    "validation average accuracy degraded by more than 0.10pp",
+    "strict validation gate failure count increased",
+    "fewer than two targeted ranking objectives improved by 0.002",
+    "at least one targeted ranking objective degraded by over 0.003"
+  ]
+}

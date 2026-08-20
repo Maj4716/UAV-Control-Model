@@ -1,0 +1,19 @@
+{
+  "experiment_id": "A15_selective_confidence",
+  "description": "单变量候选：恢复MC置信度，但仅对Small×K绕过置信度乘子；其余单元保持A13的完整置信度。用于检验全局置信度收益与Small×K潜在损害能否解耦。",
+  "data": {
+    "use_label_uncertainty": true,
+    "label_confidence_strength_by_task_munition": [
+      [0.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.0, 1.0, 1.0, 1.0]
+    ]
+  },
+  "ablation": {
+    "components": [
+      "selective_label_confidence"
+    ],
+    "note": "Relative to A13, only Small×K changes from full MC confidence to confidence bypass."
+  }
+}

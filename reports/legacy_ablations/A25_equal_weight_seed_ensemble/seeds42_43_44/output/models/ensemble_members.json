@@ -1,0 +1,43 @@
+{
+  "schema": "stage0_nn_probability_ensemble_v1",
+  "experiment_id": "A25_equal_weight_seed_ensemble",
+  "aggregation": "weighted_arithmetic_mean_of_probabilities",
+  "members": [
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed42\\output\\models\\best_model.pth",
+      "model_sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed42\\output\\models\\model_manifest.json",
+      "manifest_sha256": "e3df1a1e1157e3a809dc45a9917cfc78e115dfc5cc9522adbd1357f5917d7529",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed42\\recalibration_report.json",
+      "validation_report_sha256": "e60955268b46521fed48958b78a38325595128de56cd3eeb96f2f7f7e4e248b4"
+    },
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 43,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed43\\output\\models\\best_model.pth",
+      "model_sha256": "784b86bd9510b0d5038fa628bbeb07c0549a854587a772dfaa4a3a5ed5513d32",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed43\\output\\models\\model_manifest.json",
+      "manifest_sha256": "6e38c7abc37ff1b196b711db8b054b9e5484c014876f7cfd7db9ddf260a25f8f",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed43\\recalibration_report.json",
+      "validation_report_sha256": "0dbde2a5b430013fa9aee6fde30a0482b73b9202d8fca91178f82a37f9a7319e"
+    },
+    {
+      "experiment_id": "A19_bounded_class1_floor_calibration",
+      "seed": 44,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed44\\output\\models\\best_model.pth",
+      "model_sha256": "4bde279878bcfff805b6f81556d2cf58006387c65981a466b965f9b9a2890335",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed44\\output\\models\\model_manifest.json",
+      "manifest_sha256": "855a7c23c9c97ad1d4ebc0bac6139d7dc8203335633fbd5a7dc5efcb2b68e441",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed44\\recalibration_report.json",
+      "validation_report_sha256": "3a873241aaba326b52537ba1631f0da34bf4bdf4dfa4b6cd325d74baaee07cbc"
+    }
+  ],
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "scaler_sha256": "c27bec9e065d92f617f13a39c4698eba87370c38740cc00b8abbb8b1a7f65c75",
+  "test_labels_used": false
+}

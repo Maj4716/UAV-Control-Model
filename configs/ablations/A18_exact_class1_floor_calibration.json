@@ -1,0 +1,22 @@
+{
+  "experiment_id": "A18_exact_class1_floor_calibration",
+  "description": "复用A13权重，仅在验证集重新校准阈值：若不违反既有误报上限且85%精确L1召回可达，则优先选择达到该召回下限的阈值；不可达时保留最优安全阈值。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": null
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "ablation": {
+    "components": [
+      "validation_only_exact_class1_recall_floor_calibration"
+    ],
+    "note": "No test labels are used for calibration and model weights remain byte-identical to A13."
+  }
+}

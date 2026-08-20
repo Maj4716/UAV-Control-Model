@@ -1,0 +1,43 @@
+{
+  "experiment_id": "A9_no_focal_loss",
+  "description": "关闭focal调制，退化为加权BCE，检验难样本聚焦机制对稀有毁伤等级的作用。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": true,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": true,
+    "use_class1_margin": true,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "focal_loss"
+    ],
+    "note": "Implemented by setting gamma=0."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A9_no_focal_loss\\seed42"
+  }
+}

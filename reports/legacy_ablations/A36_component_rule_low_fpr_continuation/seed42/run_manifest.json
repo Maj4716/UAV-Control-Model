@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A36_component_rule_low_fpr_continuation",
+  "description": "从已通过相对晋级的A35组件专家继续训练：冻结A31直接代理，仅对可微组件树施加分弹型低假阳性入口排序和L1/L2条件排序，并采用A35验证诊断预注册的稀疏融合矩阵。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A36_component_rule_low_fpr_continuation.json",
+  "config_sha256": "365d3c6322acb17c53d950e0dbeee44eade8695a84137c0b5c6d5ab23f85704e",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A36_component_rule_low_fpr_continuation\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "ef8c66fd959a9109dcf437801f67c5727704ed3946eb614c1733d971493572c7",
+    "nn_dataset.py": "f8f5f83036206cabc3b74f7f19e527826989ac341de9df2f9b2ace6f1bce882a",
+    "nn_feature_engineering.py": "2b202da47428dc786ed3798d9773ad4e18880d0a56fecd33f2e2254632afddc1",
+    "nn_model.py": "24c531507cf922d6b089e9eda72f385b92754de5f03c23fc7841c9bf16047590",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "b9456192bcea6f7b9669b5e48c520e5d5c14ce49752d6715777df3f44a6bf24a",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

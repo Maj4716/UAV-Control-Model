@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A34_component_physics_auxiliary",
+  "description": "保持A31的可部署直接综合毁伤主头，增加51个毁伤树关键部件的破片/冲击波MC均值辅助监督，并用低权重可微毁伤树一致性约束共享表征。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A34_component_physics_auxiliary.json",
+  "config_sha256": "6886fedd5835fd76a330259777155b5533cdda51f577c5ad8e7e5dc9d865def3",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A34_component_physics_auxiliary\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "b4f2eca944968a0b18ba3bf56bad188c61c3467f4df35332575fa37e20168ea6",
+    "nn_dataset.py": "f8f5f83036206cabc3b74f7f19e527826989ac341de9df2f9b2ace6f1bce882a",
+    "nn_feature_engineering.py": "2b202da47428dc786ed3798d9773ad4e18880d0a56fecd33f2e2254632afddc1",
+    "nn_model.py": "7fb00d14df4119ad355318937aeb6eb4b9df6c60e6516d135cb1aa95097f472b",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "f344d20f17167994464ffbef651041b3b4d99fffae4a89dda76606ab9346eeaf",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

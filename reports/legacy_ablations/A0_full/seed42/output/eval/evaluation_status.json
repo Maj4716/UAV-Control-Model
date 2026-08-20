@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A0_full",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A0_full\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "e0c5bda80d8a5e077e54885c7f13df1a39221a63ff24d8470068d82ec66f1e66",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A0_full\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "4f082bca1d80b77bce2e0731ae1b66e9dc8207cd99ee7e8c974cccd8b402dea7",
+  "performance_gate_passed": false
+}

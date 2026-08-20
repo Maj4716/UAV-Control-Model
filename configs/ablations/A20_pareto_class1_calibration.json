@@ -1,0 +1,22 @@
+{
+  "experiment_id": "A20_pareto_class1_calibration",
+  "description": "复用A13权重的Pareto阈值校准：验证集精确L1召回目标87%，每单元三分类准确率下降预算1个百分点，用泛化余量争取低代价减少失败单元。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.87,
+    "maximum_class1_floor_accuracy_drop": 0.01
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "ablation": {
+    "components": [
+      "validation_only_pareto_exact_class1_calibration"
+    ],
+    "note": "A13 weights remain byte-identical; only validation-calibrated thresholds differ."
+  }
+}

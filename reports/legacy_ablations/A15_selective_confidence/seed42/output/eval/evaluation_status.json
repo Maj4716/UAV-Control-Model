@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A15_selective_confidence",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A15_selective_confidence\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "1da8b6f61fa71d6636339a39a6de3356cc47cf4d8b113b548bc6ff06586eeb55",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A15_selective_confidence\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "23cf48a7027987afbe4b0583db96020153870331354e3477029ec5179d979361",
+  "performance_gate_passed": false
+}

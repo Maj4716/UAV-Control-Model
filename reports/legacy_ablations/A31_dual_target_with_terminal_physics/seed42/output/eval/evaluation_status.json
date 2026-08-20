@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A31_dual_target_with_terminal_physics",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "3f565f3997e1fa3911a2b4194c41f85fb7e10c8550756789e17ed4b590a0b2c4",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "bf665d0022402da92706ba955acebba34a9f6298bdf77a60affd257a908d235f",
+  "performance_gate_passed": false
+}

@@ -1,0 +1,55 @@
+{
+  "K_ge1_prob": {
+    "pi_train": 0.18544002788821473,
+    "pi_true": 0.04455000000000009,
+    "log_adjust": 1.4261193760640336
+  },
+  "K_ge2_prob": {
+    "pi_train": 0.0720777549987135,
+    "pi_true": 0.015,
+    "log_adjust": 1.569695265746033
+  },
+  "M_ge1_prob": {
+    "pi_train": 0.8632771972344188,
+    "pi_true": 0.5489999999999999,
+    "log_adjust": 0.4526373998934931
+  },
+  "M_ge2_prob": {
+    "pi_train": 0.793776612079913,
+    "pi_true": 0.18,
+    "log_adjust": 1.4838452257844843
+  },
+  "F_ge1_prob": {
+    "pi_train": 0.8169420904540965,
+    "pi_true": 0.18400000000000005,
+    "log_adjust": 1.4906324540217202
+  },
+  "F_ge2_prob": {
+    "pi_train": 0.07832770312331405,
+    "pi_true": 0.04,
+    "log_adjust": 0.6720218937574571
+  },
+  "C_ge1_prob": {
+    "pi_train": 0.30101011777790687,
+    "pi_true": 0.04,
+    "log_adjust": 2.018264423950095
+  },
+  "C_ge2_prob": {
+    "pi_train": 0.004739336492890996,
+    "pi_true": 0.012,
+    "log_adjust": -0.9290095042819297
+  },
+  "__meta__": {
+    "schema": "ordinal_exceedance_v2",
+    "enabled": false,
+    "disabled_reason": "Thresholds must be calibrated in the same shifted-logit space before enabling.",
+    "valid_threshold": 0.5,
+    "n_train_samples": 240962,
+    "n_dataset_samples": 300000,
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "input_prior_semantics": "raw_rule_events",
+    "output_prior_semantics": "ordinal_exceedance",
+    "usage": "当前禁用；联合校准后方可执行 logit_corrected = logit_train - log_adjust",
+    "reference": "Menon et al. 2020, Long-Tail Learning via Logit Adjustment"
+  }
+}

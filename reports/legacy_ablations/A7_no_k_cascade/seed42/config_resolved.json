@@ -1,0 +1,43 @@
+{
+  "experiment_id": "A7_no_k_cascade",
+  "description": "取消K分支概率向M/F/C分支级联，检验核心毁伤先验对任务间条件推断的作用。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": true,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": false,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": true,
+    "use_ordinal_penalty": true,
+    "use_class1_margin": true,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "k_probability_cascade"
+    ],
+    "note": "M/F/C branches consume only the head representation."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A7_no_k_cascade\\seed42"
+  }
+}

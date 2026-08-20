@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A0_full",
+  "description": "改进基线：13维可观测终端状态、完整MC均值软标签（不使用类别相关的MC置信度乘子）、累计BCE加显式三分类分布损失、普通无放回shuffle、等权正类BCE、分弹型专家头、物理跳连、停止梯度的K级联、单调序数输出和受误报约束的分弹型阈值。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A0_full.json",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A0_full\\seed42"
+}

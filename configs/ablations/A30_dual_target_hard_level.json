@@ -1,0 +1,16 @@
+{
+  "experiment_id": "A30_dual_target_hard_level",
+  "description": "在A13概率监督不变的前提下，增加阈值后L0/L1/L2硬等级NLL。连续MC均值仍用于概率校准，硬等级仅监督最终分类语义，用于隔离检验软物理概率与硬等级目标错位。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "loss": {
+    "hard_level_classification_weight": 0.5
+  },
+  "ablation": {
+    "components": [
+      "dual_target_hard_level_nll"
+    ],
+    "note": "Single-variable validation-only candidate relative to A13; test remains sealed until the preregistered validation promotion gate passes."
+  }
+}

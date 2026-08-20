@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A3_no_balanced_sampler",
+  "description": "取消BalancedMunitionBatchSampler，训练集采用普通shuffle，检验分弹型等曝光采样对弱格样本的作用。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\new\\abli_exp\\configs\\A3_no_balanced_sampler.json",
+  "run_dir": "D:\\Desktop\\new\\abli_exp\\results\\A3_no_balanced_sampler\\seed42"
+}

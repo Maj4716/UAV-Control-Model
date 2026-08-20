@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A10_no_ordinal_margin",
+  "description": "同时关闭序数保序惩罚与class-1间隔约束，检验毁伤等级有序结构约束的贡献。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\new\\abli_exp\\configs\\A10_no_ordinal_margin.json",
+  "run_dir": "D:\\Desktop\\new\\abli_exp\\results\\A10_no_ordinal_margin\\seed42"
+}

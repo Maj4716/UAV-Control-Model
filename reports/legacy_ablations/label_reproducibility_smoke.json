@@ -1,0 +1,752 @@
+{
+  "schema": "stage0_label_reproducibility_audit_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "dataset": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "selection_seed": 20260728,
+  "independent_seed_namespace": "label-reproducibility-v1",
+  "original_replicate_range": [
+    3,
+    9
+  ],
+  "audit_replicates": 3,
+  "unique_rows": 44,
+  "requested_strata": {
+    "Small/K/L0": {
+      "available": 7143,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Small/K/L1": {
+      "available": 266,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Small/C/L0": {
+      "available": 6743,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Small/C/L1": {
+      "available": 666,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/K/L0": {
+      "available": 6253,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/K/L1": {
+      "available": 766,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/K/L2": {
+      "available": 305,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/C/L0": {
+      "available": 5380,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/C/L1": {
+      "available": 1941,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-LM/C/L2": {
+      "available": 3,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/K/L0": {
+      "available": 5237,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/K/L1": {
+      "available": 1295,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/K/L2": {
+      "available": 883,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/M/L0": {
+      "available": 229,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/M/L1": {
+      "available": 212,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/M/L2": {
+      "available": 6974,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/C/L0": {
+      "available": 3788,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/C/L1": {
+      "available": 3601,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Med-RD/C/L2": {
+      "available": 26,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Heavy/K/L0": {
+      "available": 5625,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Heavy/K/L1": {
+      "available": 864,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    },
+    "Heavy/K/L2": {
+      "available": 925,
+      "requested": 2,
+      "selected_before_deduplication": 2
+    }
+  },
+  "strata": {
+    "Small/K/L0": {
+      "support": 6,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.047678731086179364,
+      "mean_absolute_ge2_probability_change": 0.00221497394489783,
+      "new_level_histogram": [
+        6,
+        0,
+        0
+      ]
+    },
+    "Small/K/L1": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.13349636512766466,
+      "mean_absolute_ge2_probability_change": 0.006647950347045295,
+      "new_level_histogram": [
+        0,
+        2,
+        0
+      ]
+    },
+    "Small/C/L0": {
+      "support": 6,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.07469479213091587,
+      "mean_absolute_ge2_probability_change": 1.1629094667224202e-07,
+      "new_level_histogram": [
+        6,
+        0,
+        0
+      ]
+    },
+    "Small/C/L1": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.053111706145071325,
+      "mean_absolute_ge2_probability_change": 0.00014729213237125267,
+      "new_level_histogram": [
+        0,
+        2,
+        0
+      ]
+    },
+    "Med-LM/K/L0": {
+      "support": 8,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.06062171672657135,
+      "mean_absolute_ge2_probability_change": 0.025590059833223704,
+      "new_level_histogram": [
+        8,
+        0,
+        0
+      ]
+    },
+    "Med-LM/K/L1": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.006446099710287312,
+      "mean_absolute_ge2_probability_change": 0.0,
+      "new_level_histogram": [
+        0,
+        2,
+        0
+      ]
+    },
+    "Med-LM/K/L2": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.10554083734266878,
+      "mean_absolute_ge2_probability_change": 0.10582294908038431,
+      "new_level_histogram": [
+        0,
+        0,
+        2
+      ]
+    },
+    "Med-LM/C/L0": {
+      "support": 5,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.07107400130000267,
+      "mean_absolute_ge2_probability_change": 2.2933821481674986e-06,
+      "new_level_histogram": [
+        5,
+        0,
+        0
+      ]
+    },
+    "Med-LM/C/L1": {
+      "support": 5,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.1287114535246437,
+      "mean_absolute_ge2_probability_change": 0.0009022537366852759,
+      "new_level_histogram": [
+        0,
+        5,
+        0
+      ]
+    },
+    "Med-LM/C/L2": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 8.004474218892277e-06,
+      "mean_absolute_ge2_probability_change": 0.05975883695354395,
+      "new_level_histogram": [
+        0,
+        0,
+        2
+      ]
+    },
+    "Med-RD/K/L0": {
+      "support": 13,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          13,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.023452900640577798,
+      "mean_absolute_ge2_probability_change": 0.02197857282686041,
+      "new_level_histogram": [
+        13,
+        0,
+        0
+      ]
+    },
+    "Med-RD/K/L1": {
+      "support": 3,
+      "exact_level_agreement_percent": 66.66666666666666,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.0891137425736982,
+      "mean_absolute_ge2_probability_change": 0.057628105267505704,
+      "new_level_histogram": [
+        0,
+        2,
+        1
+      ]
+    },
+    "Med-RD/K/L2": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.04704958995763181,
+      "mean_absolute_ge2_probability_change": 0.04717049464295303,
+      "new_level_histogram": [
+        0,
+        0,
+        2
+      ]
+    },
+    "Med-RD/M/L0": {
+      "support": 3,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.0021747700211073445,
+      "mean_absolute_ge2_probability_change": 0.0019516541580357344,
+      "new_level_histogram": [
+        3,
+        0,
+        0
+      ]
+    },
+    "Med-RD/M/L1": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.002077090160142847,
+      "mean_absolute_ge2_probability_change": 0.009315592851844953,
+      "new_level_histogram": [
+        0,
+        2,
+        0
+      ]
+    },
+    "Med-RD/M/L2": {
+      "support": 13,
+      "exact_level_agreement_percent": 92.3076923076923,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          12
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.0014299359825342523,
+      "mean_absolute_ge2_probability_change": 0.017848256936319726,
+      "new_level_histogram": [
+        0,
+        1,
+        12
+      ]
+    },
+    "Med-RD/C/L0": {
+      "support": 12,
+      "exact_level_agreement_percent": 91.66666666666666,
+      "transition_counts_rows_old_columns_new": [
+        [
+          11,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.03843153308325207,
+      "mean_absolute_ge2_probability_change": 1.6267089713584328e-05,
+      "new_level_histogram": [
+        11,
+        1,
+        0
+      ]
+    },
+    "Med-RD/C/L1": {
+      "support": 4,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.05319291225619241,
+      "mean_absolute_ge2_probability_change": 0.00018395031433414132,
+      "new_level_histogram": [
+        0,
+        4,
+        0
+      ]
+    },
+    "Med-RD/C/L2": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 4.282180903031341e-05,
+      "mean_absolute_ge2_probability_change": 0.06892176399232253,
+      "new_level_histogram": [
+        0,
+        0,
+        2
+      ]
+    },
+    "Heavy/K/L0": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.0,
+      "mean_absolute_ge2_probability_change": 0.0,
+      "new_level_histogram": [
+        2,
+        0,
+        0
+      ]
+    },
+    "Heavy/K/L1": {
+      "support": 2,
+      "exact_level_agreement_percent": 100.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.05713222639398341,
+      "mean_absolute_ge2_probability_change": 0.0,
+      "new_level_histogram": [
+        0,
+        2,
+        0
+      ]
+    },
+    "Heavy/K/L2": {
+      "support": 2,
+      "exact_level_agreement_percent": 50.0,
+      "transition_counts_rows_old_columns_new": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "mean_absolute_ge1_probability_change": 0.04496432495691183,
+      "mean_absolute_ge2_probability_change": 0.12288987340291166,
+      "new_level_histogram": [
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  "summary": {
+    "weak_l1_strata": 8,
+    "mean_weak_l1_exact_level_agreement_percent": 95.83333333333333,
+    "minimum_weak_l1_exact_level_agreement_percent": 66.66666666666666,
+    "maximum_weak_l1_exact_level_agreement_percent": 100.0
+  }
+}

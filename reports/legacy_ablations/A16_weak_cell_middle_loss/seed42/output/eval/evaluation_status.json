@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A16_weak_cell_middle_loss",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A16_weak_cell_middle_loss\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "31faabee894fac34011ea022ccea2b247b989d8078b97c6be23b6148325736e6",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A16_weak_cell_middle_loss\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "465bc9e7ea385d9ea54037e0edaf47dc54e1ba82141ee38dd6c7b3f3a1a25f66",
+  "performance_gate_passed": false
+}

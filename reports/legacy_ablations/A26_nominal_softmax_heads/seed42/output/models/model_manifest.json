@@ -1,0 +1,361 @@
+{
+  "schema": "stage0_nn_artifact_v1",
+  "created_unix": 1785082721,
+  "python_version": "3.9.23",
+  "seed": 42,
+  "data_contract": {
+    "contract_schema": "stage0_nn_data_v1",
+    "dataset_path": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "dataset_rows": 300000,
+    "dataset_schema": "stage0_lineage_v2",
+    "frame_convention": "stage0_ned_frd_v1",
+    "feature_names": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity"
+    ],
+    "feature_count": 13,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "split_counts": {
+      "train": 240962,
+      "val": 29562,
+      "test": 29476
+    },
+    "target_mode": "full_mc_mean",
+    "label_uncertainty_enabled": true,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "pos_weight_mode": "ones",
+    "balanced_sampler": false
+  },
+  "model_config": {
+    "in_dim": 13,
+    "num_munitions": 4,
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_parameterization": "nominal_softmax",
+    "residual_adapter_cells": [],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "residual_adapter_frequencies": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "residual_adapter_max_logit": 2.0,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ]
+  },
+  "training_config": {
+    "loss": {
+      "focal_gamma": 0.0,
+      "ordinal_penalty_weight": 0.0,
+      "class1_margin_weight": 0.0,
+      "cell_class1_alpha_enabled": false,
+      "class_distribution_weight": 0.25,
+      "class_distribution_loss_enabled": true,
+      "middle_class_distribution_multiplier": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "entry_ranking_weight": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "conditional_l1_l2_ranking_weight": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "ranking_margin": 0.5,
+      "hard_negative_fraction": 0.1
+    },
+    "epochs_requested": 45,
+    "smoke_test": false,
+    "optimization": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0005,
+      "minimum_selection_epochs": 32,
+      "selection_patience": 10,
+      "freeze_base_model": false,
+      "freeze_criterion_uncertainty": false,
+      "trainable_model_parameters": 1855344
+    },
+    "warm_start": null
+  },
+  "artifacts": {
+    "best_model.pth": {
+      "sha256": "6733be78089627306625c869ad6badae0b6321992e04f40740efb129e536a88a",
+      "size_bytes": 7468505
+    },
+    "best_thresholds.json": {
+      "sha256": "eaf35938ae35c10864349d11c5d7edc331a397f9e7713ccc242293a41c1a097d",
+      "size_bytes": 12788
+    },
+    "minmax_scaler.pkl": {
+      "sha256": "c27bec9e065d92f617f13a39c4698eba87370c38740cc00b8abbb8b1a7f65c75",
+      "size_bytes": 747
+    },
+    "minmax_scaler.json": {
+      "sha256": "72c54863d24ea9aed170e7aa091083d42ac4acafe84a0ebf3a69f0ddcd617217",
+      "size_bytes": 1411
+    }
+  }
+}

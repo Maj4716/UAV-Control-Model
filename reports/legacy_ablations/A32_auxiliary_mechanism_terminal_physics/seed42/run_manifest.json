@@ -1,0 +1,23 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A32_auxiliary_mechanism_terminal_physics",
+  "description": "保留直接综合毁伤主头，同时用破片和冲击波序数概率作为训练期辅助监督；联合 terminal_geometry_v2 与硬等级目标，避免固定 OR 融合累积两个机制头的估计误差。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A32_auxiliary_mechanism_terminal_physics.json",
+  "config_sha256": "4a76dc320476fb5dd6a8fb094109c10e2e203e0d4e265efbb3e773bb6f55d26e",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A32_auxiliary_mechanism_terminal_physics\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "2790bb39e3b3db99934235b30bfaacca90ab2f9f2f38062a7ff3cfa6c798661a",
+    "nn_dataset.py": "b38781837bf02dfec700f99bc32671de14e4087845f80528aee4351c3eeb20ec",
+    "nn_feature_engineering.py": "482a310be637d33d9492a4be5d0b5783aead41834defac7c24c970ac20b9c241",
+    "nn_model.py": "0166766dbb80d45c709ba360bf730ace397c5724dfbb59afc345444fe828e4d1",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "981610ed0510753f8d2ba764618000ace0932a6c110658316200f4a48d569bd0"
+  }
+}

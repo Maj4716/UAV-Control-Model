@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A18_exact_class1_floor_calibration",
+  "description": "复用A13权重，仅在验证集重新校准阈值：若不违反既有误报上限且85%精确L1召回可达，则优先选择达到该召回下限的阈值；不可达时保留最优安全阈值。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A18_exact_class1_floor_calibration.json",
+  "config_sha256": "03712f53d60e8a4d9437d698826a9d5680d9a6126b8452322d2abff57e06e2bc",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A18_exact_class1_floor_calibration\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "bf7b03dd117586dc8c426bb645fe28d1b6373bdc704939c586ca2a376e70ee80",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "b72eebd7144966840219e307b0599180690233920d2728bc49cebfa64fefe9b2",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "e6b0eeeec4bd78396a90ad4128eea208650af73dc5069592a4d098fd6da3c02b"
+  }
+}

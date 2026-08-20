@@ -1,0 +1,46 @@
+{
+  "experiment_id": "A11_global_thresholds",
+  "description": "评估阶段忽略分弹型阈值，仅使用全局8头阈值，检验分弹型阈值校准的收益。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": true,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": true,
+    "use_ordinal_penalty": true,
+    "use_class1_margin": true,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "global"
+  },
+  "ablation": {
+    "components": [
+      "per_munition_thresholds"
+    ],
+    "note": "Training still saves all thresholds; evaluation ignores per-munition entries."
+  },
+  "execution": {
+    "reuse_train_from": "A0_full"
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A11_global_thresholds\\seed42"
+  }
+}

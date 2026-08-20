@@ -1,0 +1,59 @@
+{
+  "threshold_strategy": "global",
+  "threshold_schema": "v5_cellwise_thresholds",
+  "overall_acc": {
+    "K": 98.07896131425544,
+    "M": 95.13116057233705,
+    "F": 95.74721780604133,
+    "C": 95.94263381028087
+  },
+  "avg_acc": 96.22499337572867,
+  "small_k1": {
+    "n": 44,
+    "precision": 66.07142857142857,
+    "recall": 84.0909090909091,
+    "f1": 74.0,
+    "k0_fp": 0.24614587381785205
+  },
+  "small_m": {
+    "acc": 91.13744686332603
+  },
+  "small_c1": {
+    "n": 253,
+    "recall": 89.32806324110672,
+    "c0_fp": 1.9088352936517365,
+    "small_c0_fp": 0.8388814913448734
+  },
+  "low_cls1_cells": [
+    {
+      "munition": "Med-RD",
+      "task": "C",
+      "n_pos": 1059,
+      "recall": 78.65911237016053
+    },
+    {
+      "munition": "Med-LM",
+      "task": "C",
+      "n_pos": 1069,
+      "recall": 81.19738072965387
+    },
+    {
+      "munition": "Med-RD",
+      "task": "M",
+      "n_pos": 486,
+      "recall": 83.33333333333334
+    },
+    {
+      "munition": "Heavy",
+      "task": "C",
+      "n_pos": 1596,
+      "recall": 83.45864661654136
+    },
+    {
+      "munition": "Med-LM",
+      "task": "K",
+      "n_pos": 428,
+      "recall": 84.57943925233646
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "stage0_ablation_run_status_v1",
+  "status": "COMPLETE",
+  "experiment_id": "A21_pareto_class1_calibration_1p5",
+  "seed": 42,
+  "phase": "complete",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A21_pareto_class1_calibration_1p5\\seed42"
+}

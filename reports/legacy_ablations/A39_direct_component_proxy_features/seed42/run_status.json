@@ -1,0 +1,10 @@
+{
+  "schema": "stage0_ablation_run_status_v1",
+  "status": "INVALID_TEST_CONTAMINATED",
+  "experiment_id": "A39_direct_component_proxy_features",
+  "seed": 42,
+  "phase": "test_evaluation_without_validation_promotion",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A39_direct_component_proxy_features\\seed42",
+  "formal_candidate_eligible": false,
+  "reason": "nn_eval_export.py read test labels before a validation-only promotion PASS. Test artifacts are retained for audit but must not be used for model selection or claims."
+}

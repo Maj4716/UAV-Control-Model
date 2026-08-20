@@ -1,0 +1,22 @@
+{
+  "experiment_id": "A19_bounded_class1_floor_calibration",
+  "description": "复用A13权重，在验证集执行受准确率预算约束的精确L1阈值校准：仅当单元三分类准确率下降不超过0.5个百分点时才优先满足85%召回。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "ablation": {
+    "components": [
+      "validation_only_bounded_exact_class1_recall_floor_calibration"
+    ],
+    "note": "A13 weights remain byte-identical; validation calibration has a per-cell 0.5 percentage-point accuracy-loss budget."
+  }
+}

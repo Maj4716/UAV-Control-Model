@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A3_balanced_sampler",
+  "description": "启用四弹型等曝光的无放回batch采样，检验其相对普通shuffle的作用。",
+  "data": {
+    "use_balanced_sampler": true
+  },
+  "ablation": {
+    "components": ["balanced_munition_batch_sampler"],
+    "note": "Sampling remains without replacement and no adaptive class boost is enabled."
+  }
+}

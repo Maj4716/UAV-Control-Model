@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A17_selective_confidence_weak_cell_loss",
+  "description": "下一轮候选基线：保留A13总体MC置信度收益，仅绕过Small×K置信度，并对弱单元精确L1三分类分布损失做不超过2倍的定向增强。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A17_selective_confidence_weak_cell_loss.json",
+  "config_sha256": "92d518e3b8b6d01e98cfefc54f1fcf7edf2722bc824eecc7932c1c7e7a62ad46",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A17_selective_confidence_weak_cell_loss\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "d49500edcd3eef721699c628bf81e8fa67ea0aecab9cc205ae3099fecb2cf8c8",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "b72eebd7144966840219e307b0599180690233920d2728bc49cebfa64fefe9b2",
+    "nn_eval_export.py": "31ae3d7ac3d8f5ae48b1ead08f926895605f7b4036ef59f65721b4516dc301fd",
+    "abli_exp\\run_ablations.py": "57603b1389fdf49aa32f7dc5964c0ab838511affd8d5d30eb56506b9cd521722"
+  }
+}

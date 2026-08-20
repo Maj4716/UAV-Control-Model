@@ -1,0 +1,123 @@
+{
+  "experiment_id": "A18_exact_class1_floor_calibration",
+  "description": "复用A13权重，仅在验证集重新校准阈值：若不违反既有误报上限且85%精确L1召回可达，则优先选择达到该召回下限的阈值；不可达时保留最优安全阈值。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true,
+    "label_uncertainty_scale": 0.1,
+    "label_confidence_floor": 0.25,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones",
+    "k_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "m_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "c_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25,
+    "middle_class_distribution_multiplier": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85
+  },
+  "ablation": {
+    "components": [
+      "validation_only_exact_class1_recall_floor_calibration"
+    ],
+    "note": "No test labels are used for calibration and model weights remain byte-identical to A13."
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A18_exact_class1_floor_calibration\\seed42"
+  }
+}

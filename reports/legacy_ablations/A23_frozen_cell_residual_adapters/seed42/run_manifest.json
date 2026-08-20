@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A23_frozen_cell_residual_adapters",
+  "description": "冻结A13主干，使用零初始化、多尺度终端几何残差专家只修正8个弱单元，避免A22观察到的共享表征负迁移。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A23_frozen_cell_residual_adapters.json",
+  "config_sha256": "f21e7baf3177689c633d49c218a468b7710a92f9179941f14e5d566c49a393f1",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A23_frozen_cell_residual_adapters\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "260815d9c98afdfef010d6b6fe16a135fd23b71838fb8c2844c1ce8b8f137f67",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "6c66f942035679bb311eaf684713c0ca6504c8e8b59d61171c2b76ed419244a9",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "52cdf55147ee436eb0b4dcf2263477ed17ab1ebc475ef86bc584738a1c39f797"
+  }
+}

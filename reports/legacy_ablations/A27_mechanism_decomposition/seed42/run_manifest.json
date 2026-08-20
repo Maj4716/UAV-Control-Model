@@ -1,0 +1,23 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A27_mechanism_decomposition",
+  "description": "在A13训练设定上增加破片/冲击波双专家及分机制MC均值辅助监督，最终毁伤概率严格按物理OR融合；保持13维终端可观测输入，以隔离检验机制分解本身。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A27_mechanism_decomposition.json",
+  "config_sha256": "621351567edf65a13ed8ef782011ea8bc819f88d09a2e2243c5f30aca85acb8b",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A27_mechanism_decomposition\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "87470521e30bbb6c599b328c8319bdbd428d195aaa78c8069124bff2581ace2c",
+    "nn_dataset.py": "49e19c9070335133ba6c8add98139db158a76790ec0a2ab35060094b0cc25708",
+    "nn_feature_engineering.py": "cdae795ae6fc1cacef854af0a6d7d4de63346c48393ec9cd5b959bef6a761142",
+    "nn_model.py": "e1da2f95bafe88b881a2605a4a7f6658378a354dfabdcf211a307fbb63df4a1d",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "981610ed0510753f8d2ba764618000ace0932a6c110658316200f4a48d569bd0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "experiment_id": "A21_pareto_class1_calibration_1p5",
+  "description": "复用A13权重的最终Pareto阈值候选：验证集精确L1召回目标87%，每单元三分类准确率下降预算1.5个百分点。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.87,
+    "maximum_class1_floor_accuracy_drop": 0.015
+  },
+  "execution": {
+    "reuse_train_from": "A13_with_label_confidence",
+    "recalibrate_thresholds": true
+  },
+  "ablation": {
+    "components": [
+      "validation_only_pareto_exact_class1_calibration_1p5"
+    ],
+    "note": "Final predeclared budget probe; do not continue tuning this budget against test outcomes."
+  }
+}

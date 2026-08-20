@@ -1,0 +1,14 @@
+{
+  "experiment_id": "A12_fixed_0_5_thresholds",
+  "description": "评估阶段强制所有8个阈值为0.5，检验阈值校准整体对部署性能的贡献。",
+  "calibration": {
+    "threshold_strategy": "fixed_0_5"
+  },
+  "execution": {
+    "reuse_train_from": "A0_full"
+  },
+  "ablation": {
+    "components": ["threshold_calibration"],
+    "note": "All L1/L2 decisions use fixed probability threshold 0.5."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "experiment_id": "A10_no_ordinal_margin",
+  "description": "同时关闭序数保序惩罚与class-1间隔约束，检验毁伤等级有序结构约束的贡献。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": true,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true
+  },
+  "loss": {
+    "use_focal_loss": true,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "ordinal_penalty",
+      "class1_margin"
+    ],
+    "note": "BCE, task weighting, and focal settings are kept."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A10_no_ordinal_margin\\seed42"
+  }
+}

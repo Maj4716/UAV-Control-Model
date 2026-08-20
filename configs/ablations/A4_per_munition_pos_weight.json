@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A4_per_munition_pos_weight",
+  "description": "在等权BCE基线上启用per-munition x task x level正类权重，检验类别先验再平衡的净作用。",
+  "data": {
+    "pos_weight_mode": "per_munition"
+  },
+  "ablation": {
+    "components": ["per_munition_pos_weight"],
+    "note": "Criterion receives a 3D per-munition pos_weight matrix; all other balancing mechanisms remain disabled."
+  }
+}

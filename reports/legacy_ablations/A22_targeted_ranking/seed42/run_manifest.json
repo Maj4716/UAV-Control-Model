@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A22_targeted_ranking",
+  "description": "预注册的定向排序候选：对Small/K及安全受限C单元优化高分难负例排序，对Med-RD/M优化条件L1-vs-L2排序；其余A13配置保持不变。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A22_targeted_ranking.json",
+  "config_sha256": "4edbfbbdf2e878eccfda176374903689062f35cdb96d19f55cc490dee5339a15",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A22_targeted_ranking\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "493597c469d3cc51bba40804ed42d4ee0d87e7b93eec8fafb0d62ff008b2fe38",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "b72eebd7144966840219e307b0599180690233920d2728bc49cebfa64fefe9b2",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "f69fbf221647380ff0a5f9079d83b3c6cd6cc7397bd0fb67e6cb3e8bd5d69725"
+  }
+}

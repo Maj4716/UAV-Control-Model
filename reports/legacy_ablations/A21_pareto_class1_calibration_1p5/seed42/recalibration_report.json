@@ -1,0 +1,151 @@
+{
+  "schema": "stage0_nn_recalibration_v1",
+  "status": "COMPLETE",
+  "experiment_id": "A21_pareto_class1_calibration_1p5",
+  "seed": 42,
+  "device": "cuda",
+  "validation_rows": 29562,
+  "source_model_sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+  "source_threshold_sha256": "d315b217693efac7523441abbe062fa869784acbea59e875f27cf7d745bce035",
+  "new_threshold_sha256": "d74537bf11e99092b26c5ce7b85e31b25cd883d82e8a1d522069c3a72bf93d7a",
+  "threshold_schema": "v8_exact_l1_floor_constrained",
+  "minimum_exact_class1_recall": 0.87,
+  "maximum_class1_floor_accuracy_drop": 0.015,
+  "model_weights_unchanged": true,
+  "validation_average_3class_accuracy": 93.15590858459473,
+  "validation_class1_recall_by_cell": {
+    "Small": {
+      "K": {
+        "class1_support": 266,
+        "class1_recall_percent": 30.451128005981445
+      },
+      "M": {
+        "class1_support": 1088,
+        "class1_recall_percent": 87.04044342041016
+      },
+      "F": {
+        "class1_support": 3937,
+        "class1_recall_percent": 94.31039428710938
+      },
+      "C": {
+        "class1_support": 666,
+        "class1_recall_percent": 52.25225067138672
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "class1_support": 766,
+        "class1_recall_percent": 68.7989501953125
+      },
+      "M": {
+        "class1_support": 528,
+        "class1_recall_percent": 89.7727279663086
+      },
+      "F": {
+        "class1_support": 5903,
+        "class1_recall_percent": 98.62781524658203
+      },
+      "C": {
+        "class1_support": 1941,
+        "class1_recall_percent": 63.16331481933594
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "class1_support": 1295,
+        "class1_recall_percent": 78.06949615478516
+      },
+      "M": {
+        "class1_support": 212,
+        "class1_recall_percent": 56.132080078125
+      },
+      "F": {
+        "class1_support": 5932,
+        "class1_recall_percent": 96.96561431884766
+      },
+      "C": {
+        "class1_support": 3601,
+        "class1_recall_percent": 57.62287902832031
+      }
+    },
+    "Heavy": {
+      "K": {
+        "class1_support": 864,
+        "class1_recall_percent": 79.74536895751953
+      },
+      "M": {
+        "class1_support": 175,
+        "class1_recall_percent": 89.71427917480469
+      },
+      "F": {
+        "class1_support": 6239,
+        "class1_recall_percent": 98.99021911621094
+      },
+      "C": {
+        "class1_support": 2452,
+        "class1_recall_percent": 84.9918441772461
+      }
+    }
+  },
+  "validation_low_class1_cells": [
+    {
+      "task": "M",
+      "munition": "Med-RD",
+      "n_pos": 212,
+      "recall": 56.132080078125,
+      "floor": 85.0,
+      "deficit": 28.867919921875
+    },
+    {
+      "task": "C",
+      "munition": "Med-RD",
+      "n_pos": 3601,
+      "recall": 57.62287902832031,
+      "floor": 85.0,
+      "deficit": 27.377120971679688
+    },
+    {
+      "task": "C",
+      "munition": "Med-LM",
+      "n_pos": 1941,
+      "recall": 63.16331481933594,
+      "floor": 85.0,
+      "deficit": 21.836685180664062
+    },
+    {
+      "task": "K",
+      "munition": "Med-LM",
+      "n_pos": 766,
+      "recall": 68.7989501953125,
+      "floor": 85.0,
+      "deficit": 16.2010498046875
+    },
+    {
+      "task": "K",
+      "munition": "Med-RD",
+      "n_pos": 1295,
+      "recall": 78.06949615478516,
+      "floor": 85.0,
+      "deficit": 6.930503845214844
+    },
+    {
+      "task": "K",
+      "munition": "Heavy",
+      "n_pos": 864,
+      "recall": 79.74536895751953,
+      "floor": 85.0,
+      "deficit": 5.254631042480469
+    },
+    {
+      "task": "C",
+      "munition": "Heavy",
+      "n_pos": 2452,
+      "recall": 84.9918441772461,
+      "floor": 85.0,
+      "deficit": 0.00815582275390625
+    }
+  ],
+  "validation_small_k0_false_positive_percent": 0.46199075877666473,
+  "validation_global_c0_false_positive_percent": 2.3673469200730324,
+  "model_manifest": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A21_pareto_class1_calibration_1p5\\seed42\\output\\models\\model_manifest.json"
+}

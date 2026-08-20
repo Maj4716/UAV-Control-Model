@@ -1,0 +1,43 @@
+{
+  "experiment_id": "A8_shallow_m_branch",
+  "description": "将加深的M分支退化为单隐层结构，检验机动毁伤几何判别复杂度需求。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_physics_features": true,
+    "use_soft_labels": true,
+    "use_balanced_sampler": true,
+    "use_adaptive_loss_balance": true,
+    "pos_weight_mode": "per_munition"
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": false
+  },
+  "loss": {
+    "use_focal_loss": true,
+    "use_ordinal_penalty": true,
+    "use_class1_margin": true,
+    "use_cell_class1_alpha": true
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "ablation": {
+    "components": [
+      "deep_m_branch"
+    ],
+    "note": "K/F/C branches remain unchanged."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\new\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\new\\abli_exp\\results\\A8_shallow_m_branch\\seed42"
+  }
+}

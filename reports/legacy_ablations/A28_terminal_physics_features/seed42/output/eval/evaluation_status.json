@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A28_terminal_physics_features",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "5a64328e376ba6158c7ec3298bb9cf50789ae9ae97375ab74b8308133de2f740",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "075c38ff001867a5f84fe61e9bf5a59f7fdb510af8ef686ba877b31d0c4e8405",
+  "performance_gate_passed": false
+}

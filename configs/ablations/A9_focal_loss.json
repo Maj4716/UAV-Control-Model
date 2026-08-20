@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A9_focal_loss",
+  "description": "在等权BCE基线上启用focal调制，检验难样本聚焦机制的净作用。",
+  "loss": {
+    "use_focal_loss": true
+  },
+  "ablation": {
+    "components": ["focal_loss"],
+    "note": "Implemented with gamma=2; soft targets are used consistently in p_t."
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "schema": "stage0_nn_validation_selection_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "model_variant": "verified_warm_start",
+  "selected_epoch": 0,
+  "selection_score": 0.5218036224603653,
+  "validation_rows": 29562,
+  "average_3class_accuracy_percent": 93.16521286964417,
+  "task_3class_accuracy_percent": {
+    "K": 91.37406158447266,
+    "M": 97.34456634521484,
+    "F": 95.68026733398438,
+    "C": 88.26195526123047
+  },
+  "small_k0_false_positive_percent": 0.46199075877666473,
+  "global_c0_false_positive_percent": 2.3673469200730324,
+  "cell_metrics": {
+    "Small": {
+      "K": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 97.05763244628906,
+        "class1_support": 266,
+        "class1_recall_percent": 30.451128005981445
+      },
+      "M": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 94.64164733886719,
+        "class1_support": 1088,
+        "class1_recall_percent": 87.04044342041016
+      },
+      "F": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 95.77540588378906,
+        "class1_support": 3937,
+        "class1_recall_percent": 94.31039428710938
+      },
+      "C": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 93.56188201904297,
+        "class1_support": 666,
+        "class1_recall_percent": 52.25225067138672
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 90.94757080078125,
+        "class1_support": 766,
+        "class1_recall_percent": 68.7989501953125
+      },
+      "M": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 98.55270385742188,
+        "class1_support": 528,
+        "class1_recall_percent": 89.7727279663086
+      },
+      "F": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 97.32386779785156,
+        "class1_support": 5903,
+        "class1_recall_percent": 98.62781524658203
+      },
+      "C": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 88.38066101074219,
+        "class1_support": 1941,
+        "class1_recall_percent": 63.16331481933594
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 86.75657653808594,
+        "class1_support": 1295,
+        "class1_recall_percent": 78.06949615478516
+      },
+      "M": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 96.96561431884766,
+        "class1_support": 212,
+        "class1_recall_percent": 56.132080078125
+      },
+      "F": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 92.33985137939453,
+        "class1_support": 5932,
+        "class1_recall_percent": 96.96561431884766
+      },
+      "C": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 78.07147216796875,
+        "class1_support": 3601,
+        "class1_recall_percent": 57.62287902832031
+      }
+    },
+    "Heavy": {
+      "K": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 90.73374938964844,
+        "class1_support": 864,
+        "class1_recall_percent": 79.74536895751953
+      },
+      "M": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 99.23118591308594,
+        "class1_support": 175,
+        "class1_recall_percent": 85.71428680419922
+      },
+      "F": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 97.30239868164062,
+        "class1_support": 6239,
+        "class1_recall_percent": 98.99021911621094
+      },
+      "C": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 93.04019165039062,
+        "class1_support": 2452,
+        "class1_recall_percent": 85.11419677734375
+      }
+    }
+  },
+  "targeted_probability_diagnostics": {
+    "Small/K": {
+      "entry_auc": 0.9665869840497927,
+      "entry_standardized_partial_auc": 0.6072295939650393,
+      "entry_average_precision": 0.5555115873533596,
+      "maximum_false_positive_rate": 0.005,
+      "positive_support": 266,
+      "negative_support": 7143
+    },
+    "Med-LM/K": {
+      "entry_auc": 0.9578005731851884,
+      "entry_standardized_partial_auc": 0.7102164259504313,
+      "entry_average_precision": 0.8026324809296679,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1071,
+      "negative_support": 6253
+    },
+    "Med-RD/K": {
+      "entry_auc": 0.9512382579067183,
+      "entry_standardized_partial_auc": 0.744587761967858,
+      "entry_average_precision": 0.8973650082974791,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 2178,
+      "negative_support": 5237
+    },
+    "Heavy/K": {
+      "entry_auc": 0.9749387988323706,
+      "entry_standardized_partial_auc": 0.7855426229521085,
+      "entry_average_precision": 0.9247675672615825,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1789,
+      "negative_support": 5625
+    },
+    "Small/C": {
+      "entry_auc": 0.9553176934906136,
+      "entry_standardized_partial_auc": 0.6828283313095505,
+      "entry_average_precision": 0.6883998751546342,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 666,
+      "negative_support": 6743
+    },
+    "Med-LM/C": {
+      "entry_auc": 0.9661484866216898,
+      "entry_standardized_partial_auc": 0.749072326395485,
+      "entry_average_precision": 0.9105624554220136,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1944,
+      "negative_support": 5380
+    },
+    "Med-RD/C": {
+      "entry_auc": 0.9430442047194441,
+      "entry_standardized_partial_auc": 0.732480076756106,
+      "entry_average_precision": 0.9415062617934292,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 3627,
+      "negative_support": 3788
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "conditional_auc": 0.9792504234055333,
+      "conditional_average_precision": 0.9993533426742913,
+      "level1_support": 212,
+      "level2_support": 6974
+    }
+  },
+  "performance_gate": {
+    "passed": false,
+    "failure_count": 8,
+    "failures": [
+      "Small/K class-1 recall 30.45% < 85.00% (n=266)",
+      "Small/C class-1 recall 52.25% < 85.00% (n=666)",
+      "Med-LM/K class-1 recall 68.80% < 85.00% (n=766)",
+      "Med-LM/C class-1 recall 63.16% < 85.00% (n=1941)",
+      "Med-RD/K class-1 recall 78.07% < 85.00% (n=1295)",
+      "Med-RD/M class-1 recall 56.13% < 85.00% (n=212)",
+      "Med-RD/C class-1 recall 57.62% < 85.00% (n=3601)",
+      "Heavy/K class-1 recall 79.75% < 85.00% (n=864)"
+    ]
+  },
+  "artifact_identity": {
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "model_sha256": "fbaf5c064193018b0b8f3592fb6cc2b4c686b3a2cc09382fd9586af5c7236526",
+    "threshold_sha256": "cc2df0d281bceb0f6a6a9ca97f48ad9084177d6558addb776a5415714a808bd2"
+  }
+}

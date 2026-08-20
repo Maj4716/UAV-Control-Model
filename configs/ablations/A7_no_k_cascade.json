@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A7_no_k_cascade",
+  "description": "取消K分支概率向M/F/C分支级联，检验核心毁伤先验对任务间条件推断的作用。",
+  "model": {
+    "use_k_cascade": false
+  },
+  "ablation": {
+    "components": ["k_probability_cascade"],
+    "note": "M/F/C branches consume only the head representation."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "experiment_id": "A29_mechanism_with_terminal_physics",
+  "description": "联合使用可部署终端解析物理特征与破片/冲击波双专家监督，按固定物理OR输出综合毁伤概率。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true,
+    "use_mechanism_supervision": true
+  },
+  "model": {
+    "use_mechanism_decomposition": true
+  },
+  "loss": {
+    "mechanism_auxiliary_weight": 0.5,
+    "mechanism_class_distribution_weight": 0.25
+  },
+  "ablation": {
+    "components": [
+      "terminal_geometry_v2_features",
+      "fragment_shock_experts",
+      "mechanism_mc_mean_auxiliary_supervision",
+      "fixed_probability_or_fusion"
+    ],
+    "note": "Combined candidate; promotion requires outperforming both single-change candidates on validation."
+  }
+}

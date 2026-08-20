@@ -1,0 +1,1016 @@
+{
+  "version": "stage0-nn-deploy-v1",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "model_manifest_schema": "stage0_nn_artifact_v1",
+  "ordinal_applicability": [
+    [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ]
+  ],
+  "onnx_validation": {
+    "checker_passed": true,
+    "runtime_parity_passed": true,
+    "maximum_absolute_error": 1.52587890625e-05,
+    "maximum_normalized_error": 0.02207024209201336,
+    "absolute_tolerance": 2e-05,
+    "relative_tolerance": 0.0001
+  },
+  "threshold_schema": "v7_monotone_fpr_constrained",
+  "threshold_strategy": "per_munition",
+  "model_variant": "raw_best",
+  "threshold_best_epoch": 24,
+  "threshold_raw_best_epoch": 24,
+  "threshold_soup_epochs": [],
+  "threshold_selection_score": 0.49575831258296965,
+  "threshold_metadata": {
+    "_schema": "v7_monotone_fpr_constrained",
+    "_note": "Checkpoint-aligned thresholds saved at the final selected model variant.",
+    "_calibration_policy": {
+      "joint_alpha": 0.8,
+      "threshold_grid_min": 0.02,
+      "threshold_grid_max": 1.0,
+      "threshold_grid_step": 0.02,
+      "c0_max_false_positive_rate": 0.025
+    },
+    "_model_variant": "raw_best",
+    "_best_epoch": 24,
+    "_raw_best_epoch": 24,
+    "_soup_epochs": [],
+    "_selection_score": 0.49575831258296965,
+    "_val_loss": -1.242029070854187,
+    "_small_m_acc": 0.94061279296875,
+    "_small_k1_recall": 0.27819549560546875,
+    "_small_c1_recall": 0.5015015029907226,
+    "_small_k0_false_positive": 0.004899901803582907,
+    "_c0_false_positive": 0.022953180596232414,
+    "_small_c0_false_positive": 0.02372831106185913,
+    "_guardrail_penalty": 0.3028302001953125,
+    "_non_target_cell_acc_mean": 0.9221385955810547,
+    "_rare_cell_thresholds": {
+      "SmallK1": {
+        "name": "SmallK1",
+        "task": "K",
+        "munition": "Small",
+        "n_samples": 7409,
+        "n_pos_L1": 266,
+        "n_pos_L2": 0,
+        "min_pos_L1": 15,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": false,
+        "mode": "structural_zero_L2",
+        "threshold_L1": 0.5199999809265137,
+        "threshold_L2": 1.0,
+        "max_fp_rate": 0.005,
+        "recall_weight": 0.75,
+        "objective": "max 0.75*recall + 0.25*F1 under Small x K0 FP <= 0.5%"
+      },
+      "Med-LM_K": {
+        "name": "Med-LM_K",
+        "task": "K",
+        "munition": "Med-LM",
+        "n_samples": 7324,
+        "n_pos_L1": 1071,
+        "n_pos_L2": 305,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.46000000834465027,
+        "threshold_L2": 0.4000000059604645,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Med-RD_K": {
+        "name": "Med-RD_K",
+        "task": "K",
+        "munition": "Med-RD",
+        "n_samples": 7415,
+        "n_pos_L1": 2178,
+        "n_pos_L2": 883,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5600000023841858,
+        "threshold_L2": 0.47999998927116394,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Heavy_K": {
+        "name": "Heavy_K",
+        "task": "K",
+        "munition": "Heavy",
+        "n_samples": 7414,
+        "n_pos_L1": 1789,
+        "n_pos_L2": 925,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5400000214576721,
+        "threshold_L2": 0.5,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Small_M": {
+        "name": "Small_M",
+        "task": "M",
+        "munition": "Small",
+        "n_samples": 7409,
+        "n_pos_L1": 4326,
+        "n_pos_L2": 3238,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5400000214576721,
+        "threshold_L2": 0.5600000023841858,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Med-LM_M": {
+        "name": "Med-LM_M",
+        "task": "M",
+        "munition": "Med-LM",
+        "n_samples": 7324,
+        "n_pos_L1": 6651,
+        "n_pos_L2": 6123,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5,
+        "threshold_L2": 0.5,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Med-RD_M": {
+        "name": "Med-RD_M",
+        "task": "M",
+        "munition": "Med-RD",
+        "n_samples": 7415,
+        "n_pos_L1": 7186,
+        "n_pos_L2": 6974,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.6200000047683716,
+        "threshold_L2": 0.5400000214576721,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Heavy_M": {
+        "name": "Heavy_M",
+        "task": "M",
+        "munition": "Heavy",
+        "n_samples": 7414,
+        "n_pos_L1": 7255,
+        "n_pos_L2": 7080,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5799999833106995,
+        "threshold_L2": 0.5400000214576721,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Small_F": {
+        "name": "Small_F",
+        "task": "F",
+        "munition": "Small",
+        "n_samples": 7409,
+        "n_pos_L1": 4112,
+        "n_pos_L2": 175,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5,
+        "threshold_L2": 0.4000000059604645,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Med-LM_F": {
+        "name": "Med-LM_F",
+        "task": "F",
+        "munition": "Med-LM",
+        "n_samples": 7324,
+        "n_pos_L1": 6432,
+        "n_pos_L2": 529,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5199999809265137,
+        "threshold_L2": 0.4399999976158142,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Med-RD_F": {
+        "name": "Med-RD_F",
+        "task": "F",
+        "munition": "Med-RD",
+        "n_samples": 7415,
+        "n_pos_L1": 6815,
+        "n_pos_L2": 883,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5199999809265137,
+        "threshold_L2": 0.47999998927116394,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Heavy_F": {
+        "name": "Heavy_F",
+        "task": "F",
+        "munition": "Heavy",
+        "n_samples": 7414,
+        "n_pos_L1": 6907,
+        "n_pos_L2": 668,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.5,
+        "threshold_L2": 0.41999998688697815,
+        "max_fp_rate": null,
+        "recall_weight": 0.7,
+        "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+      },
+      "Small_C": {
+        "name": "Small_C",
+        "task": "C",
+        "munition": "Small",
+        "n_samples": 7409,
+        "n_pos_L1": 666,
+        "n_pos_L2": 0,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": false,
+        "mode": "structural_zero_L2",
+        "threshold_L1": 0.47999998927116394,
+        "threshold_L2": 1.0,
+        "max_fp_rate": 0.025,
+        "recall_weight": 0.7,
+        "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+      },
+      "Med-LM_C": {
+        "name": "Med-LM_C",
+        "task": "C",
+        "munition": "Med-LM",
+        "n_samples": 7324,
+        "n_pos_L1": 1944,
+        "n_pos_L2": 3,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "l1_only_global_L2",
+        "threshold_L1": 0.7200000286102295,
+        "threshold_L2": 0.6000000238418579,
+        "max_fp_rate": 0.025,
+        "recall_weight": 0.7,
+        "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+      },
+      "Med-RD_C": {
+        "name": "Med-RD_C",
+        "task": "C",
+        "munition": "Med-RD",
+        "n_samples": 7415,
+        "n_pos_L1": 3627,
+        "n_pos_L2": 26,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "l1_only_global_L2",
+        "threshold_L1": 0.7799999713897705,
+        "threshold_L2": 0.6000000238418579,
+        "max_fp_rate": 0.025,
+        "recall_weight": 0.7,
+        "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+      },
+      "Heavy_C": {
+        "name": "Heavy_C",
+        "task": "C",
+        "munition": "Heavy",
+        "n_samples": 7414,
+        "n_pos_L1": 2500,
+        "n_pos_L2": 48,
+        "min_pos_L1": 30,
+        "min_pos_L2": 30,
+        "applicable_L1": true,
+        "applicable_L2": true,
+        "mode": "joint",
+        "threshold_L1": 0.6600000262260437,
+        "threshold_L2": 0.5600000023841858,
+        "max_fp_rate": 0.025,
+        "recall_weight": 0.7,
+        "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+      }
+    },
+    "_low_class1_cells": [
+      {
+        "task": "M",
+        "munition": "Med-RD",
+        "n_pos": 212,
+        "recall": 54.71697998046875,
+        "floor": 85.0,
+        "deficit": 30.28302001953125
+      },
+      {
+        "task": "C",
+        "munition": "Med-RD",
+        "n_pos": 3601,
+        "recall": 56.31768798828125,
+        "floor": 85.0,
+        "deficit": 28.68231201171875
+      },
+      {
+        "task": "C",
+        "munition": "Med-LM",
+        "n_pos": 1941,
+        "recall": 61.56620407104492,
+        "floor": 85.0,
+        "deficit": 23.433795928955078
+      },
+      {
+        "task": "K",
+        "munition": "Med-LM",
+        "n_pos": 766,
+        "recall": 70.62663269042969,
+        "floor": 85.0,
+        "deficit": 14.373367309570312
+      },
+      {
+        "task": "K",
+        "munition": "Med-RD",
+        "n_pos": 1295,
+        "recall": 71.50579071044922,
+        "floor": 85.0,
+        "deficit": 13.494209289550781
+      },
+      {
+        "task": "K",
+        "munition": "Heavy",
+        "n_pos": 864,
+        "recall": 74.65277862548828,
+        "floor": 85.0,
+        "deficit": 10.347221374511719
+      },
+      {
+        "task": "M",
+        "munition": "Heavy",
+        "n_pos": 175,
+        "recall": 77.71428680419922,
+        "floor": 85.0,
+        "deficit": 7.285713195800781
+      },
+      {
+        "task": "C",
+        "munition": "Heavy",
+        "n_pos": 2452,
+        "recall": 79.7308349609375,
+        "floor": 85.0,
+        "deficit": 5.2691650390625
+      }
+    ]
+  },
+  "rare_cell_thresholds": {
+    "SmallK1": {
+      "name": "SmallK1",
+      "task": "K",
+      "munition": "Small",
+      "n_samples": 7409,
+      "n_pos_L1": 266,
+      "n_pos_L2": 0,
+      "min_pos_L1": 15,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": false,
+      "mode": "structural_zero_L2",
+      "threshold_L1": 0.5199999809265137,
+      "threshold_L2": 1.0,
+      "max_fp_rate": 0.005,
+      "recall_weight": 0.75,
+      "objective": "max 0.75*recall + 0.25*F1 under Small x K0 FP <= 0.5%"
+    },
+    "Med-LM_K": {
+      "name": "Med-LM_K",
+      "task": "K",
+      "munition": "Med-LM",
+      "n_samples": 7324,
+      "n_pos_L1": 1071,
+      "n_pos_L2": 305,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.46000000834465027,
+      "threshold_L2": 0.4000000059604645,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Med-RD_K": {
+      "name": "Med-RD_K",
+      "task": "K",
+      "munition": "Med-RD",
+      "n_samples": 7415,
+      "n_pos_L1": 2178,
+      "n_pos_L2": 883,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5600000023841858,
+      "threshold_L2": 0.47999998927116394,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Heavy_K": {
+      "name": "Heavy_K",
+      "task": "K",
+      "munition": "Heavy",
+      "n_samples": 7414,
+      "n_pos_L1": 1789,
+      "n_pos_L2": 925,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5400000214576721,
+      "threshold_L2": 0.5,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Small_M": {
+      "name": "Small_M",
+      "task": "M",
+      "munition": "Small",
+      "n_samples": 7409,
+      "n_pos_L1": 4326,
+      "n_pos_L2": 3238,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5400000214576721,
+      "threshold_L2": 0.5600000023841858,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Med-LM_M": {
+      "name": "Med-LM_M",
+      "task": "M",
+      "munition": "Med-LM",
+      "n_samples": 7324,
+      "n_pos_L1": 6651,
+      "n_pos_L2": 6123,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5,
+      "threshold_L2": 0.5,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Med-RD_M": {
+      "name": "Med-RD_M",
+      "task": "M",
+      "munition": "Med-RD",
+      "n_samples": 7415,
+      "n_pos_L1": 7186,
+      "n_pos_L2": 6974,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.6200000047683716,
+      "threshold_L2": 0.5400000214576721,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Heavy_M": {
+      "name": "Heavy_M",
+      "task": "M",
+      "munition": "Heavy",
+      "n_samples": 7414,
+      "n_pos_L1": 7255,
+      "n_pos_L2": 7080,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5799999833106995,
+      "threshold_L2": 0.5400000214576721,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Small_F": {
+      "name": "Small_F",
+      "task": "F",
+      "munition": "Small",
+      "n_samples": 7409,
+      "n_pos_L1": 4112,
+      "n_pos_L2": 175,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5,
+      "threshold_L2": 0.4000000059604645,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Med-LM_F": {
+      "name": "Med-LM_F",
+      "task": "F",
+      "munition": "Med-LM",
+      "n_samples": 7324,
+      "n_pos_L1": 6432,
+      "n_pos_L2": 529,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5199999809265137,
+      "threshold_L2": 0.4399999976158142,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Med-RD_F": {
+      "name": "Med-RD_F",
+      "task": "F",
+      "munition": "Med-RD",
+      "n_samples": 7415,
+      "n_pos_L1": 6815,
+      "n_pos_L2": 883,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5199999809265137,
+      "threshold_L2": 0.47999998927116394,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Heavy_F": {
+      "name": "Heavy_F",
+      "task": "F",
+      "munition": "Heavy",
+      "n_samples": 7414,
+      "n_pos_L1": 6907,
+      "n_pos_L2": 668,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.5,
+      "threshold_L2": 0.41999998688697815,
+      "max_fp_rate": null,
+      "recall_weight": 0.7,
+      "objective": "cellwise joint calibration when support is sufficient; otherwise inherit the global validation threshold"
+    },
+    "Small_C": {
+      "name": "Small_C",
+      "task": "C",
+      "munition": "Small",
+      "n_samples": 7409,
+      "n_pos_L1": 666,
+      "n_pos_L2": 0,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": false,
+      "mode": "structural_zero_L2",
+      "threshold_L1": 0.47999998927116394,
+      "threshold_L2": 1.0,
+      "max_fp_rate": 0.025,
+      "recall_weight": 0.7,
+      "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+    },
+    "Med-LM_C": {
+      "name": "Med-LM_C",
+      "task": "C",
+      "munition": "Med-LM",
+      "n_samples": 7324,
+      "n_pos_L1": 1944,
+      "n_pos_L2": 3,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "l1_only_global_L2",
+      "threshold_L1": 0.7200000286102295,
+      "threshold_L2": 0.6000000238418579,
+      "max_fp_rate": 0.025,
+      "recall_weight": 0.7,
+      "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+    },
+    "Med-RD_C": {
+      "name": "Med-RD_C",
+      "task": "C",
+      "munition": "Med-RD",
+      "n_samples": 7415,
+      "n_pos_L1": 3627,
+      "n_pos_L2": 26,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "l1_only_global_L2",
+      "threshold_L1": 0.7799999713897705,
+      "threshold_L2": 0.6000000238418579,
+      "max_fp_rate": 0.025,
+      "recall_weight": 0.7,
+      "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+    },
+    "Heavy_C": {
+      "name": "Heavy_C",
+      "task": "C",
+      "munition": "Heavy",
+      "n_samples": 7414,
+      "n_pos_L1": 2500,
+      "n_pos_L2": 48,
+      "min_pos_L1": 30,
+      "min_pos_L2": 30,
+      "applicable_L1": true,
+      "applicable_L2": true,
+      "mode": "joint",
+      "threshold_L1": 0.6600000262260437,
+      "threshold_L2": 0.5600000023841858,
+      "max_fp_rate": 0.025,
+      "recall_weight": 0.7,
+      "objective": "maximize C1 recall/F1 under C0 FP <= 2.5%"
+    }
+  },
+  "low_class1_cells": [
+    {
+      "task": "M",
+      "munition": "Med-RD",
+      "n_pos": 212,
+      "recall": 54.71697998046875,
+      "floor": 85.0,
+      "deficit": 30.28302001953125
+    },
+    {
+      "task": "C",
+      "munition": "Med-RD",
+      "n_pos": 3601,
+      "recall": 56.31768798828125,
+      "floor": 85.0,
+      "deficit": 28.68231201171875
+    },
+    {
+      "task": "C",
+      "munition": "Med-LM",
+      "n_pos": 1941,
+      "recall": 61.56620407104492,
+      "floor": 85.0,
+      "deficit": 23.433795928955078
+    },
+    {
+      "task": "K",
+      "munition": "Med-LM",
+      "n_pos": 766,
+      "recall": 70.62663269042969,
+      "floor": 85.0,
+      "deficit": 14.373367309570312
+    },
+    {
+      "task": "K",
+      "munition": "Med-RD",
+      "n_pos": 1295,
+      "recall": 71.50579071044922,
+      "floor": 85.0,
+      "deficit": 13.494209289550781
+    },
+    {
+      "task": "K",
+      "munition": "Heavy",
+      "n_pos": 864,
+      "recall": 74.65277862548828,
+      "floor": 85.0,
+      "deficit": 10.347221374511719
+    },
+    {
+      "task": "M",
+      "munition": "Heavy",
+      "n_pos": 175,
+      "recall": 77.71428680419922,
+      "floor": 85.0,
+      "deficit": 7.285713195800781
+    },
+    {
+      "task": "C",
+      "munition": "Heavy",
+      "n_pos": 2452,
+      "recall": 79.7308349609375,
+      "floor": 85.0,
+      "deficit": 5.2691650390625
+    }
+  ],
+  "uses_per_munition_thresholds": true,
+  "logit_adjustment_enabled": false,
+  "performance_gate": {
+    "passed": false,
+    "criteria": {
+      "minimum_class1_positive_support": 100,
+      "minimum_class1_recall_percent": 85.0,
+      "maximum_small_k0_false_positive_percent": 0.5,
+      "maximum_global_c0_false_positive_percent": 2.5
+    },
+    "failures": [
+      "Small/K class-1 recall 28.37% < 85.00% (n=289)",
+      "Small/C class-1 recall 52.32% < 85.00% (n=625)",
+      "Med-LM/K class-1 recall 69.07% < 85.00% (n=776)",
+      "Med-LM/C class-1 recall 60.40% < 85.00% (n=2020)",
+      "Med-RD/K class-1 recall 70.84% < 85.00% (n=1327)",
+      "Med-RD/M class-1 recall 48.77% < 85.00% (n=203)",
+      "Med-RD/C class-1 recall 55.57% < 85.00% (n=3588)",
+      "Heavy/K class-1 recall 74.24% < 85.00% (n=792)",
+      "Heavy/M class-1 recall 75.17% < 85.00% (n=149)",
+      "Heavy/C class-1 recall 79.80% < 85.00% (n=2431)"
+    ]
+  },
+  "description": "Stage-0 v2 monotone ordinal damage surrogate. MinMax缩放、模型、结构零、阈值和全部哈希均由同一产物合同封存。",
+  "input_schema": {
+    "feature_count": 13,
+    "features_active_order": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity"
+    ],
+    "munition_id_range": [
+      0,
+      3
+    ],
+    "munition_id_map": {
+      "0": "Small",
+      "1": "Med-LM",
+      "2": "Med-RD",
+      "3": "Heavy"
+    }
+  },
+  "output_schema": {
+    "logits_shape": [
+      4,
+      2
+    ],
+    "task_order": [
+      "K",
+      "M",
+      "F",
+      "C"
+    ],
+    "level_order": [
+      "P(y>=1)",
+      "P(y>=2)"
+    ]
+  },
+  "artifacts": {
+    "onnx_model": "damage_model.onnx",
+    "pytorch_reference": "best_model.pth",
+    "minmax_scaler_pkl": "minmax_scaler.pkl",
+    "minmax_scaler_json": "minmax_scaler.json",
+    "logit_adjustment": "logit_adjustment.json",
+    "thresholds": "best_thresholds.json",
+    "effective_thresholds": "effective_thresholds.json",
+    "model_manifest": "model_manifest.json"
+  },
+  "artifact_status": {
+    "damage_model.onnx": true,
+    "best_model.pth": true,
+    "minmax_scaler.pkl": true,
+    "minmax_scaler.json": true,
+    "logit_adjustment.json": true,
+    "best_thresholds.json": true,
+    "effective_thresholds.json": true,
+    "model_manifest.json": true
+  },
+  "logit_shifts_matrix": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "thresholds": {
+    "K1": 0.5400000214576721,
+    "K2": 0.46000000834465027,
+    "M1": 0.5600000023841858,
+    "M2": 0.5199999809265137,
+    "F1": 0.5199999809265137,
+    "F2": 0.4399999976158142,
+    "C1": 0.6800000071525574,
+    "C2": 0.6000000238418579
+  },
+  "per_munition_thresholds": {
+    "K1": {
+      "0": 0.5199999809265137,
+      "1": 0.46000000834465027,
+      "2": 0.5600000023841858,
+      "3": 0.5400000214576721
+    },
+    "K2": {
+      "0": 1.0,
+      "1": 0.4000000059604645,
+      "2": 0.47999998927116394,
+      "3": 0.5
+    },
+    "M1": {
+      "0": 0.5400000214576721,
+      "1": 0.5,
+      "2": 0.6200000047683716,
+      "3": 0.5799999833106995
+    },
+    "M2": {
+      "0": 0.5600000023841858,
+      "1": 0.5,
+      "2": 0.5400000214576721,
+      "3": 0.5400000214576721
+    },
+    "F1": {
+      "0": 0.5,
+      "1": 0.5199999809265137,
+      "2": 0.5199999809265137,
+      "3": 0.5
+    },
+    "F2": {
+      "0": 0.4000000059604645,
+      "1": 0.4399999976158142,
+      "2": 0.47999998927116394,
+      "3": 0.41999998688697815
+    },
+    "C1": {
+      "0": 0.47999998927116394,
+      "1": 0.7200000286102295,
+      "2": 0.7799999713897705,
+      "3": 0.6600000262260437
+    },
+    "C2": {
+      "0": 1.0,
+      "1": 0.6000000238418579,
+      "2": 0.6000000238418579,
+      "3": 0.5600000023841858
+    }
+  },
+  "inference_steps": [
+    "1. features = MinMaxScaler.transform(raw_features)         # 严格沿用训练 fit 的 (data_min_, data_max_)",
+    "2. logits = onnx.run({encounter_features, munition_id})     # 输出 (N, 4, 2)",
+    "3. logits_adj = logits - logit_shifts_matrix               # 仅在同一概率空间联合校准后启用；当前通常为零矩阵",
+    "4. probs = sigmoid(logits_adj)                             # (N, 4, 2)",
+    "5. assert probs[:, :, 1] <= probs[:, :, 0]                 # 模型输出头天然保序，运行时只验证",
+    "6. pred_level = 1·(p1>=thr1) + 1·((p1>=thr1) & (p2>=thr2)) # 返回 0/1/2 毁伤等级"
+  ],
+  "metrics_snapshot_note": "概率指标同时报告hard-label与MC均值口径；低支持单元继承全局L2阈值，结构零由模型掩码；可选C2 challenge仅用于独立root稀有事件判别，禁止用于阈值校准或部署先验估计。",
+  "artifact_sha256": {
+    "damage_model.onnx": "2a899cdb552ef70a6e8d87bb3f61e6c23c81cd2ebe7fbde14d194fe70dd8f69b",
+    "best_model.pth": "009ee56661e3e20f0702cad007437fc994bae15b9b71e77d1d3df4435fe93411",
+    "minmax_scaler.pkl": "c27bec9e065d92f617f13a39c4698eba87370c38740cc00b8abbb8b1a7f65c75",
+    "minmax_scaler.json": "72c54863d24ea9aed170e7aa091083d42ac4acafe84a0ebf3a69f0ddcd617217",
+    "logit_adjustment.json": "ccff0d998b50b1589315af81bb6aa03e6adf8a530b014e2d79ffce6561b2932c",
+    "best_thresholds.json": "3541fe690e2c043ad6efd96d40317e9700c9bde940e3443b687f960579e6c784",
+    "effective_thresholds.json": "1525cd1b2fbc27275203ce4aefd43b570349264e2df85477b134ce08cac0e3ad",
+    "model_manifest.json": "82c9af6dd03f9cc5962fb6f13831f7fbb03bbd5d6c32a7cb9d7aa97abd09db11"
+  }
+}

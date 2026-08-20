@@ -1,0 +1,54 @@
+{
+  "schema": "stage0_nn_a37_validation_promotion_v1",
+  "candidate": "A37_component_tree_teacher_residual",
+  "baseline": "A35_independent_component_tree_fusion",
+  "status": "FAIL",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_average_accuracy_drop_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_weak_objectives": 3,
+    "minimum_objective_improvement": 0.002,
+    "maximum_objective_degradation": 0.003,
+    "minimum_mean_objective_delta": 0.0005,
+    "historical_gate_failure_count_may_increase": false,
+    "minimum_goal_metric_failure_reduction": 1,
+    "goal_evidence_failure_count_may_increase": false
+  },
+  "metrics": {
+    "average_accuracy_delta_percentage_points": -0.030440092086791992,
+    "baseline_historical_gate_failures": 8,
+    "candidate_historical_gate_failures": 8,
+    "baseline_goal_metric_failures": 25,
+    "candidate_goal_metric_failures": 25,
+    "goal_metric_failure_reduction": 0,
+    "baseline_goal_evidence_failures": 3,
+    "candidate_goal_evidence_failures": 3,
+    "small_k0_false_positive_percent": 0.4059918690472841,
+    "global_c0_false_positive_percent": 2.2569026798009872,
+    "objective_deltas": {
+      "Small/K": -0.00015063674455306764,
+      "Med-LM/K": -0.004923524025419845,
+      "Med-RD/K": 0.0004316556212389244,
+      "Heavy/K": 0.004337178522601404,
+      "Small/C": -0.00010057044356093225,
+      "Med-LM/C": -0.00015007766276986523,
+      "Med-RD/C": -0.0008333248847338659,
+      "Med-RD/M_L1_vs_L2": 0.0010138736330628229
+    },
+    "mean_objective_delta": -4.6928248016803176e-05,
+    "improved_objectives": [
+      "Heavy/K"
+    ],
+    "degraded_objectives": [
+      "Med-LM/K"
+    ]
+  },
+  "failures": [
+    "strict goal metric failure count did not decrease",
+    "fewer than three weak-cell ranking objectives improved by 0.002",
+    "at least one weak-cell ranking objective degraded by over 0.003",
+    "mean weak-cell ranking improvement is below 0.0005"
+  ]
+}

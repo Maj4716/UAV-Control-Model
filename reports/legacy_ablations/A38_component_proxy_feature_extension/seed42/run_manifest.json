@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A38_component_proxy_feature_extension",
+  "description": "保持A35直接任务主干与融合系数不变，仅向独立组件专家追加102个可由终端状态重建的组件级破片/冲击波物理代理，并以零权重扩展保证微调前与A35严格等价。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A38_component_proxy_feature_extension.json",
+  "config_sha256": "f6a3e72555da6d148db39141d5a3a562b042f563931d4308272df56cce311a7a",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A38_component_proxy_feature_extension\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "d632c1610bc19924e284eda7bd62bfb97655e4c013a9f1cb5b60df64cfdbbcfe",
+    "nn_dataset.py": "e121e77b56d82c6b358ab0d7ddec070168d7eac7161491eedaa8dace2ca6dbe9",
+    "nn_feature_engineering.py": "afb9e93fce690fe4e747bfa90f1ace854249b0cf011e04abb61caea772324ace",
+    "nn_model.py": "8764e78fb9ab403bfef35ef8e7ff7d13ad1ceda1b328f876c62e4e9edca52130",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "20ae6a6411fca8b16a65da6961b8d78b5d13b17e2d9cf26ad17c98a4e41a543e",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

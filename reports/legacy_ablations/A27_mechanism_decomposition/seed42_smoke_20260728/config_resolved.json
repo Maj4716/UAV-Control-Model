@@ -1,0 +1,207 @@
+{
+  "experiment_id": "A27_mechanism_decomposition",
+  "description": "在A13训练设定上增加破片/冲击波双专家及分机制MC均值辅助监督，最终毁伤概率严格按物理OR融合；保持13维终端可观测输入，以隔离检验机制分解本身。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true,
+    "label_uncertainty_scale": 0.1,
+    "label_confidence_floor": 0.25,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "use_terminal_physics_features": false,
+    "use_mechanism_supervision": true,
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones",
+    "k_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "m_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "c_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_parameterization": "cumulative_logits",
+    "use_mechanism_decomposition": true,
+    "residual_adapter_cells": [],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "residual_adapter_frequencies": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "residual_adapter_max_logit": 2.0
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25,
+    "middle_class_distribution_multiplier": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "entry_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "conditional_l1_l2_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ranking_margin": 0.5,
+    "hard_negative_fraction": 0.1,
+    "mechanism_auxiliary_weight": 0.5,
+    "mechanism_class_distribution_weight": 0.25
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition"
+  },
+  "training": {
+    "epochs": 45,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "minimum_selection_epochs": 32,
+    "selection_patience": 10,
+    "freeze_base_model": false,
+    "freeze_criterion_uncertainty": false,
+    "include_initial_candidate": true
+  },
+  "ablation": {
+    "components": [
+      "fragment_shock_experts",
+      "mechanism_mc_mean_auxiliary_supervision",
+      "fixed_probability_or_fusion"
+    ],
+    "note": "Mechanism-only candidate. No new input feature is enabled, so comparison with A13 isolates the decomposition."
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A27_mechanism_decomposition\\seed42"
+  }
+}

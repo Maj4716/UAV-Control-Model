@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A21_pareto_class1_calibration_1p5",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A21_pareto_class1_calibration_1p5\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "bb8f6853aa7b33b369e9b13ca6496cff0f572c4ef285e65b8cdb412a4fe62921",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A21_pareto_class1_calibration_1p5\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "8d1a4f444ff6b7f8cbb26178ca922ce0e1ea485f01ac762a09111467cb3d5533",
+  "performance_gate_passed": false
+}

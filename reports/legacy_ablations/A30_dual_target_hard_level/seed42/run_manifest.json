@@ -1,0 +1,23 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A30_dual_target_hard_level",
+  "description": "在A13概率监督不变的前提下，增加阈值后L0/L1/L2硬等级NLL。连续MC均值仍用于概率校准，硬等级仅监督最终分类语义，用于隔离检验软物理概率与硬等级目标错位。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A30_dual_target_hard_level.json",
+  "config_sha256": "4a7e3cedc055e21b2f6696f3c79732b3f7ad1674a37ae23a194f0fdeaa59f78c",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A30_dual_target_hard_level\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "e6071068692edd8ff0edae2363e19e1756a35aeb83bcdca573f39450eaeb37f9",
+    "nn_dataset.py": "49e19c9070335133ba6c8add98139db158a76790ec0a2ab35060094b0cc25708",
+    "nn_feature_engineering.py": "482a310be637d33d9492a4be5d0b5783aead41834defac7c24c970ac20b9c241",
+    "nn_model.py": "e1da2f95bafe88b881a2605a4a7f6658378a354dfabdcf211a307fbb63df4a1d",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "981610ed0510753f8d2ba764618000ace0932a6c110658316200f4a48d569bd0"
+  }
+}

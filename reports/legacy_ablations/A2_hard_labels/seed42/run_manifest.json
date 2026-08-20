@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A2_hard_labels",
+  "description": "关闭仿真概率软标签，仅使用0/1硬序数标签训练，检验软标签对边界样本的缓冲作用。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\new\\abli_exp\\configs\\A2_hard_labels.json",
+  "run_dir": "D:\\Desktop\\new\\abli_exp\\results\\A2_hard_labels\\seed42"
+}

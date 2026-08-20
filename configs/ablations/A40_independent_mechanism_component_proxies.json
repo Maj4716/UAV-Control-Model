@@ -1,0 +1,77 @@
+{
+  "experiment_id": "A40_independent_mechanism_component_proxies",
+  "description": "面向破片瓶颈的固定OR模型：破片/冲击使用完全独立编码器，输入增加逐部件可部署解析代理，并强化破片0.5毁伤边界监督。",
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": false,
+    "use_terminal_physics_features": true,
+    "use_component_proxy_features": true,
+    "use_armor_aware_fragment_proxies": true,
+    "use_mechanism_supervision": true,
+    "use_component_supervision": false,
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones"
+  },
+  "model": {
+    "base_input_dim": 296,
+    "allow_component_proxy_direct_path": true,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_parameterization": "cumulative_logits",
+    "use_mechanism_decomposition": true,
+    "use_mechanism_auxiliary_heads": false,
+    "mechanism_encoder_mode": "independent",
+    "use_component_auxiliary_heads": false
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25,
+    "hard_level_classification_weight": 0.5,
+    "mechanism_auxiliary_weight": 1.0,
+    "mechanism_class_distribution_weight": 0.25,
+    "mechanism_branch_weights": [3.0, 1.0],
+    "mechanism_boundary_focus_weight": 2.0,
+    "mechanism_boundary_focus_bandwidth": 0.15,
+    "mechanism_hard_classification_weight": 0.5,
+    "mechanism_use_dataset_row_weights": false
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.90,
+    "maximum_class1_floor_accuracy_drop": null,
+    "goal_aware_cell_search": true,
+    "minimum_cell_accuracy": 0.94,
+    "minimum_class_diagonal_recall": 0.90
+  },
+  "training": {
+    "epochs": 60,
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0005,
+    "minimum_selection_epochs": 40,
+    "selection_patience": 12,
+    "freeze_base_model": false,
+    "freeze_criterion_uncertainty": false,
+    "include_initial_candidate": false
+  },
+  "ablation": {
+    "components": [
+      "fixed_fragment_shock_probability_or",
+      "independent_mechanism_encoders",
+      "direct_per_component_analytic_proxies",
+      "fragment_priority_mechanism_loss",
+      "mechanism_boundary_focus",
+      "hard_mechanism_boundary_auxiliary",
+      "sealed_test_split"
+    ],
+    "note": "A29混合反事实诊断表明真值破片+预测冲击可达15/16，而预测破片+真值冲击仅5/16；因此将容量和边界监督定向投入破片专家。所有新增输入均可由13维终端状态、弹型常数和公开车辆几何确定，不读取命中、侵彻、组件毁伤或采样元数据。"
+  }
+}

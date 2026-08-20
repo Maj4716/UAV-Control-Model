@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A8_shallow_m_branch",
+  "description": "将加深的M分支退化为单隐层结构，检验机动毁伤几何判别复杂度需求。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\new\\abli_exp\\configs\\A8_shallow_m_branch.json",
+  "run_dir": "D:\\Desktop\\new\\abli_exp\\results\\A8_shallow_m_branch\\seed42"
+}

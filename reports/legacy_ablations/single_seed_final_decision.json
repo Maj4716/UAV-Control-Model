@@ -1,0 +1,99 @@
+{
+  "schema": "stage0_nn_single_seed_final_decision_v1",
+  "status": "COMPLETE",
+  "seed": 42,
+  "decision": {
+    "research_reference_model": "A19_bounded_class1_floor_calibration",
+    "strict_deployment_status": "REJECT",
+    "reason": "Safety false-positive caps are stable, but the exact-L1 recall gate fails in every evaluated seed.",
+    "no_rejected_candidate_test_access": true
+  },
+  "single_seed_improvement": {
+    "original_baseline": "A0_full",
+    "improved_training_candidate": "A13_with_label_confidence",
+    "current_reference": "A19_bounded_class1_floor_calibration",
+    "a0_average_accuracy_percent": 92.91372642149545,
+    "a13_average_accuracy_percent": 93.13000407110869,
+    "a19_average_accuracy_percent": 93.12830777581762,
+    "a13_minus_a0_accuracy_percentage_points": 0.21627764961323237,
+    "a19_minus_a0_accuracy_percentage_points": 0.21458135432216352,
+    "a0_gate_failure_count": 11,
+    "a19_gate_failure_count": 8,
+    "gate_failure_count_reduction": 3,
+    "a19_strict_gate_passed": false,
+    "a19_small_k0_false_positive_percent": 0.45216899816306344,
+    "a19_global_c0_false_positive_percent": 2.2393822393822393
+  },
+  "post_reference_candidates": {
+    "A22_targeted_ranking": {
+      "validation_promotion_status": "FAIL",
+      "test_metrics_read": false,
+      "test_metrics_file_exists": false,
+      "failures": [
+        "validation average accuracy degraded by more than 0.10pp",
+        "strict validation gate failure count increased",
+        "fewer than two targeted ranking objectives improved by 0.002",
+        "at least one targeted ranking objective degraded by over 0.003"
+      ],
+      "promotion_report": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A22_targeted_ranking\\seed42\\validation_promotion.json"
+    },
+    "A23_frozen_cell_residual_adapters": {
+      "validation_promotion_status": "FAIL",
+      "test_metrics_read": false,
+      "test_metrics_file_exists": false,
+      "failures": [
+        "fewer than three weak-cell ranking objectives improved by 0.002",
+        "mean weak-cell ranking improvement is below 0.0005"
+      ],
+      "promotion_report": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A23_frozen_cell_residual_adapters\\seed42\\validation_promotion.json"
+    },
+    "A24_hard_boundary_residual_adapters": {
+      "validation_promotion_status": "FAIL",
+      "test_metrics_read": false,
+      "test_metrics_file_exists": false,
+      "failures": [
+        "fewer than three weak-cell ranking objectives improved by 0.002",
+        "mean weak-cell ranking improvement is below 0.0005"
+      ],
+      "promotion_report": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A24_hard_boundary_residual_adapters\\seed42\\validation_promotion.json"
+    },
+    "A26_nominal_softmax_heads": {
+      "validation_promotion_status": "FAIL",
+      "test_metrics_read": false,
+      "test_metrics_file_exists": false,
+      "failures": [
+        "validation average accuracy degraded by more than 0.10pp",
+        "strict validation gate failure count increased",
+        "fewer than three weak-cell ranking objectives improved by 0.002",
+        "at least one weak-cell ranking objective degraded by over 0.003",
+        "mean weak-cell ranking improvement is below 0.0005"
+      ],
+      "promotion_report": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A26_nominal_softmax_heads\\seed42\\validation_promotion.json"
+    }
+  },
+  "post_reference_candidates_all_rejected": true,
+  "multiseed_reliability": {
+    "report": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\a19_multiseed_reliability.json",
+    "status": "COMPLETE",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "strict_gate_pass_count": 0,
+    "strict_gate_total": 3,
+    "safety_caps_stable_across_all_seeds": true,
+    "average_accuracy_mean_percent": 93.0810942235491,
+    "average_accuracy_seed_std_percent": 0.08771804120891703
+  },
+  "artifact_identity": {
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "selected_model_sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+    "all_multiseed_evaluation_hashes_verified": true
+  },
+  "limitations": [
+    "The fixed validation and test splits have been used by multiple historical experiments; new candidates are exploratory rather than untouched external validation.",
+    "The three-seed interval quantifies initialization variability only, not population or simulator uncertainty.",
+    "A19 is suitable as the current research reference, not as a strictly accepted deployment surrogate."
+  ]
+}

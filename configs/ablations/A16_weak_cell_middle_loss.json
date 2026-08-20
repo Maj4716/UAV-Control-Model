@@ -1,0 +1,21 @@
+{
+  "experiment_id": "A16_weak_cell_middle_loss",
+  "description": "单变量候选：在A13完整MC置信度基础上，只增强经单种子证据确认的弱单元L1三分类分布损失；不改变累计BCE、采样、阈值或误报门禁。",
+  "data": {
+    "use_label_uncertainty": true
+  },
+  "loss": {
+    "middle_class_distribution_multiplier": [
+      [2.0, 1.25, 1.5, 1.25],
+      [1.0, 1.0, 2.0, 1.5],
+      [1.0, 1.0, 1.0, 1.0],
+      [1.5, 1.5, 1.25, 1.5]
+    ]
+  },
+  "ablation": {
+    "components": [
+      "weak_cell_middle_class_distribution_multiplier"
+    ],
+    "note": "Relative to A13, only exact-L1 rows in selected task×munition cells receive a larger class-distribution term; maximum multiplier is 2."
+  }
+}

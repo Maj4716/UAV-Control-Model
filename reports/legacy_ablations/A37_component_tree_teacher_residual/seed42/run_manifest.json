@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A37_component_tree_teacher_residual",
+  "description": "冻结A35主干，以验证集上限已证实满足94/90目标的目标组件树直接监督可部署输出；仅训练弱单元多尺度残差专家并继续校正独立组件分支。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A37_component_tree_teacher_residual.json",
+  "config_sha256": "1db85bb6314b10b5dae7b6c8190efeb6552474757eea7e1df77020709214c516",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A37_component_tree_teacher_residual\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "d56102018520c07cfb820565ba305ec26d94515e2e9d8b836ce69f0bb9f0df8a",
+    "nn_dataset.py": "f8f5f83036206cabc3b74f7f19e527826989ac341de9df2f9b2ace6f1bce882a",
+    "nn_feature_engineering.py": "2b202da47428dc786ed3798d9773ad4e18880d0a56fecd33f2e2254632afddc1",
+    "nn_model.py": "24c531507cf922d6b089e9eda72f385b92754de5f03c23fc7841c9bf16047590",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "20ae6a6411fca8b16a65da6961b8d78b5d13b17e2d9cf26ad17c98a4e41a543e",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema": "stage0_nn_validation_selection_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "model_variant": "raw_best",
+  "selected_epoch": 24,
+  "selection_score": 0.49501603608131406,
+  "validation_rows": 29562,
+  "average_3class_accuracy_percent": 92.55801439285278,
+  "task_3class_accuracy_percent": {
+    "K": 90.83621215820312,
+    "M": 96.66801452636719,
+    "F": 95.24050903320312,
+    "C": 87.48731994628906
+  },
+  "small_k0_false_positive_percent": 0.46199075877666473,
+  "global_c0_false_positive_percent": 2.4057622998952866,
+  "cell_metrics": {
+    "Small": {
+      "K": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 97.01713562011719,
+        "class1_support": 266,
+        "class1_recall_percent": 29.32330894470215
+      },
+      "M": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 93.93980407714844,
+        "class1_support": 1088,
+        "class1_recall_percent": 85.56985473632812
+      },
+      "F": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 95.37049865722656,
+        "class1_support": 3937,
+        "class1_recall_percent": 95.02159118652344
+      },
+      "C": {
+        "samples": 7409,
+        "three_class_accuracy_percent": 93.07598876953125,
+        "class1_support": 666,
+        "class1_recall_percent": 47.29729461669922
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 90.03276824951172,
+        "class1_support": 766,
+        "class1_recall_percent": 75.45691680908203
+      },
+      "M": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 97.979248046875,
+        "class1_support": 528,
+        "class1_recall_percent": 87.1212158203125
+      },
+      "F": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 97.07809448242188,
+        "class1_support": 5903,
+        "class1_recall_percent": 98.78028106689453
+      },
+      "C": {
+        "samples": 7324,
+        "three_class_accuracy_percent": 88.18951416015625,
+        "class1_support": 1941,
+        "class1_recall_percent": 62.13291931152344
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 86.08226776123047,
+        "class1_support": 1295,
+        "class1_recall_percent": 76.83397674560547
+      },
+      "M": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 95.92716979980469,
+        "class1_support": 212,
+        "class1_recall_percent": 54.71697998046875
+      },
+      "F": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 91.50370788574219,
+        "class1_support": 5932,
+        "class1_recall_percent": 96.67903137207031
+      },
+      "C": {
+        "samples": 7415,
+        "three_class_accuracy_percent": 77.50505828857422,
+        "class1_support": 3601,
+        "class1_recall_percent": 56.78977966308594
+      }
+    },
+    "Heavy": {
+      "K": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 90.20771026611328,
+        "class1_support": 864,
+        "class1_recall_percent": 73.49536895751953
+      },
+      "M": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 98.84003448486328,
+        "class1_support": 175,
+        "class1_recall_percent": 85.14286041259766
+      },
+      "F": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 97.03263854980469,
+        "class1_support": 6239,
+        "class1_recall_percent": 99.32681274414062
+      },
+      "C": {
+        "samples": 7414,
+        "three_class_accuracy_percent": 91.19233703613281,
+        "class1_support": 2452,
+        "class1_recall_percent": 79.52691650390625
+      }
+    }
+  },
+  "targeted_probability_diagnostics": {
+    "Small/K": {
+      "entry_auc": 0.9643249240278352,
+      "entry_standardized_partial_auc": 0.6104855636695471,
+      "entry_average_precision": 0.5484115033037901,
+      "maximum_false_positive_rate": 0.005,
+      "positive_support": 266,
+      "negative_support": 7143
+    },
+    "Small/C": {
+      "entry_auc": 0.9518750175357028,
+      "entry_standardized_partial_auc": 0.667825972160331,
+      "entry_average_precision": 0.6644062780112343,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 666,
+      "negative_support": 6743
+    },
+    "Med-LM/C": {
+      "entry_auc": 0.9636205482124007,
+      "entry_standardized_partial_auc": 0.7382306676248399,
+      "entry_average_precision": 0.9037358055576228,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1944,
+      "negative_support": 5380
+    },
+    "Med-RD/C": {
+      "entry_auc": 0.9410917444521014,
+      "entry_standardized_partial_auc": 0.7300990642780905,
+      "entry_average_precision": 0.940196538312329,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 3627,
+      "negative_support": 3788
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "conditional_auc": 0.973750886040333,
+      "conditional_average_precision": 0.9991807977317959,
+      "level1_support": 212,
+      "level2_support": 6974
+    }
+  },
+  "performance_gate": {
+    "passed": false,
+    "failure_count": 9,
+    "failures": [
+      "Small/K class-1 recall 29.32% < 85.00% (n=266)",
+      "Small/C class-1 recall 47.30% < 85.00% (n=666)",
+      "Med-LM/K class-1 recall 75.46% < 85.00% (n=766)",
+      "Med-LM/C class-1 recall 62.13% < 85.00% (n=1941)",
+      "Med-RD/K class-1 recall 76.83% < 85.00% (n=1295)",
+      "Med-RD/M class-1 recall 54.72% < 85.00% (n=212)",
+      "Med-RD/C class-1 recall 56.79% < 85.00% (n=3601)",
+      "Heavy/K class-1 recall 73.50% < 85.00% (n=864)",
+      "Heavy/C class-1 recall 79.53% < 85.00% (n=2452)"
+    ]
+  },
+  "artifact_identity": {
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "model_sha256": "334b67c03acbeffa3144a3fee4f68e8758b0c1ad2e5a8a5bce1524f571543199",
+    "threshold_sha256": "f92a35f5ca32209d85075c540ffd2410afc752cc165f88eef2445944712de21e"
+  }
+}

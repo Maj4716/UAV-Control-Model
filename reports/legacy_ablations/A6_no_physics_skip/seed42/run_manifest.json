@@ -1,0 +1,8 @@
+{
+  "experiment_id": "A6_no_physics_skip",
+  "description": "取消head入口处的物理跳连分支，检验原始物理特征直达专家头的增益。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\new\\abli_exp\\configs\\A6_no_physics_skip.json",
+  "run_dir": "D:\\Desktop\\new\\abli_exp\\results\\A6_no_physics_skip\\seed42"
+}

@@ -1,0 +1,47 @@
+{
+  "threshold_strategy": "per_munition",
+  "threshold_schema": "v5_cellwise_thresholds",
+  "overall_acc": {
+    "K": 97.111817700053,
+    "M": 96.15461049284578,
+    "F": 96.67792792792793,
+    "C": 96.22085320614732
+  },
+  "avg_acc": 96.54130233174351,
+  "small_k1": {
+    "n": 44,
+    "precision": 57.14285714285714,
+    "recall": 90.9090909090909,
+    "f1": 70.17543859649122,
+    "k0_fp": 0.388651379712398
+  },
+  "small_m": {
+    "acc": 93.17274249645754
+  },
+  "small_c1": {
+    "n": 253,
+    "recall": 92.09486166007905,
+    "c0_fp": 2.221694190329096,
+    "small_c0_fp": 1.0918774966711053
+  },
+  "low_cls1_cells": [
+    {
+      "munition": "Med-RD",
+      "task": "M",
+      "n_pos": 486,
+      "recall": 77.9835390946502
+    },
+    {
+      "munition": "Heavy",
+      "task": "M",
+      "n_pos": 198,
+      "recall": 83.83838383838383
+    },
+    {
+      "munition": "Med-RD",
+      "task": "C",
+      "n_pos": 1059,
+      "recall": 84.2304060434372
+    }
+  ]
+}

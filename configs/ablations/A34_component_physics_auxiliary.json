@@ -1,0 +1,31 @@
+{
+  "experiment_id": "A34_component_physics_auxiliary",
+  "description": "保持A31的可部署直接综合毁伤主头，增加51个毁伤树关键部件的破片/冲击波MC均值辅助监督，并用低权重可微毁伤树一致性约束共享表征。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true,
+    "use_mechanism_supervision": false,
+    "use_component_supervision": true
+  },
+  "model": {
+    "use_mechanism_decomposition": false,
+    "use_mechanism_auxiliary_heads": false,
+    "use_component_auxiliary_heads": true
+  },
+  "loss": {
+    "hard_level_classification_weight": 0.5,
+    "component_auxiliary_weight": 0.1,
+    "component_rule_consistency_weight": 0.05,
+    "component_distribution_weight": 0.1
+  },
+  "ablation": {
+    "components": [
+      "direct_combined_damage_head",
+      "component_fragment_shock_auxiliary_heads",
+      "differentiable_damage_tree_consistency",
+      "dual_target_hard_level_nll",
+      "terminal_geometry_v2_features"
+    ],
+    "note": "Component probabilities are SHA-bound training labels in a sidecar. They are explicitly forbidden as model inputs and are absent from the exported inference signature."
+  }
+}

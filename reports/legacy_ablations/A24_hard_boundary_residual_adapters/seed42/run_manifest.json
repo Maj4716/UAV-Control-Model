@@ -1,0 +1,22 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A24_hard_boundary_residual_adapters",
+  "description": "冻结A13主干，以零初始化单元残差专家直接学习MC均值0.5所定义的硬等级边界，检验软概率回归与严格L1判决之间的目标错配。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A24_hard_boundary_residual_adapters.json",
+  "config_sha256": "9c2e248872c4bba09af12fd05dc0273e4e34a1c4eb942375be09af10f9cc4136",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A24_hard_boundary_residual_adapters\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "45e7706f8f086cd8402d50d1696844b4124ef800b1033bc24071ae70d81f8129",
+    "nn_dataset.py": "2f2b41cd8bfcb230e8c15b68991dc18dd90e7dfed35a42f8a093cba55a7b3f04",
+    "nn_model.py": "6c66f942035679bb311eaf684713c0ca6504c8e8b59d61171c2b76ed419244a9",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "73d05bcbae5bdf68da7bff4bee479e904b63bc6eb7867e15bc286a15d9919987"
+  }
+}

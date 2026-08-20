@@ -1,0 +1,261 @@
+{
+  "schema": "stage0_nn_artifact_v1",
+  "created_unix": 1785058240,
+  "python_version": "3.9.23",
+  "seed": 42,
+  "data_contract": {
+    "contract_schema": "stage0_nn_data_v1",
+    "dataset_path": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "dataset_rows": 300000,
+    "dataset_schema": "stage0_lineage_v2",
+    "frame_convention": "stage0_ned_frd_v1",
+    "feature_names": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity"
+    ],
+    "feature_count": 13,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "split_counts": {
+      "train": 240962,
+      "val": 29562,
+      "test": 29476
+    },
+    "target_mode": "full_mc_mean",
+    "label_uncertainty_enabled": true,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "pos_weight_mode": "ones",
+    "balanced_sampler": false
+  },
+  "model_config": {
+    "in_dim": 13,
+    "num_munitions": 4,
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ]
+  },
+  "training_config": {
+    "loss": {
+      "focal_gamma": 0.0,
+      "ordinal_penalty_weight": 0.0,
+      "class1_margin_weight": 0.0,
+      "cell_class1_alpha_enabled": false,
+      "class_distribution_weight": 0.25,
+      "class_distribution_loss_enabled": true
+    },
+    "epochs_requested": 45,
+    "smoke_test": false,
+    "posthoc_recalibration": {
+      "enabled": true,
+      "threshold_schema": "v8_exact_l1_floor_constrained",
+      "validation_only": true,
+      "source_model_sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+      "source_threshold_sha256": "d315b217693efac7523441abbe062fa869784acbea59e875f27cf7d745bce035",
+      "minimum_exact_class1_recall": 0.85
+    }
+  },
+  "artifacts": {
+    "best_model.pth": {
+      "sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+      "size_bytes": 7460761
+    },
+    "best_thresholds.json": {
+      "sha256": "18ac20e370d9501039e33ee3c89161e0b63f658663365bfe0171ede75650359f",
+      "size_bytes": 12379
+    },
+    "minmax_scaler.pkl": {
+      "sha256": "c27bec9e065d92f617f13a39c4698eba87370c38740cc00b8abbb8b1a7f65c75",
+      "size_bytes": 747
+    },
+    "minmax_scaler.json": {
+      "sha256": "72c54863d24ea9aed170e7aa091083d42ac4acafe84a0ebf3a69f0ddcd617217",
+      "size_bytes": 1411
+    }
+  }
+}

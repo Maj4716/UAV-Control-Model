@@ -1,0 +1,23 @@
+{
+  "experiment_id": "A26_nominal_softmax_heads",
+  "description": "三类Softmax序数头：显式学习L0/L1/L2概率，再严格转换为单调累积概率，以检验窄L1等级的间接参数化是否是当前主要瓶颈。",
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true
+  },
+  "model": {
+    "ordinal_parameterization": "nominal_softmax"
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.85,
+    "maximum_class1_floor_accuracy_drop": 0.005
+  },
+  "ablation": {
+    "components": [
+      "explicit_three_class_simplex",
+      "monotone_cumulative_probability_conversion"
+    ],
+    "note": "A26只改变输出参数化；输入、软标签、损失、采样和训练预算与A13一致。先执行验证集晋级，失败时禁止读取A26测试集。由于既有开发已多次使用固定validation，本候选结果按探索性证据报告，不宣称为全新独立验证。"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "experiment_id": "A27_mechanism_decomposition",
+  "description": "在A13训练设定上增加破片/冲击波双专家及分机制MC均值辅助监督，最终毁伤概率严格按物理OR融合；保持13维终端可观测输入，以隔离检验机制分解本身。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_mechanism_supervision": true
+  },
+  "model": {
+    "use_mechanism_decomposition": true
+  },
+  "loss": {
+    "mechanism_auxiliary_weight": 0.5,
+    "mechanism_class_distribution_weight": 0.25
+  },
+  "ablation": {
+    "components": [
+      "fragment_shock_experts",
+      "mechanism_mc_mean_auxiliary_supervision",
+      "fixed_probability_or_fusion"
+    ],
+    "note": "Mechanism-only candidate. No new input feature is enabled, so comparison with A13 isolates the decomposition."
+  }
+}

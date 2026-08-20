@@ -1,0 +1,42 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Notebook and editor-local state
+.ipynb_checkpoints/
+.claude/
+.agents/
+.vscode/*.local.json
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime datasets, checkpoints, and generated outputs
+output/*
+!output/README.md
+*.parquet
+*.pth
+*.pt
+*.onnx
+*.pkl
+*.log
+predictions.csv
+vis_outputs/
+vis_outputs_cn/
+
+# Operating-system metadata
+Thumbs.db
+.DS_Store
+Desktop.ini

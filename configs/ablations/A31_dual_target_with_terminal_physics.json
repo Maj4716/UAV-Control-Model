@@ -1,0 +1,18 @@
+{
+  "experiment_id": "A31_dual_target_with_terminal_physics",
+  "description": "组合A30的双目标序数监督与A28的可部署terminal_geometry_v2特征；用于检验分类语义修复和物理可辨识性增量是否互补。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true
+  },
+  "loss": {
+    "hard_level_classification_weight": 0.5
+  },
+  "ablation": {
+    "components": [
+      "dual_target_hard_level_nll",
+      "terminal_geometry_v2_features"
+    ],
+    "note": "Factorial combination of A30 and A28; no target-point, realized-hit, component-damage or sampling-provenance input is permitted."
+  }
+}

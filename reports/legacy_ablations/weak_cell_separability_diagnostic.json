@@ -1,0 +1,178 @@
+{
+  "schema": "stage0_nn_weak_cell_separability_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "dataset": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "features": [
+    "x_cm",
+    "y_cm",
+    "z_cm",
+    "vx_ms",
+    "vy_ms",
+    "vz_ms",
+    "sin_yaw",
+    "cos_yaw",
+    "sin_pitch",
+    "cos_pitch",
+    "sin_roll",
+    "cos_roll",
+    "norm_velocity"
+  ],
+  "feature_count": 13,
+  "model_role": "diagnostic upper-bound probe; not a deployment candidate",
+  "random_seed": 42,
+  "estimators": 400,
+  "cells": {
+    "Small/K": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60225,
+      "validation_rows": 7409,
+      "train_positive_support": 2683,
+      "validation_positive_support": 266,
+      "full_auc": 0.9441684850513516,
+      "standardized_partial_auc": 0.5632547446663518,
+      "average_precision": 0.4280389824746413,
+      "maximum_false_positive_rate": 0.005,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.20300751879699247,
+        "observed_false_positive_rate": 0.004899902001959961,
+        "threshold": 0.5223132389019549
+      },
+      "neural_baseline_standardized_partial_auc": 0.6072295939650393,
+      "partial_auc_delta_vs_neural": -0.043974849298687446
+    },
+    "Med-LM/K": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60222,
+      "validation_rows": 7324,
+      "train_positive_support": 9082,
+      "validation_positive_support": 1071,
+      "full_auc": 0.9317435380783796,
+      "standardized_partial_auc": 0.6421259357280893,
+      "average_precision": 0.7045058654720997,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.42670401493930904,
+        "observed_false_positive_rate": 0.024788101711178633,
+        "threshold": 0.5809564422255488
+      },
+      "neural_baseline_standardized_partial_auc": 0.7102164259504313,
+      "partial_auc_delta_vs_neural": -0.06809049022234204
+    },
+    "Med-RD/K": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60220,
+      "validation_rows": 7415,
+      "train_positive_support": 18138,
+      "validation_positive_support": 2178,
+      "full_auc": 0.9173722048719877,
+      "standardized_partial_auc": 0.6777434208934819,
+      "average_precision": 0.8347769901156697,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.47107438016528924,
+        "observed_false_positive_rate": 0.02482337215963338,
+        "threshold": 0.6800111397508937
+      },
+      "neural_baseline_standardized_partial_auc": 0.744587761967858,
+      "partial_auc_delta_vs_neural": -0.06684434107437609
+    },
+    "Heavy/K": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60295,
+      "validation_rows": 7414,
+      "train_positive_support": 14781,
+      "validation_positive_support": 1789,
+      "full_auc": 0.9574891497422521,
+      "standardized_partial_auc": 0.7205043165020806,
+      "average_precision": 0.8774667990376984,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.5902738960313024,
+        "observed_false_positive_rate": 0.024888888888888887,
+        "threshold": 0.6890886318990813
+      },
+      "neural_baseline_standardized_partial_auc": 0.7855426229521085,
+      "partial_auc_delta_vs_neural": -0.06503830645002795
+    },
+    "Small/C": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60225,
+      "validation_rows": 7409,
+      "train_positive_support": 5503,
+      "validation_positive_support": 666,
+      "full_auc": 0.9361208309006025,
+      "standardized_partial_auc": 0.6547865406146943,
+      "average_precision": 0.6242075937609004,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.4804804804804805,
+        "observed_false_positive_rate": 0.024766424440160167,
+        "threshold": 0.47633402109958245
+      },
+      "neural_baseline_standardized_partial_auc": 0.6828283313095505,
+      "partial_auc_delta_vs_neural": -0.028041790694856128
+    },
+    "Med-LM/C": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60222,
+      "validation_rows": 7324,
+      "train_positive_support": 16342,
+      "validation_positive_support": 1944,
+      "full_auc": 0.9507117505775083,
+      "standardized_partial_auc": 0.7032393343678042,
+      "average_precision": 0.8751570565862703,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.5627572016460906,
+        "observed_false_positive_rate": 0.02490706319702602,
+        "threshold": 0.7058684099478293
+      },
+      "neural_baseline_standardized_partial_auc": 0.749072326395485,
+      "partial_auc_delta_vs_neural": -0.045832992027680874
+    },
+    "Med-RD/C": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 60220,
+      "validation_rows": 7415,
+      "train_positive_support": 29641,
+      "validation_positive_support": 3627,
+      "full_auc": 0.9011276304170673,
+      "standardized_partial_auc": 0.6412559220213402,
+      "average_precision": 0.8956119941913312,
+      "maximum_false_positive_rate": 0.025,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.4394816652881169,
+        "observed_false_positive_rate": 0.02481520591341077,
+        "threshold": 0.7738067995569771
+      },
+      "neural_baseline_standardized_partial_auc": 0.732480076756106,
+      "partial_auc_delta_vs_neural": -0.09122415473476586
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "model": "ExtraTreesClassifier",
+      "training_rows": 58405,
+      "validation_rows": 7186,
+      "train_positive_support": 56631,
+      "validation_positive_support": 6974,
+      "full_auc": 0.9717102878075439,
+      "standardized_partial_auc": 0.932999829982779,
+      "average_precision": 0.9991048028754346,
+      "maximum_false_positive_rate": 0.1,
+      "recall_at_fpr_cap": {
+        "maximum_recall": 0.9281617436191568,
+        "observed_false_positive_rate": 0.09905660377358491,
+        "threshold": 0.8808190360225266
+      },
+      "neural_baseline_full_auc": 0.9792504234055333,
+      "full_auc_delta_vs_neural": -0.007540135597989384
+    }
+  },
+  "summary": {
+    "mean_entry_partial_auc_delta_vs_neural": -0.05843527492896234,
+    "entry_cells_better_than_neural_by_0p01": 0,
+    "entry_cells_worse_than_neural_by_0p01": 7
+  }
+}

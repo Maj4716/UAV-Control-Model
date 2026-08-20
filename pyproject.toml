@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loitering-munition-damage-twin"
+version = "0.1.0"
+description = "Lightweight loitering-munition damage simulation and surrogate-model pipeline"
+requires-python = ">=3.9,<3.14"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "scipy>=1.12,<2",
+  "scikit-learn>=1.4,<2",
+  "pyarrow>=21,<23",
+  "fastparquet>=2024.11,<2027",
+  "torch>=2.3,<3",
+  "tensorboard>=2.16,<3",
+  "matplotlib>=3.8,<4",
+  "onnx>=1.16,<2",
+  "onnxruntime>=1.17,<2",
+]
+
+[project.optional-dependencies]
+ui = [
+  "streamlit>=1.35,<2",
+  "plotly>=5.22,<7",
+  "seaborn>=0.13,<1",
+]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+lmdt-stage0-generate = "loitering_munition_damage_twin.cli:stage0_generate"
+lmdt-stage0-validate = "loitering_munition_damage_twin.stage0.validation:main"
+lmdt-stage0-audit = "loitering_munition_damage_twin.stage0.audit:main"
+lmdt-stage0-post = "loitering_munition_damage_twin.stage0.post_generation:main"
+lmdt-train = "loitering_munition_damage_twin.cli:train"
+lmdt-eval = "loitering_munition_damage_twin.cli:evaluate"
+lmdt-ablate = "loitering_munition_damage_twin.experiments.run_ablations:main"
+lmdt-promote = "loitering_munition_damage_twin.experiments.promote_strict_validation_goal:main"
+lmdt-strict-validate = "loitering_munition_damage_twin.experiments.validate_strict_performance_goal:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["loitering_munition_damage_twin*"]
+
+[tool.setuptools.package-data]
+"loitering_munition_damage_twin.simulation.resources" = ["*.csv", "*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

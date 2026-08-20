@@ -1,0 +1,8 @@
+{
+  "schema": "stage0_ablation_run_status_v1",
+  "status": "COMPLETE",
+  "experiment_id": "A15_selective_confidence",
+  "seed": 42,
+  "phase": "complete",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A15_selective_confidence\\seed42"
+}

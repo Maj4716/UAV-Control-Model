@@ -1,0 +1,14 @@
+{
+  "experiment_id": "A28_terminal_physics_features",
+  "description": "在A13训练设定上只增加可部署的终端几何与解析物理代理特征，不使用瞄准点、命中或部件毁伤元数据，用于隔离检验输入充分性。",
+  "data": {
+    "use_label_uncertainty": true,
+    "use_terminal_physics_features": true
+  },
+  "ablation": {
+    "components": [
+      "terminal_geometry_v2_features"
+    ],
+    "note": "Feature-only candidate. V2 adds sparse fragment-ring phase and damage-tree rule proxies; mechanism decomposition remains disabled."
+  }
+}

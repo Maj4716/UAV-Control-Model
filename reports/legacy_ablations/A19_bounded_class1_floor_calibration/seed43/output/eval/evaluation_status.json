@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A19_bounded_class1_floor_calibration",
+  "seed": 43,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed43\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "5c20bc47949a9e5e4eece9724df1c3223098e280cc496c9d23377822333a021b",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A19_bounded_class1_floor_calibration\\seed43\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "687d59b41fbe6de7516d4682513c53a53fdd8f80e54d445f3d19687e43dc36c9",
+  "performance_gate_passed": false
+}

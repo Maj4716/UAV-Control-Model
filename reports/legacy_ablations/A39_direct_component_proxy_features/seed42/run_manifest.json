@@ -1,0 +1,26 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A39_direct_component_proxy_features",
+  "description": "从零训练的直接任务代理：在A31的194维terminal_geometry_v2输入上追加102个可部署的逐部件解析破片/冲击波代理，检验分组汇总造成的信息损失；不读取仿真实现命中或部件标签。",
+  "seed": 42,
+  "smoke_test": true,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A39_direct_component_proxy_features.json",
+  "config_sha256": "5fbca175f5dcbb8df636472ce16a536757d206b7c6ad7d1f2ce24f6f1596fa2f",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A39_direct_component_proxy_features\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "5a2a4b0752923af2ce32d88bca73cb42ca978a246037554eec66b692bbf15f59",
+    "nn_dataset.py": "3858917b8e050d83330c00b5c1980e1e18a517e5a37a16b47d4cdd2b0efb4375",
+    "nn_feature_engineering.py": "afb9e93fce690fe4e747bfa90f1ace854249b0cf011e04abb61caea772324ace",
+    "nn_model.py": "8764e78fb9ab403bfef35ef8e7ff7d13ad1ceda1b328f876c62e4e9edca52130",
+    "nn_artifacts.py": "2cff82e50e8b74acb4294e40cc966e3a20e985e0f71cbb4bc6c52f09e4fbc97a",
+    "component_supervision.py": "b7339d177167baa17ac67ed5344ea19dcaeb959522b0cd33b12bbfefda680a54",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\ablation_config.py": "c447f877e1d3a04ba35f1c596b5cd304b34485b124e9a9e4f8cc3c4312869833",
+    "abli_exp\\run_ablations.py": "cacfc3b37ea32bf8c4e50e56a9a2c3772fff92a9319abc48fa451fcfe04f32e5"
+  }
+}

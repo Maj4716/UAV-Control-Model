@@ -1,0 +1,57 @@
+{
+  "schema": "stage0_nn_a34_validation_promotion_v1",
+  "candidate": "A34_component_physics_auxiliary",
+  "baseline": "A31_dual_target_with_terminal_physics",
+  "status": "FAIL",
+  "test_metrics_read": false,
+  "criteria": {
+    "maximum_average_accuracy_drop_percentage_points": 0.1,
+    "maximum_small_k0_false_positive_percent": 0.5,
+    "maximum_global_c0_false_positive_percent": 2.5,
+    "minimum_improved_weak_objectives": 3,
+    "minimum_objective_improvement": 0.002,
+    "maximum_objective_degradation": 0.003,
+    "minimum_mean_objective_delta": 0.0005,
+    "historical_gate_failure_count_may_increase": false,
+    "minimum_goal_metric_failure_reduction": 1,
+    "goal_evidence_failure_count_may_increase": false
+  },
+  "metrics": {
+    "average_accuracy_delta_percentage_points": -0.31121373176574707,
+    "baseline_historical_gate_failures": 8,
+    "candidate_historical_gate_failures": 8,
+    "baseline_goal_metric_failures": 26,
+    "candidate_goal_metric_failures": 26,
+    "goal_metric_failure_reduction": 0,
+    "baseline_goal_evidence_failures": 3,
+    "candidate_goal_evidence_failures": 3,
+    "small_k0_false_positive_percent": 0.4899901803582907,
+    "global_c0_false_positive_percent": 2.3481393232941628,
+    "objective_deltas": {
+      "Small/K": -0.005675654855192058,
+      "Med-LM/K": -0.006248364115366778,
+      "Med-RD/K": 0.0018811466743362537,
+      "Heavy/K": -0.00942430653336257,
+      "Small/C": -3.348589880891595e-05,
+      "Med-LM/C": -0.022234247800103524,
+      "Med-RD/C": -0.017434061703580195,
+      "Med-RD/M_L1_vs_L2": 0.0012965948996541687
+    },
+    "mean_objective_delta": -0.007234047416552952,
+    "improved_objectives": [],
+    "degraded_objectives": [
+      "Small/K",
+      "Med-LM/K",
+      "Heavy/K",
+      "Med-LM/C",
+      "Med-RD/C"
+    ]
+  },
+  "failures": [
+    "validation average accuracy degraded by more than 0.10pp",
+    "strict goal metric failure count did not decrease",
+    "fewer than three weak-cell ranking objectives improved by 0.002",
+    "at least one weak-cell ranking objective degraded by over 0.003",
+    "mean weak-cell ranking improvement is below 0.0005"
+  ]
+}

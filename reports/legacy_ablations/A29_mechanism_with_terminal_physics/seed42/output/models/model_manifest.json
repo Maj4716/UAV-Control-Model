@@ -1,0 +1,736 @@
+{
+  "schema": "stage0_nn_artifact_v1",
+  "created_unix": 1785268289,
+  "python_version": "3.9.23",
+  "seed": 42,
+  "data_contract": {
+    "contract_schema": "stage0_nn_data_v1",
+    "dataset_path": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "dataset_rows": 300000,
+    "dataset_schema": "stage0_lineage_v2",
+    "frame_convention": "stage0_ned_frd_v1",
+    "feature_names": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity",
+      "phys_position_radius_m",
+      "phys_position_horizontal_radius_m",
+      "phys_velocity_unit_x",
+      "phys_velocity_unit_y",
+      "phys_velocity_unit_z",
+      "phys_velocity_body_forward_cos",
+      "phys_velocity_body_right_cos",
+      "phys_velocity_body_down_cos",
+      "phys_center_closing_cos",
+      "phys_time_to_center_closest_s",
+      "phys_center_miss_distance_m",
+      "phys_k_fuel_min_distance_m",
+      "phys_k_fuel_mean_distance_m",
+      "phys_k_fuel_max_shock_damage_proxy",
+      "phys_k_fuel_mean_shock_damage_proxy",
+      "phys_k_fuel_max_fragment_exposure_proxy",
+      "phys_k_fuel_mean_fragment_exposure_proxy",
+      "phys_k_fuel_min_fragment_cone_residual_rad",
+      "phys_k_fuel_min_fragment_azimuth_residual_rad",
+      "phys_k_fuel_max_fragment_grid_alignment",
+      "phys_k_fuel_max_fragment_damage_proxy",
+      "phys_k_fuel_mean_fragment_damage_proxy",
+      "phys_k_ammo_min_distance_m",
+      "phys_k_ammo_mean_distance_m",
+      "phys_k_ammo_max_shock_damage_proxy",
+      "phys_k_ammo_mean_shock_damage_proxy",
+      "phys_k_ammo_max_fragment_exposure_proxy",
+      "phys_k_ammo_mean_fragment_exposure_proxy",
+      "phys_k_ammo_min_fragment_cone_residual_rad",
+      "phys_k_ammo_min_fragment_azimuth_residual_rad",
+      "phys_k_ammo_max_fragment_grid_alignment",
+      "phys_k_ammo_max_fragment_damage_proxy",
+      "phys_k_ammo_mean_fragment_damage_proxy",
+      "phys_m_wheels_min_distance_m",
+      "phys_m_wheels_mean_distance_m",
+      "phys_m_wheels_max_shock_damage_proxy",
+      "phys_m_wheels_mean_shock_damage_proxy",
+      "phys_m_wheels_max_fragment_exposure_proxy",
+      "phys_m_wheels_mean_fragment_exposure_proxy",
+      "phys_m_wheels_min_fragment_cone_residual_rad",
+      "phys_m_wheels_min_fragment_azimuth_residual_rad",
+      "phys_m_wheels_max_fragment_grid_alignment",
+      "phys_m_wheels_max_fragment_damage_proxy",
+      "phys_m_wheels_mean_fragment_damage_proxy",
+      "phys_m_idlers_min_distance_m",
+      "phys_m_idlers_mean_distance_m",
+      "phys_m_idlers_max_shock_damage_proxy",
+      "phys_m_idlers_mean_shock_damage_proxy",
+      "phys_m_idlers_max_fragment_exposure_proxy",
+      "phys_m_idlers_mean_fragment_exposure_proxy",
+      "phys_m_idlers_min_fragment_cone_residual_rad",
+      "phys_m_idlers_min_fragment_azimuth_residual_rad",
+      "phys_m_idlers_max_fragment_grid_alignment",
+      "phys_m_idlers_max_fragment_damage_proxy",
+      "phys_m_idlers_mean_fragment_damage_proxy",
+      "phys_m_power_min_distance_m",
+      "phys_m_power_mean_distance_m",
+      "phys_m_power_max_shock_damage_proxy",
+      "phys_m_power_mean_shock_damage_proxy",
+      "phys_m_power_max_fragment_exposure_proxy",
+      "phys_m_power_mean_fragment_exposure_proxy",
+      "phys_m_power_min_fragment_cone_residual_rad",
+      "phys_m_power_min_fragment_azimuth_residual_rad",
+      "phys_m_power_max_fragment_grid_alignment",
+      "phys_m_power_max_fragment_damage_proxy",
+      "phys_m_power_mean_fragment_damage_proxy",
+      "phys_m_drives_min_distance_m",
+      "phys_m_drives_mean_distance_m",
+      "phys_m_drives_max_shock_damage_proxy",
+      "phys_m_drives_mean_shock_damage_proxy",
+      "phys_m_drives_max_fragment_exposure_proxy",
+      "phys_m_drives_mean_fragment_exposure_proxy",
+      "phys_m_drives_min_fragment_cone_residual_rad",
+      "phys_m_drives_min_fragment_azimuth_residual_rad",
+      "phys_m_drives_max_fragment_grid_alignment",
+      "phys_m_drives_max_fragment_damage_proxy",
+      "phys_m_drives_mean_fragment_damage_proxy",
+      "phys_m_tracks_min_distance_m",
+      "phys_m_tracks_mean_distance_m",
+      "phys_m_tracks_max_shock_damage_proxy",
+      "phys_m_tracks_mean_shock_damage_proxy",
+      "phys_m_tracks_max_fragment_exposure_proxy",
+      "phys_m_tracks_mean_fragment_exposure_proxy",
+      "phys_m_tracks_min_fragment_cone_residual_rad",
+      "phys_m_tracks_min_fragment_azimuth_residual_rad",
+      "phys_m_tracks_max_fragment_grid_alignment",
+      "phys_m_tracks_max_fragment_damage_proxy",
+      "phys_m_tracks_mean_fragment_damage_proxy",
+      "phys_m_driver_min_distance_m",
+      "phys_m_driver_mean_distance_m",
+      "phys_m_driver_max_shock_damage_proxy",
+      "phys_m_driver_mean_shock_damage_proxy",
+      "phys_m_driver_max_fragment_exposure_proxy",
+      "phys_m_driver_mean_fragment_exposure_proxy",
+      "phys_m_driver_min_fragment_cone_residual_rad",
+      "phys_m_driver_min_fragment_azimuth_residual_rad",
+      "phys_m_driver_max_fragment_grid_alignment",
+      "phys_m_driver_max_fragment_damage_proxy",
+      "phys_m_driver_mean_fragment_damage_proxy",
+      "phys_f_secondary_min_distance_m",
+      "phys_f_secondary_mean_distance_m",
+      "phys_f_secondary_max_shock_damage_proxy",
+      "phys_f_secondary_mean_shock_damage_proxy",
+      "phys_f_secondary_max_fragment_exposure_proxy",
+      "phys_f_secondary_mean_fragment_exposure_proxy",
+      "phys_f_secondary_min_fragment_cone_residual_rad",
+      "phys_f_secondary_min_fragment_azimuth_residual_rad",
+      "phys_f_secondary_max_fragment_grid_alignment",
+      "phys_f_secondary_max_fragment_damage_proxy",
+      "phys_f_secondary_mean_fragment_damage_proxy",
+      "phys_f_sights_min_distance_m",
+      "phys_f_sights_mean_distance_m",
+      "phys_f_sights_max_shock_damage_proxy",
+      "phys_f_sights_mean_shock_damage_proxy",
+      "phys_f_sights_max_fragment_exposure_proxy",
+      "phys_f_sights_mean_fragment_exposure_proxy",
+      "phys_f_sights_min_fragment_cone_residual_rad",
+      "phys_f_sights_min_fragment_azimuth_residual_rad",
+      "phys_f_sights_max_fragment_grid_alignment",
+      "phys_f_sights_max_fragment_damage_proxy",
+      "phys_f_sights_mean_fragment_damage_proxy",
+      "phys_f_fire_control_min_distance_m",
+      "phys_f_fire_control_mean_distance_m",
+      "phys_f_fire_control_max_shock_damage_proxy",
+      "phys_f_fire_control_mean_shock_damage_proxy",
+      "phys_f_fire_control_max_fragment_exposure_proxy",
+      "phys_f_fire_control_mean_fragment_exposure_proxy",
+      "phys_f_fire_control_min_fragment_cone_residual_rad",
+      "phys_f_fire_control_min_fragment_azimuth_residual_rad",
+      "phys_f_fire_control_max_fragment_grid_alignment",
+      "phys_f_fire_control_max_fragment_damage_proxy",
+      "phys_f_fire_control_mean_fragment_damage_proxy",
+      "phys_f_main_supply_min_distance_m",
+      "phys_f_main_supply_mean_distance_m",
+      "phys_f_main_supply_max_shock_damage_proxy",
+      "phys_f_main_supply_mean_shock_damage_proxy",
+      "phys_f_main_supply_max_fragment_exposure_proxy",
+      "phys_f_main_supply_mean_fragment_exposure_proxy",
+      "phys_f_main_supply_min_fragment_cone_residual_rad",
+      "phys_f_main_supply_min_fragment_azimuth_residual_rad",
+      "phys_f_main_supply_max_fragment_grid_alignment",
+      "phys_f_main_supply_max_fragment_damage_proxy",
+      "phys_f_main_supply_mean_fragment_damage_proxy",
+      "phys_f_command_min_distance_m",
+      "phys_f_command_mean_distance_m",
+      "phys_f_command_max_shock_damage_proxy",
+      "phys_f_command_mean_shock_damage_proxy",
+      "phys_f_command_max_fragment_exposure_proxy",
+      "phys_f_command_mean_fragment_exposure_proxy",
+      "phys_f_command_min_fragment_cone_residual_rad",
+      "phys_f_command_min_fragment_azimuth_residual_rad",
+      "phys_f_command_max_fragment_grid_alignment",
+      "phys_f_command_max_fragment_damage_proxy",
+      "phys_f_command_mean_fragment_damage_proxy",
+      "phys_c_crew_min_distance_m",
+      "phys_c_crew_mean_distance_m",
+      "phys_c_crew_max_shock_damage_proxy",
+      "phys_c_crew_mean_shock_damage_proxy",
+      "phys_c_crew_max_fragment_exposure_proxy",
+      "phys_c_crew_mean_fragment_exposure_proxy",
+      "phys_c_crew_min_fragment_cone_residual_rad",
+      "phys_c_crew_min_fragment_azimuth_residual_rad",
+      "phys_c_crew_max_fragment_grid_alignment",
+      "phys_c_crew_max_fragment_damage_proxy",
+      "phys_c_crew_mean_fragment_damage_proxy",
+      "phys_fragment_K_ge1_rule_proxy",
+      "phys_fragment_K_ge2_rule_proxy",
+      "phys_fragment_M_ge1_rule_proxy",
+      "phys_fragment_M_ge2_rule_proxy",
+      "phys_fragment_F_ge1_rule_proxy",
+      "phys_fragment_F_ge2_rule_proxy",
+      "phys_fragment_C_ge1_rule_proxy",
+      "phys_fragment_C_ge2_rule_proxy",
+      "phys_shock_K_ge1_rule_proxy",
+      "phys_shock_K_ge2_rule_proxy",
+      "phys_shock_M_ge1_rule_proxy",
+      "phys_shock_M_ge2_rule_proxy",
+      "phys_shock_F_ge1_rule_proxy",
+      "phys_shock_F_ge2_rule_proxy",
+      "phys_shock_C_ge1_rule_proxy",
+      "phys_shock_C_ge2_rule_proxy"
+    ],
+    "feature_count": 194,
+    "terminal_physics_contract": {
+      "derivation_version": "terminal_geometry_v2",
+      "vehicle_model_sha256": "66aea51c4ba4165717ffa094607420de45fd9121db71b32364d9ea569756f0fd",
+      "derived_feature_names": [
+        "phys_position_radius_m",
+        "phys_position_horizontal_radius_m",
+        "phys_velocity_unit_x",
+        "phys_velocity_unit_y",
+        "phys_velocity_unit_z",
+        "phys_velocity_body_forward_cos",
+        "phys_velocity_body_right_cos",
+        "phys_velocity_body_down_cos",
+        "phys_center_closing_cos",
+        "phys_time_to_center_closest_s",
+        "phys_center_miss_distance_m",
+        "phys_k_fuel_min_distance_m",
+        "phys_k_fuel_mean_distance_m",
+        "phys_k_fuel_max_shock_damage_proxy",
+        "phys_k_fuel_mean_shock_damage_proxy",
+        "phys_k_fuel_max_fragment_exposure_proxy",
+        "phys_k_fuel_mean_fragment_exposure_proxy",
+        "phys_k_fuel_min_fragment_cone_residual_rad",
+        "phys_k_fuel_min_fragment_azimuth_residual_rad",
+        "phys_k_fuel_max_fragment_grid_alignment",
+        "phys_k_fuel_max_fragment_damage_proxy",
+        "phys_k_fuel_mean_fragment_damage_proxy",
+        "phys_k_ammo_min_distance_m",
+        "phys_k_ammo_mean_distance_m",
+        "phys_k_ammo_max_shock_damage_proxy",
+        "phys_k_ammo_mean_shock_damage_proxy",
+        "phys_k_ammo_max_fragment_exposure_proxy",
+        "phys_k_ammo_mean_fragment_exposure_proxy",
+        "phys_k_ammo_min_fragment_cone_residual_rad",
+        "phys_k_ammo_min_fragment_azimuth_residual_rad",
+        "phys_k_ammo_max_fragment_grid_alignment",
+        "phys_k_ammo_max_fragment_damage_proxy",
+        "phys_k_ammo_mean_fragment_damage_proxy",
+        "phys_m_wheels_min_distance_m",
+        "phys_m_wheels_mean_distance_m",
+        "phys_m_wheels_max_shock_damage_proxy",
+        "phys_m_wheels_mean_shock_damage_proxy",
+        "phys_m_wheels_max_fragment_exposure_proxy",
+        "phys_m_wheels_mean_fragment_exposure_proxy",
+        "phys_m_wheels_min_fragment_cone_residual_rad",
+        "phys_m_wheels_min_fragment_azimuth_residual_rad",
+        "phys_m_wheels_max_fragment_grid_alignment",
+        "phys_m_wheels_max_fragment_damage_proxy",
+        "phys_m_wheels_mean_fragment_damage_proxy",
+        "phys_m_idlers_min_distance_m",
+        "phys_m_idlers_mean_distance_m",
+        "phys_m_idlers_max_shock_damage_proxy",
+        "phys_m_idlers_mean_shock_damage_proxy",
+        "phys_m_idlers_max_fragment_exposure_proxy",
+        "phys_m_idlers_mean_fragment_exposure_proxy",
+        "phys_m_idlers_min_fragment_cone_residual_rad",
+        "phys_m_idlers_min_fragment_azimuth_residual_rad",
+        "phys_m_idlers_max_fragment_grid_alignment",
+        "phys_m_idlers_max_fragment_damage_proxy",
+        "phys_m_idlers_mean_fragment_damage_proxy",
+        "phys_m_power_min_distance_m",
+        "phys_m_power_mean_distance_m",
+        "phys_m_power_max_shock_damage_proxy",
+        "phys_m_power_mean_shock_damage_proxy",
+        "phys_m_power_max_fragment_exposure_proxy",
+        "phys_m_power_mean_fragment_exposure_proxy",
+        "phys_m_power_min_fragment_cone_residual_rad",
+        "phys_m_power_min_fragment_azimuth_residual_rad",
+        "phys_m_power_max_fragment_grid_alignment",
+        "phys_m_power_max_fragment_damage_proxy",
+        "phys_m_power_mean_fragment_damage_proxy",
+        "phys_m_drives_min_distance_m",
+        "phys_m_drives_mean_distance_m",
+        "phys_m_drives_max_shock_damage_proxy",
+        "phys_m_drives_mean_shock_damage_proxy",
+        "phys_m_drives_max_fragment_exposure_proxy",
+        "phys_m_drives_mean_fragment_exposure_proxy",
+        "phys_m_drives_min_fragment_cone_residual_rad",
+        "phys_m_drives_min_fragment_azimuth_residual_rad",
+        "phys_m_drives_max_fragment_grid_alignment",
+        "phys_m_drives_max_fragment_damage_proxy",
+        "phys_m_drives_mean_fragment_damage_proxy",
+        "phys_m_tracks_min_distance_m",
+        "phys_m_tracks_mean_distance_m",
+        "phys_m_tracks_max_shock_damage_proxy",
+        "phys_m_tracks_mean_shock_damage_proxy",
+        "phys_m_tracks_max_fragment_exposure_proxy",
+        "phys_m_tracks_mean_fragment_exposure_proxy",
+        "phys_m_tracks_min_fragment_cone_residual_rad",
+        "phys_m_tracks_min_fragment_azimuth_residual_rad",
+        "phys_m_tracks_max_fragment_grid_alignment",
+        "phys_m_tracks_max_fragment_damage_proxy",
+        "phys_m_tracks_mean_fragment_damage_proxy",
+        "phys_m_driver_min_distance_m",
+        "phys_m_driver_mean_distance_m",
+        "phys_m_driver_max_shock_damage_proxy",
+        "phys_m_driver_mean_shock_damage_proxy",
+        "phys_m_driver_max_fragment_exposure_proxy",
+        "phys_m_driver_mean_fragment_exposure_proxy",
+        "phys_m_driver_min_fragment_cone_residual_rad",
+        "phys_m_driver_min_fragment_azimuth_residual_rad",
+        "phys_m_driver_max_fragment_grid_alignment",
+        "phys_m_driver_max_fragment_damage_proxy",
+        "phys_m_driver_mean_fragment_damage_proxy",
+        "phys_f_secondary_min_distance_m",
+        "phys_f_secondary_mean_distance_m",
+        "phys_f_secondary_max_shock_damage_proxy",
+        "phys_f_secondary_mean_shock_damage_proxy",
+        "phys_f_secondary_max_fragment_exposure_proxy",
+        "phys_f_secondary_mean_fragment_exposure_proxy",
+        "phys_f_secondary_min_fragment_cone_residual_rad",
+        "phys_f_secondary_min_fragment_azimuth_residual_rad",
+        "phys_f_secondary_max_fragment_grid_alignment",
+        "phys_f_secondary_max_fragment_damage_proxy",
+        "phys_f_secondary_mean_fragment_damage_proxy",
+        "phys_f_sights_min_distance_m",
+        "phys_f_sights_mean_distance_m",
+        "phys_f_sights_max_shock_damage_proxy",
+        "phys_f_sights_mean_shock_damage_proxy",
+        "phys_f_sights_max_fragment_exposure_proxy",
+        "phys_f_sights_mean_fragment_exposure_proxy",
+        "phys_f_sights_min_fragment_cone_residual_rad",
+        "phys_f_sights_min_fragment_azimuth_residual_rad",
+        "phys_f_sights_max_fragment_grid_alignment",
+        "phys_f_sights_max_fragment_damage_proxy",
+        "phys_f_sights_mean_fragment_damage_proxy",
+        "phys_f_fire_control_min_distance_m",
+        "phys_f_fire_control_mean_distance_m",
+        "phys_f_fire_control_max_shock_damage_proxy",
+        "phys_f_fire_control_mean_shock_damage_proxy",
+        "phys_f_fire_control_max_fragment_exposure_proxy",
+        "phys_f_fire_control_mean_fragment_exposure_proxy",
+        "phys_f_fire_control_min_fragment_cone_residual_rad",
+        "phys_f_fire_control_min_fragment_azimuth_residual_rad",
+        "phys_f_fire_control_max_fragment_grid_alignment",
+        "phys_f_fire_control_max_fragment_damage_proxy",
+        "phys_f_fire_control_mean_fragment_damage_proxy",
+        "phys_f_main_supply_min_distance_m",
+        "phys_f_main_supply_mean_distance_m",
+        "phys_f_main_supply_max_shock_damage_proxy",
+        "phys_f_main_supply_mean_shock_damage_proxy",
+        "phys_f_main_supply_max_fragment_exposure_proxy",
+        "phys_f_main_supply_mean_fragment_exposure_proxy",
+        "phys_f_main_supply_min_fragment_cone_residual_rad",
+        "phys_f_main_supply_min_fragment_azimuth_residual_rad",
+        "phys_f_main_supply_max_fragment_grid_alignment",
+        "phys_f_main_supply_max_fragment_damage_proxy",
+        "phys_f_main_supply_mean_fragment_damage_proxy",
+        "phys_f_command_min_distance_m",
+        "phys_f_command_mean_distance_m",
+        "phys_f_command_max_shock_damage_proxy",
+        "phys_f_command_mean_shock_damage_proxy",
+        "phys_f_command_max_fragment_exposure_proxy",
+        "phys_f_command_mean_fragment_exposure_proxy",
+        "phys_f_command_min_fragment_cone_residual_rad",
+        "phys_f_command_min_fragment_azimuth_residual_rad",
+        "phys_f_command_max_fragment_grid_alignment",
+        "phys_f_command_max_fragment_damage_proxy",
+        "phys_f_command_mean_fragment_damage_proxy",
+        "phys_c_crew_min_distance_m",
+        "phys_c_crew_mean_distance_m",
+        "phys_c_crew_max_shock_damage_proxy",
+        "phys_c_crew_mean_shock_damage_proxy",
+        "phys_c_crew_max_fragment_exposure_proxy",
+        "phys_c_crew_mean_fragment_exposure_proxy",
+        "phys_c_crew_min_fragment_cone_residual_rad",
+        "phys_c_crew_min_fragment_azimuth_residual_rad",
+        "phys_c_crew_max_fragment_grid_alignment",
+        "phys_c_crew_max_fragment_damage_proxy",
+        "phys_c_crew_mean_fragment_damage_proxy",
+        "phys_fragment_K_ge1_rule_proxy",
+        "phys_fragment_K_ge2_rule_proxy",
+        "phys_fragment_M_ge1_rule_proxy",
+        "phys_fragment_M_ge2_rule_proxy",
+        "phys_fragment_F_ge1_rule_proxy",
+        "phys_fragment_F_ge2_rule_proxy",
+        "phys_fragment_C_ge1_rule_proxy",
+        "phys_fragment_C_ge2_rule_proxy",
+        "phys_shock_K_ge1_rule_proxy",
+        "phys_shock_K_ge2_rule_proxy",
+        "phys_shock_M_ge1_rule_proxy",
+        "phys_shock_M_ge2_rule_proxy",
+        "phys_shock_F_ge1_rule_proxy",
+        "phys_shock_F_ge2_rule_proxy",
+        "phys_shock_C_ge1_rule_proxy",
+        "phys_shock_C_ge2_rule_proxy"
+      ],
+      "derived_feature_count": 181
+    },
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "split_counts": {
+      "train": 240962,
+      "val": 29562,
+      "test": 29476
+    },
+    "target_mode": "full_mc_mean",
+    "label_uncertainty_enabled": true,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "mechanism_supervision_enabled": true,
+    "mechanism_target_schema": "fragment_shock_ordinal_mc_mean_v1",
+    "pos_weight_mode": "ones",
+    "balanced_sampler": false
+  },
+  "model_config": {
+    "in_dim": 194,
+    "num_munitions": 4,
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_parameterization": "cumulative_logits",
+    "use_mechanism_decomposition": true,
+    "residual_adapter_cells": [],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "residual_adapter_frequencies": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "residual_adapter_max_logit": 2.0,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ]
+  },
+  "training_config": {
+    "loss": {
+      "focal_gamma": 0.0,
+      "ordinal_penalty_weight": 0.0,
+      "class1_margin_weight": 0.0,
+      "cell_class1_alpha_enabled": false,
+      "class_distribution_weight": 0.25,
+      "class_distribution_loss_enabled": true,
+      "hard_level_classification_weight": 0.0,
+      "middle_class_distribution_multiplier": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "entry_ranking_weight": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "conditional_l1_l2_ranking_weight": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "ranking_margin": 0.5,
+      "hard_negative_fraction": 0.1,
+      "mechanism_auxiliary_weight": 0.5,
+      "mechanism_class_distribution_weight": 0.25
+    },
+    "epochs_requested": 45,
+    "smoke_test": false,
+    "optimization": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0005,
+      "minimum_selection_epochs": 32,
+      "selection_patience": 10,
+      "freeze_base_model": false,
+      "freeze_criterion_uncertainty": false,
+      "trainable_model_parameters": 3359168
+    },
+    "warm_start": null
+  },
+  "artifacts": {
+    "best_model.pth": {
+      "sha256": "cf6769e5afc46a5451a72019f2d36183d03038f11fd08054cd562c0d001e8893",
+      "size_bytes": 13513472
+    },
+    "best_thresholds.json": {
+      "sha256": "f1e62651f94ddca8c4ff1ea6cd7d5165cf18c3ef13f4f72a772f02fb334fd9ac",
+      "size_bytes": 12789
+    },
+    "minmax_scaler.pkl": {
+      "sha256": "4cc1c1e927778314be42880262e0e1f161c85f01dc82529cc0ae857258f13f08",
+      "size_bytes": 4382
+    },
+    "minmax_scaler.json": {
+      "sha256": "7db92258662f32190a3f08e6dcd94b0d46c9ef53b1e03e1c73e5972829f60b5f",
+      "size_bytes": 25203
+    }
+  }
+}

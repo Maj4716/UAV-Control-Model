@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A1_no_physics_features",
+  "description": "移除可观测的速度模长norm_velocity，检验显式能量尺度特征相对原始速度分量的增益。",
+  "data": {
+    "drop_features": ["norm_velocity"]
+  },
+  "ablation": {
+    "components": ["norm_velocity"],
+    "note": "Input dimension changes from 13 to 12; generation-only aim-point metadata remains forbidden in every run."
+  }
+}

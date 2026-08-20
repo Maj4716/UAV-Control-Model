@@ -1,0 +1,23 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A31_dual_target_with_terminal_physics",
+  "description": "组合A30的双目标序数监督与A28的可部署terminal_geometry_v2特征；用于检验分类语义修复和物理可辨识性增量是否互补。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A31_dual_target_with_terminal_physics.json",
+  "config_sha256": "2376c663a2e9d5031afa3049f8db32278f0418504af981e697a7d6a3cc655123",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "ec77e3aecc27db068642c8e091379399df72e57afa819a878a526ac6178ecd5d",
+    "nn_dataset.py": "b38781837bf02dfec700f99bc32671de14e4087845f80528aee4351c3eeb20ec",
+    "nn_feature_engineering.py": "482a310be637d33d9492a4be5d0b5783aead41834defac7c24c970ac20b9c241",
+    "nn_model.py": "e1da2f95bafe88b881a2605a4a7f6658378a354dfabdcf211a307fbb63df4a1d",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "981610ed0510753f8d2ba764618000ace0932a6c110658316200f4a48d569bd0"
+  }
+}

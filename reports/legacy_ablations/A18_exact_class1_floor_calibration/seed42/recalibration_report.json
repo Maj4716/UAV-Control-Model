@@ -1,0 +1,109 @@
+{
+  "schema": "stage0_nn_recalibration_v1",
+  "status": "COMPLETE",
+  "experiment_id": "A18_exact_class1_floor_calibration",
+  "seed": 42,
+  "device": "cuda",
+  "validation_rows": 29562,
+  "source_model_sha256": "2c8683b40e2e5f8792cc43a026317a137cea22c253c6244268d087259eb8e4a7",
+  "source_threshold_sha256": "d315b217693efac7523441abbe062fa869784acbea59e875f27cf7d745bce035",
+  "new_threshold_sha256": "18ac20e370d9501039e33ee3c89161e0b63f658663365bfe0171ede75650359f",
+  "threshold_schema": "v8_exact_l1_floor_constrained",
+  "model_weights_unchanged": true,
+  "validation_average_3class_accuracy": 92.49796867370605,
+  "validation_class1_recall_by_cell": {
+    "Small": {
+      "K": {
+        "class1_support": 266,
+        "class1_recall_percent": 30.451128005981445
+      },
+      "M": {
+        "class1_support": 1088,
+        "class1_recall_percent": 87.04044342041016
+      },
+      "F": {
+        "class1_support": 3937,
+        "class1_recall_percent": 94.31039428710938
+      },
+      "C": {
+        "class1_support": 666,
+        "class1_recall_percent": 52.25225067138672
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "class1_support": 766,
+        "class1_recall_percent": 86.03132629394531
+      },
+      "M": {
+        "class1_support": 528,
+        "class1_recall_percent": 89.7727279663086
+      },
+      "F": {
+        "class1_support": 5903,
+        "class1_recall_percent": 98.62781524658203
+      },
+      "C": {
+        "class1_support": 1941,
+        "class1_recall_percent": 63.16331481933594
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "class1_support": 1295,
+        "class1_recall_percent": 85.09652709960938
+      },
+      "M": {
+        "class1_support": 212,
+        "class1_recall_percent": 85.37735748291016
+      },
+      "F": {
+        "class1_support": 5932,
+        "class1_recall_percent": 96.96561431884766
+      },
+      "C": {
+        "class1_support": 3601,
+        "class1_recall_percent": 57.62287902832031
+      }
+    },
+    "Heavy": {
+      "K": {
+        "class1_support": 864,
+        "class1_recall_percent": 85.18518829345703
+      },
+      "M": {
+        "class1_support": 175,
+        "class1_recall_percent": 85.71428680419922
+      },
+      "F": {
+        "class1_support": 6239,
+        "class1_recall_percent": 98.99021911621094
+      },
+      "C": {
+        "class1_support": 2452,
+        "class1_recall_percent": 85.11419677734375
+      }
+    }
+  },
+  "validation_low_class1_cells": [
+    {
+      "task": "C",
+      "munition": "Med-RD",
+      "n_pos": 3601,
+      "recall": 57.62287902832031,
+      "floor": 85.0,
+      "deficit": 27.377120971679688
+    },
+    {
+      "task": "C",
+      "munition": "Med-LM",
+      "n_pos": 1941,
+      "recall": 63.16331481933594,
+      "floor": 85.0,
+      "deficit": 21.836685180664062
+    }
+  ],
+  "validation_small_k0_false_positive_percent": 0.46199075877666473,
+  "validation_global_c0_false_positive_percent": 2.3673469200730324,
+  "model_manifest": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A18_exact_class1_floor_calibration\\seed42\\output\\models\\model_manifest.json"
+}

@@ -1,0 +1,604 @@
+{
+  "schema": "stage0_validation_threshold_feasibility_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "validation_scan_predicate": "split_role == 'val'",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A29_mechanism_with_terminal_physics\\seed42",
+  "probability_source": "predicted_mechanism_shock",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "model_sha256": "cf6769e5afc46a5451a72019f2d36183d03038f11fd08054cd562c0d001e8893",
+  "validation_rows": 29562,
+  "requirements": {
+    "minimum_cell_3class_accuracy_percent": 94.0,
+    "minimum_applicable_class_diagonal_recall_percent": 90.0,
+    "minimum_class_support": 100,
+    "small_k0_max_false_positive_percent": 0.5,
+    "global_c0_max_false_positive_percent": 2.5
+  },
+  "threshold_grid": {
+    "minimum": 0.02,
+    "maximum": 1.0,
+    "step": 0.02,
+    "pairs_per_cell": 2500
+  },
+  "metric_goal_threshold_feasible": false,
+  "evidence_sufficient": false,
+  "global_c0_joint_feasibility": {
+    "l0_support": 20825,
+    "maximum_false_positive_count": 520,
+    "minimum_false_positive_count_for_local_goals": null,
+    "feasible": false
+  },
+  "cells": {
+    "Small": {
+      "K": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          7143,
+          266,
+          0
+        ],
+        "applicable_classes": [
+          0,
+          1
+        ],
+        "metric_classes": [
+          0,
+          1
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.1,
+          "threshold_ge2": 0.02,
+          "three_class_accuracy_percent": 96.18032123093535,
+          "class_diagonal_recall_percent": [
+            99.5660086798264,
+            5.263157894736842,
+            null
+          ],
+          "l0_false_positive_count": 31,
+          "l0_false_positive_percent": 0.43399132017359654
+        }
+      },
+      "M": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          3083,
+          1088,
+          3238
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.24,
+          "threshold_ge2": 0.42000000000000004,
+          "three_class_accuracy_percent": 90.64651100013496,
+          "class_diagonal_recall_percent": [
+            91.46934803762569,
+            90.16544117647058,
+            90.02470660901791
+          ],
+          "l0_false_positive_count": 263,
+          "l0_false_positive_percent": 8.53065196237431
+        }
+      },
+      "F": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          3297,
+          3937,
+          175
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.4,
+          "threshold_ge2": 0.30000000000000004,
+          "three_class_accuracy_percent": 94.81711432042111,
+          "class_diagonal_recall_percent": [
+            96.05702153472853,
+            94.41198882397764,
+            80.57142857142857
+          ],
+          "l0_false_positive_count": 130,
+          "l0_false_positive_percent": 3.942978465271459
+        }
+      },
+      "C": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          6743,
+          666,
+          0
+        ],
+        "applicable_classes": [
+          0,
+          1
+        ],
+        "metric_classes": [
+          0,
+          1
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.02,
+          "threshold_ge2": 0.02,
+          "three_class_accuracy_percent": 91.01093264948035,
+          "class_diagonal_recall_percent": [
+            99.98516980572445,
+            0.15015015015015015,
+            null
+          ],
+          "l0_false_positive_count": 1,
+          "l0_false_positive_percent": 0.014830194275545008
+        }
+      }
+    },
+    "Med-LM": {
+      "K": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          6253,
+          766,
+          305
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.04,
+          "threshold_ge2": 0.04,
+          "three_class_accuracy_percent": 81.43091206990715,
+          "class_diagonal_recall_percent": [
+            92.94738525507756,
+            13.968668407310705,
+            14.754098360655737
+          ],
+          "l0_false_positive_count": 441,
+          "l0_false_positive_percent": 7.052614744922438
+        }
+      },
+      "M": {
+        "metric_goal_feasible": true,
+        "evidence_sufficient": true,
+        "class_support": [
+          673,
+          528,
+          6123
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": {
+          "threshold_ge1": 0.54,
+          "threshold_ge2": 0.6,
+          "three_class_accuracy_percent": 95.999453850355,
+          "class_diagonal_recall_percent": [
+            100.0,
+            93.37121212121212,
+            95.78637922586967
+          ],
+          "l0_false_positive_count": 0,
+          "l0_false_positive_percent": 0.0
+        },
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.5,
+          "threshold_ge2": 0.54,
+          "three_class_accuracy_percent": 97.88367012561442,
+          "class_diagonal_recall_percent": [
+            97.91976225854383,
+            97.53787878787878,
+            97.90952147640046
+          ],
+          "l0_false_positive_count": 14,
+          "l0_false_positive_percent": 2.080237741456166
+        }
+      },
+      "F": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          892,
+          5903,
+          529
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.38,
+          "threshold_ge2": 0.28,
+          "three_class_accuracy_percent": 96.76406335335882,
+          "class_diagonal_recall_percent": [
+            90.5829596412556,
+            99.03438929357954,
+            81.85255198487712
+          ],
+          "l0_false_positive_count": 84,
+          "l0_false_positive_percent": 9.417040358744394
+        }
+      },
+      "C": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": false,
+        "class_support": [
+          5380,
+          1941,
+          3
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1
+        ],
+        "evidence_failures": [
+          {
+            "class": 2,
+            "support": 3,
+            "minimum_support": 100
+          }
+        ],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.02,
+          "threshold_ge2": 0.56,
+          "three_class_accuracy_percent": 74.34462042599672,
+          "class_diagonal_recall_percent": [
+            98.68029739776951,
+            7.006697578567748,
+            0.0
+          ],
+          "l0_false_positive_count": 71,
+          "l0_false_positive_percent": 1.3197026022304832
+        }
+      }
+    },
+    "Med-RD": {
+      "K": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          5237,
+          1295,
+          883
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.04,
+          "threshold_ge2": 0.02,
+          "three_class_accuracy_percent": 66.98583951449764,
+          "class_diagonal_recall_percent": [
+            91.2354401374833,
+            8.64864864864865,
+            8.720271800679502
+          ],
+          "l0_false_positive_count": 459,
+          "l0_false_positive_percent": 8.764559862516707
+        }
+      },
+      "M": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          229,
+          212,
+          6974
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.42000000000000004,
+          "threshold_ge2": 0.54,
+          "three_class_accuracy_percent": 89.64261631827377,
+          "class_diagonal_recall_percent": [
+            93.01310043668121,
+            74.05660377358491,
+            90.0057355893318
+          ],
+          "l0_false_positive_count": 16,
+          "l0_false_positive_percent": 6.986899563318777
+        }
+      },
+      "F": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          600,
+          5932,
+          883
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.4,
+          "threshold_ge2": 0.30000000000000004,
+          "three_class_accuracy_percent": 90.66756574511126,
+          "class_diagonal_recall_percent": [
+            92.0,
+            95.73499662845583,
+            55.719139297848244
+          ],
+          "l0_false_positive_count": 48,
+          "l0_false_positive_percent": 8.0
+        }
+      },
+      "C": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": false,
+        "class_support": [
+          3788,
+          3601,
+          26
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1
+        ],
+        "evidence_failures": [
+          {
+            "class": 2,
+            "support": 26,
+            "minimum_support": 100
+          }
+        ],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.02,
+          "threshold_ge2": 0.46,
+          "three_class_accuracy_percent": 51.7329737019555,
+          "class_diagonal_recall_percent": [
+            97.28088701161562,
+            4.193279644543183,
+            0.0
+          ],
+          "l0_false_positive_count": 103,
+          "l0_false_positive_percent": 2.7191129883843717
+        }
+      }
+    },
+    "Heavy": {
+      "K": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          5625,
+          864,
+          925
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.04,
+          "threshold_ge2": 0.04,
+          "three_class_accuracy_percent": 72.1338009171837,
+          "class_diagonal_recall_percent": [
+            90.86222222222221,
+            14.930555555555555,
+            11.675675675675675
+          ],
+          "l0_false_positive_count": 514,
+          "l0_false_positive_percent": 9.137777777777778
+        }
+      },
+      "M": {
+        "metric_goal_feasible": true,
+        "evidence_sufficient": true,
+        "class_support": [
+          159,
+          175,
+          7080
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": {
+          "threshold_ge1": 0.54,
+          "threshold_ge2": 0.56,
+          "three_class_accuracy_percent": 99.00188831939573,
+          "class_diagonal_recall_percent": [
+            99.37106918238993,
+            97.14285714285714,
+            99.03954802259886
+          ],
+          "l0_false_positive_count": 1,
+          "l0_false_positive_percent": 0.628930817610063
+        },
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.54,
+          "threshold_ge2": 0.56,
+          "three_class_accuracy_percent": 99.00188831939573,
+          "class_diagonal_recall_percent": [
+            99.37106918238993,
+            97.14285714285714,
+            99.03954802259886
+          ],
+          "l0_false_positive_count": 1,
+          "l0_false_positive_percent": 0.628930817610063
+        }
+      },
+      "F": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": true,
+        "class_support": [
+          507,
+          6239,
+          668
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1,
+          2
+        ],
+        "evidence_failures": [],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.44,
+          "threshold_ge2": 0.34,
+          "three_class_accuracy_percent": 96.95171297545184,
+          "class_diagonal_recall_percent": [
+            91.91321499013807,
+            99.74354864561629,
+            74.7005988023952
+          ],
+          "l0_false_positive_count": 41,
+          "l0_false_positive_percent": 8.086785009861932
+        }
+      },
+      "C": {
+        "metric_goal_feasible": false,
+        "evidence_sufficient": false,
+        "class_support": [
+          4914,
+          2452,
+          48
+        ],
+        "applicable_classes": [
+          0,
+          1,
+          2
+        ],
+        "metric_classes": [
+          0,
+          1
+        ],
+        "evidence_failures": [
+          {
+            "class": 2,
+            "support": 48,
+            "minimum_support": 100
+          }
+        ],
+        "goal_candidate": null,
+        "best_safe_tradeoff": {
+          "threshold_ge1": 0.02,
+          "threshold_ge2": 0.16,
+          "three_class_accuracy_percent": 71.91799298624224,
+          "class_diagonal_recall_percent": [
+            96.19454619454619,
+            24.63295269168026,
+            2.083333333333333
+          ],
+          "l0_false_positive_count": 187,
+          "l0_false_positive_percent": 3.8054538054538054
+        }
+      }
+    }
+  }
+}

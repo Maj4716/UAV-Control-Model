@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A17_selective_confidence_weak_cell_loss",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A17_selective_confidence_weak_cell_loss\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "2cead4acd523b639ef0896eacf2fd684a6bd523cfb68c8edf6dddec2e6e9bb19",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A17_selective_confidence_weak_cell_loss\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "9f88a0487b2b98926d5cfdd2a078d7744a713e67e7651a291e42511e75d6cff0",
+  "performance_gate_passed": false
+}

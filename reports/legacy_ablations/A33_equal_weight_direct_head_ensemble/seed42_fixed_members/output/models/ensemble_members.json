@@ -1,0 +1,43 @@
+{
+  "schema": "stage0_nn_probability_ensemble_v1",
+  "experiment_id": "A33_equal_weight_direct_head_ensemble",
+  "aggregation": "weighted_arithmetic_mean_of_probabilities",
+  "members": [
+    {
+      "experiment_id": "A28_terminal_physics_features",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42\\output\\models\\best_model.pth",
+      "model_sha256": "c7ea95f8d65029ae7630e20f5f6728c3774a6ab4493a35fb3a141fc4eda01eaf",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42\\output\\models\\model_manifest.json",
+      "manifest_sha256": "a7cea78ac2615c8586f590a42afd3dcc7c6964420484619d8187fdd1fc344d7b",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42\\output\\validation\\selection_metrics.json",
+      "validation_report_sha256": "59ebaa865e597dd083304e2537da2b050b70a2619abee5d102ab6a095d4350d5"
+    },
+    {
+      "experiment_id": "A31_dual_target_with_terminal_physics",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42\\output\\models\\best_model.pth",
+      "model_sha256": "a051a931d4d623943239bb8d0d891ae2516ee98cdba18c6c59e2f8f666d6ba11",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42\\output\\models\\model_manifest.json",
+      "manifest_sha256": "7d852f2a24fe7fb1b571183570f982708dde756b60b404e513d4f824d80c18a5",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A31_dual_target_with_terminal_physics\\seed42\\output\\validation\\selection_metrics.json",
+      "validation_report_sha256": "d3558dcd00a25466d3383e54cd543f049c9f3b67151fdefdc5e1e1151135ae03"
+    },
+    {
+      "experiment_id": "A32_auxiliary_mechanism_terminal_physics",
+      "seed": 42,
+      "weight": 0.3333333333333333,
+      "model_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A32_auxiliary_mechanism_terminal_physics\\seed42\\output\\models\\best_model.pth",
+      "model_sha256": "18e1943ab151d95f481919afbfc30973a5665439c4a1485c0c878531711991f4",
+      "manifest_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A32_auxiliary_mechanism_terminal_physics\\seed42\\output\\models\\model_manifest.json",
+      "manifest_sha256": "7473a57d1f17c66e52b5286174913dcc203bd0e18de13feb33ab02a59d7653d1",
+      "validation_report_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A32_auxiliary_mechanism_terminal_physics\\seed42\\output\\validation\\selection_metrics.json",
+      "validation_report_sha256": "7cd0665d00ca4118bfb20453ab7d4b8dbe0d7abef3836e7d2f31c2842fe02faa"
+    }
+  ],
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "scaler_sha256": "4cc1c1e927778314be42880262e0e1f161c85f01dc82529cc0ae857258f13f08",
+  "test_labels_used": false
+}

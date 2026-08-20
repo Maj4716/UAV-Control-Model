@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A2_hard_labels",
+  "description": "关闭仿真概率软标签，仅使用0/1硬序数标签训练，检验软标签对边界样本的缓冲作用。",
+  "data": {
+    "use_soft_labels": false
+  },
+  "ablation": {
+    "components": ["soft_labels"],
+    "note": "DamageDataset still returns labels_soft, but it is copied from hard labels."
+  }
+}

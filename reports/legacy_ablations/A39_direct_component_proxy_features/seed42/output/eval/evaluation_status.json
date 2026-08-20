@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A39_direct_component_proxy_features",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A39_direct_component_proxy_features\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "541c2dcc7e83d15389f36ca2ba7854d9bbdf0acf519cb645c2cf97ccf7632e86",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A39_direct_component_proxy_features\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "d98357ead1dd8fb1f0238b61f06606f60ea1b6de18d1618df9ee7e9dd26189ca",
+  "performance_gate_passed": false
+}

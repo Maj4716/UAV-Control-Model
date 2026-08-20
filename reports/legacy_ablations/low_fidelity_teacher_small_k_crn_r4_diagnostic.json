@@ -1,0 +1,63 @@
+{
+  "schema": "stage0_low_fidelity_teacher_probe_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "dataset": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+  "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+  "fixed_seed_namespace": "stage0-low-fidelity-teacher-v1",
+  "replicates": 4,
+  "train_rows": 22683,
+  "validation_rows": 7409,
+  "validation_positive_rows": 266,
+  "teacher_feature_count": 66,
+  "teacher_compute_seconds": 676.9369001,
+  "teacher_rows_per_second": 44.45318314831808,
+  "results": {
+    "terminal_geometry_v2": {
+      "feature_count": 194,
+      "full_auc": 0.9740747290317353,
+      "standardized_partial_auc_at_fpr_0p005": 0.6287345061699214,
+      "recall_at_fpr_0p005": {
+        "recall": 0.3609022556390977,
+        "false_positive_rate": 0.004899902001959961,
+        "threshold": 0.7003658184723086
+      }
+    },
+    "terminal_geometry_v2_plus_low_fidelity_teacher": {
+      "feature_count": 260,
+      "full_auc": 0.992484360839099,
+      "standardized_partial_auc_at_fpr_0p005": 0.820491916240029,
+      "recall_at_fpr_0p005": {
+        "recall": 0.7255639097744361,
+        "false_positive_rate": 0.004759904801903962,
+        "threshold": 0.8238910785163239
+      }
+    }
+  },
+  "common_random_number_relabel_diagnostic": {
+    "role": "validation-only counterfactual; no production labels changed",
+    "seed_mode": "common_random_numbers",
+    "replicates": 4,
+    "train_positive_rows": 2336,
+    "validation_positive_rows": 254,
+    "validation_agreement_with_current_label": 0.9854231340261844,
+    "terminal_geometry_v2": {
+      "full_auc": 0.9673176073116646,
+      "standardized_partial_auc_at_fpr_0p005": 0.6094896722263684,
+      "recall_at_fpr_0p005": {
+        "recall": 0.2874015748031496,
+        "false_positive_rate": 0.004612159329140462,
+        "threshold": 0.6892704812546733
+      }
+    },
+    "fixed_seed_teacher_probability": {
+      "full_auc": 1.0,
+      "recall_at_fpr_0p005": {
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "threshold": 0.5002040246880507
+      }
+    }
+  }
+}

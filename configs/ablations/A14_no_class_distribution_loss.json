@@ -1,0 +1,14 @@
+{
+  "experiment_id": "A14_no_class_distribution_loss",
+  "description": "中间等级损失消融：在改进A0的其他配置完全不变时，关闭显式三分类分布损失，只保留累计软标签BCE。",
+  "loss": {
+    "use_class_distribution_loss": false,
+    "class_distribution_weight": 0.0
+  },
+  "ablation": {
+    "components": [
+      "class_distribution_loss"
+    ],
+    "note": "Single-variable ablation: remove the explicit q0/q1/q2 distribution loss."
+  }
+}

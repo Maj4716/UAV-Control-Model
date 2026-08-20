@@ -1,0 +1,354 @@
+{
+  "experiment_id": "A38_component_proxy_feature_extension",
+  "description": "保持A35直接任务主干与融合系数不变，仅向独立组件专家追加102个可由终端状态重建的组件级破片/冲击波物理代理，并以零权重扩展保证微调前与A35严格等价。",
+  "paths": {
+    "data": "output/damage_dataset.parquet",
+    "result_root": "abli_exp/results"
+  },
+  "data": {
+    "use_soft_labels": true,
+    "use_label_uncertainty": true,
+    "label_uncertainty_scale": 0.1,
+    "label_confidence_floor": 0.25,
+    "label_confidence_strength_by_task_munition": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "use_terminal_physics_features": true,
+    "use_mechanism_supervision": false,
+    "use_component_supervision": true,
+    "use_balanced_sampler": false,
+    "use_adaptive_sampler_balance": false,
+    "use_adaptive_loss_balance": false,
+    "pos_weight_mode": "ones",
+    "k_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "m_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "c_task_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "use_component_proxy_features": true
+  },
+  "model": {
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_parameterization": "cumulative_logits",
+    "use_mechanism_decomposition": false,
+    "use_mechanism_auxiliary_heads": false,
+    "use_component_auxiliary_heads": true,
+    "component_branch_mode": "independent_experts",
+    "component_branch_munition_emb_dim": 16,
+    "component_tree_fusion_alpha": [
+      [
+        [
+          0.15,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.525,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.45,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.65,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.375,
+          0.0
+        ],
+        [
+          0.0,
+          0.25
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.525,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.525,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "residual_adapter_cells": [],
+    "residual_adapter_hidden_dim": 64,
+    "residual_adapter_feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "residual_adapter_frequencies": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "residual_adapter_max_logit": 2.0,
+    "base_input_dim": 194
+  },
+  "loss": {
+    "use_focal_loss": false,
+    "use_ordinal_penalty": false,
+    "use_class1_margin": false,
+    "use_cell_class1_alpha": false,
+    "use_class_distribution_loss": true,
+    "class_distribution_weight": 0.25,
+    "hard_level_classification_weight": 0.5,
+    "middle_class_distribution_multiplier": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "entry_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "conditional_l1_l2_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ranking_margin": 0.5,
+    "hard_negative_fraction": 0.1,
+    "mechanism_auxiliary_weight": 0.5,
+    "mechanism_class_distribution_weight": 0.25,
+    "component_auxiliary_weight": 1.0,
+    "component_target_tree_teacher_weight": 0.0,
+    "component_rule_consistency_weight": 0.5,
+    "component_distribution_weight": 0.1,
+    "component_use_positive_weight": false,
+    "component_rule_entry_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "component_rule_conditional_l1_l2_ranking_weight": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "component_rule_ranking_margin": 0.5,
+    "component_rule_hard_negative_fraction": 0.1
+  },
+  "calibration": {
+    "threshold_strategy": "per_munition",
+    "minimum_exact_class1_recall": 0.9,
+    "maximum_class1_floor_accuracy_drop": null
+  },
+  "training": {
+    "epochs": 25,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "minimum_selection_epochs": 10,
+    "selection_patience": 8,
+    "freeze_base_model": true,
+    "freeze_criterion_uncertainty": true,
+    "include_initial_candidate": true,
+    "initial_checkpoint": "abli_exp/results/A35_independent_component_tree_fusion/seed{seed}/output/models/best_model.pth",
+    "initial_manifest": "abli_exp/results/A35_independent_component_tree_fusion/seed{seed}/output/models/model_manifest.json"
+  },
+  "ablation": {
+    "components": [
+      "verified_A35_warm_start",
+      "direct_path_194_feature_prefix_isolation",
+      "component_expert_102_proxy_extension",
+      "zero_initialized_feature_migration",
+      "sealed_test_split"
+    ],
+    "note": "102个代理来自终端状态和公开车辆几何，不读取组件监督标签。A35前194维缩放、主干权重和弹型嵌入逐项校验；新增列只进入独立组件专家。"
+  },
+  "resolved": {
+    "seed": 42,
+    "data": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "output_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A38_component_proxy_feature_extension\\seed42"
+  }
+}

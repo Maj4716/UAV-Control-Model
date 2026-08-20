@@ -1,0 +1,11 @@
+{
+  "experiment_id": "A8_shallow_m_branch",
+  "description": "将加深的M分支退化为单隐层结构，检验机动毁伤几何判别复杂度需求。",
+  "model": {
+    "deep_m_branch": false
+  },
+  "ablation": {
+    "components": ["deep_m_branch"],
+    "note": "K/F/C branches remain unchanged."
+  }
+}

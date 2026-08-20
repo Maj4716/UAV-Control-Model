@@ -1,0 +1,227 @@
+{
+  "schema": "stage0_nn_artifact_v1",
+  "created_unix": 1785027185,
+  "python_version": "3.9.23",
+  "seed": 42,
+  "data_contract": {
+    "contract_schema": "stage0_nn_data_v1",
+    "dataset_path": "D:\\Desktop\\毕设\\代码\\output\\damage_dataset.parquet",
+    "dataset_sha256": "5646b592d6e61da410b14c532929c064297c50a1671b1b4c89cd6716c8fef4da",
+    "dataset_rows": 300000,
+    "dataset_schema": "stage0_lineage_v2",
+    "frame_convention": "stage0_ned_frd_v1",
+    "feature_names": [
+      "x_cm",
+      "y_cm",
+      "z_cm",
+      "vx_ms",
+      "vy_ms",
+      "vz_ms",
+      "sin_yaw",
+      "cos_yaw",
+      "sin_pitch",
+      "cos_pitch",
+      "sin_roll",
+      "cos_roll",
+      "norm_velocity"
+    ],
+    "feature_count": 13,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "split_counts": {
+      "train": 240962,
+      "val": 29562,
+      "test": 29476
+    },
+    "target_mode": "full_mc_mean",
+    "label_uncertainty_enabled": false,
+    "pos_weight_mode": "ones",
+    "balanced_sampler": false
+  },
+  "model_config": {
+    "in_dim": 13,
+    "num_munitions": 4,
+    "munition_emb_dim": 16,
+    "use_munition_embedding": true,
+    "use_munition_experts": true,
+    "use_physics_skip": true,
+    "use_k_cascade": true,
+    "deep_m_branch": true,
+    "ordinal_applicability": [
+      [
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ]
+  },
+  "training_config": {
+    "loss": {
+      "focal_gamma": 0.0,
+      "ordinal_penalty_weight": 0.0,
+      "class1_margin_weight": 0.0,
+      "cell_class1_alpha_enabled": false,
+      "class_distribution_weight": 0.25,
+      "class_distribution_loss_enabled": true
+    },
+    "epochs_requested": 45,
+    "smoke_test": false
+  },
+  "artifacts": {
+    "best_model.pth": {
+      "sha256": "536a0a1d108943f9d3b240cb9b8f13514ef75fee53b82b759fdb1aa2dfd9a5e5",
+      "size_bytes": 7460761
+    },
+    "best_thresholds.json": {
+      "sha256": "5c2e7b865a40a887776c4ef44e31a7ad906a9ffe048e2adb177affdd7ffc8c04",
+      "size_bytes": 12581
+    },
+    "minmax_scaler.pkl": {
+      "sha256": "c27bec9e065d92f617f13a39c4698eba87370c38740cc00b8abbb8b1a7f65c75",
+      "size_bytes": 747
+    },
+    "minmax_scaler.json": {
+      "sha256": "72c54863d24ea9aed170e7aa091083d42ac4acafe84a0ebf3a69f0ddcd617217",
+      "size_bytes": 1411
+    }
+  }
+}

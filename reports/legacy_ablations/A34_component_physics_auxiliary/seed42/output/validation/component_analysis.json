@@ -1,0 +1,1719 @@
+{
+  "schema": "stage0_component_validation_analysis_v1",
+  "status": "COMPLETE",
+  "split": "validation",
+  "test_labels_used": false,
+  "rows": 29562,
+  "component_stats": {
+    "mae": 0.04590628296136856,
+    "brier": 0.014091776683926582,
+    "target_mean": 0.11930644512176514,
+    "prediction_mean": 0.15332713723182678,
+    "fragment_mae": 0.0635158121585846,
+    "shock_mae": 0.028296751901507378
+  },
+  "ordinal_errors": {
+    "direct": {
+      "mae": 0.04124933481216431,
+      "brier": 0.012576309032738209
+    },
+    "predicted_component_tree": {
+      "mae": 0.07218737155199051,
+      "brier": 0.02411908097565174
+    },
+    "target_component_tree": {
+      "mae": 0.0019227630691602826,
+      "brier": 8.492698543705046e-05
+    }
+  },
+  "objective_means": {
+    "direct": 0.7643910042776021,
+    "predicted_component_tree": 0.7484044122149702,
+    "target_component_tree": 0.9979982583842738
+  },
+  "direct_diagnostics": {
+    "Small/K": {
+      "entry_auc": 0.9759399548851128,
+      "entry_standardized_partial_auc": 0.6542498908628871,
+      "entry_average_precision": 0.6798658254374171,
+      "maximum_false_positive_rate": 0.005,
+      "positive_support": 266,
+      "negative_support": 7143
+    },
+    "Med-LM/K": {
+      "entry_auc": 0.9682851764299729,
+      "entry_standardized_partial_auc": 0.7448233086013027,
+      "entry_average_precision": 0.8408556505313993,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1071,
+      "negative_support": 6253
+    },
+    "Med-RD/K": {
+      "entry_auc": 0.9590290742234083,
+      "entry_standardized_partial_auc": 0.7571927364566401,
+      "entry_average_precision": 0.9117660026013913,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 2178,
+      "negative_support": 5237
+    },
+    "Heavy/K": {
+      "entry_auc": 0.9794409788211911,
+      "entry_standardized_partial_auc": 0.804126577561422,
+      "entry_average_precision": 0.9379427477209322,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1789,
+      "negative_support": 5625
+    },
+    "Small/C": {
+      "entry_auc": 0.9564836228784026,
+      "entry_standardized_partial_auc": 0.6977879592949698,
+      "entry_average_precision": 0.7015039495800292,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 666,
+      "negative_support": 6743
+    },
+    "Med-LM/C": {
+      "entry_auc": 0.9679341257821225,
+      "entry_standardized_partial_auc": 0.7445532943208869,
+      "entry_average_precision": 0.9129375252391948,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1944,
+      "negative_support": 5380
+    },
+    "Med-RD/C": {
+      "entry_auc": 0.9486550623928421,
+      "entry_standardized_partial_auc": 0.7304289079178987,
+      "entry_average_precision": 0.9456391131406847,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 3627,
+      "negative_support": 3788
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "conditional_auc": 0.9819653592048092,
+      "conditional_average_precision": 0.9994403478959155,
+      "level1_support": 212,
+      "level2_support": 6974
+    }
+  },
+  "predicted_component_tree_diagnostics": {
+    "Small/K": {
+      "entry_auc": 0.9685732601137451,
+      "entry_standardized_partial_auc": 0.6095434904387258,
+      "entry_average_precision": 0.5830018549328073,
+      "maximum_false_positive_rate": 0.005,
+      "positive_support": 266,
+      "negative_support": 7143
+    },
+    "Med-LM/K": {
+      "entry_auc": 0.965734766639744,
+      "entry_standardized_partial_auc": 0.736123578268031,
+      "entry_average_precision": 0.831244834225436,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1071,
+      "negative_support": 6253
+    },
+    "Med-RD/K": {
+      "entry_auc": 0.955823357606127,
+      "entry_standardized_partial_auc": 0.7399700589296263,
+      "entry_average_precision": 0.9037364860338326,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 2178,
+      "negative_support": 5237
+    },
+    "Heavy/K": {
+      "entry_auc": 0.9769110490031676,
+      "entry_standardized_partial_auc": 0.7929631228188516,
+      "entry_average_precision": 0.9302205107290731,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1789,
+      "negative_support": 5625
+    },
+    "Small/C": {
+      "entry_auc": 0.9501854664986803,
+      "entry_standardized_partial_auc": 0.6774177090942531,
+      "entry_average_precision": 0.6722679510254612,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 666,
+      "negative_support": 6743
+    },
+    "Med-LM/C": {
+      "entry_auc": 0.9671932129361911,
+      "entry_standardized_partial_auc": 0.747758178603263,
+      "entry_average_precision": 0.9120043323342121,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1944,
+      "negative_support": 5380
+    },
+    "Med-RD/C": {
+      "entry_auc": 0.943296405085757,
+      "entry_standardized_partial_auc": 0.7151110904585698,
+      "entry_average_precision": 0.9394314935226311,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 3627,
+      "negative_support": 3788
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "conditional_auc": 0.9683480691084407,
+      "conditional_average_precision": 0.9990031432190805,
+      "level1_support": 212,
+      "level2_support": 6974
+    }
+  },
+  "target_component_tree_diagnostics": {
+    "Small/K": {
+      "entry_auc": 1.0,
+      "entry_standardized_partial_auc": 1.0,
+      "entry_average_precision": 1.0,
+      "maximum_false_positive_rate": 0.005,
+      "positive_support": 266,
+      "negative_support": 7143
+    },
+    "Med-LM/K": {
+      "entry_auc": 0.9999834253227918,
+      "entry_standardized_partial_auc": 0.9996643103350247,
+      "entry_average_precision": 0.9999039216688717,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1071,
+      "negative_support": 6253
+    },
+    "Med-RD/K": {
+      "entry_auc": 0.9999896547364737,
+      "entry_standardized_partial_auc": 0.9997904756754166,
+      "entry_average_precision": 0.9999751420541586,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 2178,
+      "negative_support": 5237
+    },
+    "Heavy/K": {
+      "entry_auc": 0.9999894664927644,
+      "entry_standardized_partial_auc": 0.999786663144596,
+      "entry_average_precision": 0.9999666139007427,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1789,
+      "negative_support": 5625
+    },
+    "Small/C": {
+      "entry_auc": 0.9998229729061704,
+      "entry_standardized_partial_auc": 0.9964146411376262,
+      "entry_average_precision": 0.9982645482329363,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 666,
+      "negative_support": 6743
+    },
+    "Med-LM/C": {
+      "entry_auc": 0.9997161220493521,
+      "entry_standardized_partial_auc": 0.99427381098309,
+      "entry_average_precision": 0.9992207662142549,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 1944,
+      "negative_support": 5380
+    },
+    "Med-RD/C": {
+      "entry_auc": 0.9996912456121503,
+      "entry_standardized_partial_auc": 0.9941941445983998,
+      "entry_average_precision": 0.9996771176217624,
+      "maximum_false_positive_rate": 0.025,
+      "positive_support": 3627,
+      "negative_support": 3788
+    },
+    "Med-RD/M_L1_vs_L2": {
+      "conditional_auc": 0.9998620212000369,
+      "conditional_average_precision": 0.9999958246289631,
+      "level1_support": 212,
+      "level2_support": 6974
+    }
+  },
+  "blend_grid": {
+    "0.00": {
+      "objective_mean": 0.7643910042776021,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9759399548851128,
+          "entry_standardized_partial_auc": 0.6542498908628871,
+          "entry_average_precision": 0.6798658254374171,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9682851764299729,
+          "entry_standardized_partial_auc": 0.7448233086013027,
+          "entry_average_precision": 0.8408556505313993,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9590290742234083,
+          "entry_standardized_partial_auc": 0.7571927364566401,
+          "entry_average_precision": 0.9117660026013913,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9794409788211911,
+          "entry_standardized_partial_auc": 0.804126577561422,
+          "entry_average_precision": 0.9379427477209322,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9564836228784026,
+          "entry_standardized_partial_auc": 0.6977879592949698,
+          "entry_average_precision": 0.7015039495800292,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9679341257821225,
+          "entry_standardized_partial_auc": 0.7445532943208869,
+          "entry_average_precision": 0.9129375252391948,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9486550623928421,
+          "entry_standardized_partial_auc": 0.7304289079178987,
+          "entry_average_precision": 0.9456391131406847,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9819653592048092,
+          "conditional_average_precision": 0.9994403478959155,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04124933481216431,
+        "brier": 0.012576309032738209
+      }
+    },
+    "0.05": {
+      "objective_mean": 0.7650171173710283,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9762031075167971,
+          "entry_standardized_partial_auc": 0.6540839530129329,
+          "entry_average_precision": 0.6802107160978218,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9685599278359459,
+          "entry_standardized_partial_auc": 0.7461386979686997,
+          "entry_average_precision": 0.8425788454430463,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9595415154548593,
+          "entry_standardized_partial_auc": 0.757892334625164,
+          "entry_average_precision": 0.912427703865863,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.979548102602323,
+          "entry_standardized_partial_auc": 0.8050287308202415,
+          "entry_average_precision": 0.9382959279245766,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9570835109171161,
+          "entry_standardized_partial_auc": 0.6982840466847322,
+          "entry_average_precision": 0.7029556849088828,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9681905625162543,
+          "entry_standardized_partial_auc": 0.7453520947840169,
+          "entry_average_precision": 0.9135563879906621,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9488915775704277,
+          "entry_standardized_partial_auc": 0.7314383911676171,
+          "entry_average_precision": 0.9458983592662022,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9819186899048218,
+          "conditional_average_precision": 0.9994387758748446,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04118938371539116,
+        "brier": 0.012374031357467175
+      }
+    },
+    "0.10": {
+      "objective_mean": 0.7653780503823067,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9762710008957716,
+          "entry_standardized_partial_auc": 0.6523578300363817,
+          "entry_average_precision": 0.6794297268982148,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9687650954619281,
+          "entry_standardized_partial_auc": 0.7473282037117308,
+          "entry_average_precision": 0.8438055275841839,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9598423171426451,
+          "entry_standardized_partial_auc": 0.7584360768819056,
+          "entry_average_precision": 0.9129305671268599,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9796323706602075,
+          "entry_standardized_partial_auc": 0.8056868548930446,
+          "entry_average_precision": 0.9385657361718467,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9574264313252894,
+          "entry_standardized_partial_auc": 0.6987827272585776,
+          "entry_average_precision": 0.704141331837303,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9684063633025839,
+          "entry_standardized_partial_auc": 0.7460724675653124,
+          "entry_average_precision": 0.9140824606401161,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9491123711667365,
+          "entry_standardized_partial_auc": 0.7325173058733252,
+          "entry_average_precision": 0.9461650389006684,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9818429368381751,
+          "conditional_average_precision": 0.99943632670514,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.0415019690990448,
+        "brier": 0.012253796681761742
+      }
+    },
+    "0.15": {
+      "objective_mean": 0.7657664216496449,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9761941603273199,
+          "entry_standardized_partial_auc": 0.6510688438124128,
+          "entry_average_precision": 0.6787988049944073,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9689108331642268,
+          "entry_standardized_partial_auc": 0.7482517283193153,
+          "entry_average_precision": 0.8446727532333967,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9600423840186367,
+          "entry_standardized_partial_auc": 0.7590171517566504,
+          "entry_average_precision": 0.913342618773843,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9796824545059314,
+          "entry_standardized_partial_auc": 0.8063188150118831,
+          "entry_average_precision": 0.9387753980854604,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9576537831023963,
+          "entry_standardized_partial_auc": 0.6993490561128449,
+          "entry_average_precision": 0.7052863784115997,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9686075351477045,
+          "entry_standardized_partial_auc": 0.7469080612618956,
+          "entry_average_precision": 0.9146182294661419,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9493027769844203,
+          "entry_standardized_partial_auc": 0.733514111617279,
+          "entry_average_precision": 0.9464070422152673,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9817036053048791,
+          "conditional_average_precision": 0.9994318922926018,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04212361201643944,
+        "brier": 0.01221560686826706
+      }
+    },
+    "0.20": {
+      "objective_mean": 0.7660950237867994,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9760599524851608,
+          "entry_standardized_partial_auc": 0.6501265067694293,
+          "entry_average_precision": 0.6777309094021056,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9690405934749825,
+          "entry_standardized_partial_auc": 0.7492285550020815,
+          "entry_average_precision": 0.8454978492743693,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9601555682153525,
+          "entry_standardized_partial_auc": 0.7593020959599344,
+          "entry_average_precision": 0.9135988632271794,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.979723992298615,
+          "entry_standardized_partial_auc": 0.8070197070863592,
+          "entry_average_precision": 0.9389498546215357,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9577617807634121,
+          "entry_standardized_partial_auc": 0.6995616972076386,
+          "entry_average_precision": 0.7058790170115506,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9687878631419522,
+          "entry_standardized_partial_auc": 0.7477233218557809,
+          "entry_average_precision": 0.9151197982625671,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.949456571897557,
+          "entry_standardized_partial_auc": 0.7342401199415872,
+          "entry_average_precision": 0.946602927208834,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9815581864715844,
+          "conditional_average_precision": 0.9994273173138005,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04298209771513939,
+        "brier": 0.012259461916983128
+      }
+    },
+    "0.25": {
+      "objective_mean": 0.766344312427543,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9758994293798334,
+          "entry_standardized_partial_auc": 0.6489657332562359,
+          "entry_average_precision": 0.6766311846471873,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9691009193271637,
+          "entry_standardized_partial_auc": 0.7499846128060802,
+          "entry_average_precision": 0.846057447367424,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.96022877410556,
+          "entry_standardized_partial_auc": 0.7595831781682526,
+          "entry_average_precision": 0.9137922643274381,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9797283646978449,
+          "entry_standardized_partial_auc": 0.8075246210825808,
+          "entry_average_precision": 0.9390206584592031,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9578323689253543,
+          "entry_standardized_partial_auc": 0.699883815769582,
+          "entry_average_precision": 0.7066594104036246,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9689546139489345,
+          "entry_standardized_partial_auc": 0.7484301392352779,
+          "entry_average_precision": 0.9155835180580362,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9495768128802841,
+          "entry_standardized_partial_auc": 0.7349791005973755,
+          "entry_average_precision": 0.9467711367449323,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9814032985049591,
+          "conditional_average_precision": 0.9994223791140067,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.044024813920259476,
+        "brier": 0.012385357171297073
+      }
+    },
+    "0.30": {
+      "objective_mean": 0.7665577454833195,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9756799600850088,
+          "entry_standardized_partial_auc": 0.6478350343295205,
+          "entry_average_precision": 0.6753904796414244,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9691487021803764,
+          "entry_standardized_partial_auc": 0.7506731546481819,
+          "entry_average_precision": 0.8464861578108246,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9602702428313898,
+          "entry_standardized_partial_auc": 0.7598115685601977,
+          "entry_average_precision": 0.9139370687833581,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9797316439972672,
+          "entry_standardized_partial_auc": 0.8079251308394242,
+          "entry_average_precision": 0.9390686536306265,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9578303648450467,
+          "entry_standardized_partial_auc": 0.7000319655037065,
+          "entry_average_precision": 0.7071353842335749,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9691083612526198,
+          "entry_standardized_partial_auc": 0.7492725106327603,
+          "entry_average_precision": 0.9160433617962055,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9497114653125145,
+          "entry_standardized_partial_auc": 0.7356763634144269,
+          "entry_average_precision": 0.9469542210685594,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9812362359383371,
+          "conditional_average_precision": 0.9994169988839754,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.045224629342556,
+        "brier": 0.012593298219144344
+      }
+    },
+    "0.35": {
+      "objective_mean": 0.7666247143150807,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9754294387796454,
+          "entry_standardized_partial_auc": 0.6459429735030151,
+          "entry_average_precision": 0.6729729147997995,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9691537791085302,
+          "entry_standardized_partial_auc": 0.7512547899167981,
+          "entry_average_precision": 0.8466942085756991,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9602622647044332,
+          "entry_standardized_partial_auc": 0.7599649385901628,
+          "entry_average_precision": 0.9139977592806378,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9797313458791379,
+          "entry_standardized_partial_auc": 0.808213940638957,
+          "entry_average_precision": 0.9391033929656971,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9577214764816722,
+          "entry_standardized_partial_auc": 0.700296132038755,
+          "entry_average_precision": 0.7071985208751644,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9692567541725948,
+          "entry_standardized_partial_auc": 0.7501129455442717,
+          "entry_average_precision": 0.9165131235541369,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9498295227422864,
+          "entry_standardized_partial_auc": 0.7361942247836238,
+          "entry_average_precision": 0.9471176705730417,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.981017769505062,
+          "conditional_average_precision": 0.9994099548029065,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04655127227306366,
+        "brier": 0.012883283197879791
+      }
+    },
+    "0.40": {
+      "objective_mean": 0.7666518736007165,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9750752353373984,
+          "entry_standardized_partial_auc": 0.6436892262022851,
+          "entry_average_precision": 0.6697068577090449,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9691305596282972,
+          "entry_standardized_partial_auc": 0.7519090067345982,
+          "entry_average_precision": 0.8468551401403056,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9602098370130033,
+          "entry_standardized_partial_auc": 0.7599071418379155,
+          "entry_average_precision": 0.9139781430919783,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9796947767219427,
+          "entry_standardized_partial_auc": 0.8084396047419022,
+          "entry_average_precision": 0.9390408855374743,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9576014543388115,
+          "entry_standardized_partial_auc": 0.7008662942955797,
+          "entry_average_precision": 0.707666096699956,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9693799049979348,
+          "entry_standardized_partial_auc": 0.7509959831471499,
+          "entry_average_precision": 0.916940973990424,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9499042730384489,
+          "entry_standardized_partial_auc": 0.7366557744411688,
+          "entry_average_precision": 0.9472425610402571,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9807519574051329,
+          "conditional_average_precision": 0.9994013404062243,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.048000823706388474,
+        "brier": 0.013255314901471138
+      }
+    },
+    "0.45": {
+      "objective_mean": 0.7665269174092847,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9747268212530487,
+          "entry_standardized_partial_auc": 0.641842541067659,
+          "entry_average_precision": 0.6665745704994348,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.969079417043218,
+          "entry_standardized_partial_auc": 0.7522336579556352,
+          "entry_average_precision": 0.8468037320818922,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9601304064303354,
+          "entry_standardized_partial_auc": 0.7596970848243714,
+          "entry_average_precision": 0.913881995332699,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9796495621389976,
+          "entry_standardized_partial_auc": 0.8085374679927892,
+          "entry_average_precision": 0.938967179936357,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9574144068434443,
+          "entry_standardized_partial_auc": 0.7007831996577945,
+          "entry_average_precision": 0.7074137704938186,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9694944983707375,
+          "entry_standardized_partial_auc": 0.751757022133841,
+          "entry_average_precision": 0.9173185926148517,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9499545675415144,
+          "entry_standardized_partial_auc": 0.7369184641536394,
+          "entry_average_precision": 0.9473431457201607,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9804459014885477,
+          "conditional_average_precision": 0.9993915003376581,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.04956411197781563,
+        "brier": 0.013709385879337788
+      }
+    },
+    "0.50": {
+      "objective_mean": 0.7662746752113718,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9743678810634314,
+          "entry_standardized_partial_auc": 0.6390762067359893,
+          "entry_average_precision": 0.6622942036652686,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9689949011215979,
+          "entry_standardized_partial_auc": 0.7524362814471068,
+          "entry_average_precision": 0.8466930507041898,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9600245866585027,
+          "entry_standardized_partial_auc": 0.7594042390681688,
+          "entry_average_precision": 0.9137248462488495,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9795819886963543,
+          "entry_standardized_partial_auc": 0.8084227491177134,
+          "entry_average_precision": 0.9388191143896067,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9571703543971082,
+          "entry_standardized_partial_auc": 0.7007812829565158,
+          "entry_average_precision": 0.7070540459946237,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9696111952514266,
+          "entry_standardized_partial_auc": 0.7529324691183741,
+          "entry_average_precision": 0.9177336813229915,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9499622463694065,
+          "entry_standardized_partial_auc": 0.7370543788084641,
+          "entry_average_precision": 0.9473938272842043,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9800897944386427,
+          "conditional_average_precision": 0.9993799920738562,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.05123656243085861,
+        "brier": 0.014245501719415188
+      }
+    },
+    "0.55": {
+      "objective_mean": 0.7658768806914902,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9739605207895843,
+          "entry_standardized_partial_auc": 0.636520922133991,
+          "entry_average_precision": 0.6570733095735133,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9688539417046204,
+          "entry_standardized_partial_auc": 0.7522731241730038,
+          "entry_average_precision": 0.8461501934552991,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.959863796715221,
+          "entry_standardized_partial_auc": 0.7589097705403016,
+          "entry_average_precision": 0.913450303669763,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9794786410781939,
+          "entry_standardized_partial_auc": 0.8080858882104185,
+          "entry_average_precision": 0.9385546411043805,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9568951273682104,
+          "entry_standardized_partial_auc": 0.7006099073127797,
+          "entry_average_precision": 0.7067888196065873,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9696815671516208,
+          "entry_standardized_partial_auc": 0.7539471877672956,
+          "entry_average_precision": 0.9180668123801434,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9499483080230431,
+          "entry_standardized_partial_auc": 0.7369964455553772,
+          "entry_average_precision": 0.9474185843688301,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9796717998387543,
+          "conditional_average_precision": 0.9993665763142794,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.05300242826342583,
+        "brier": 0.014863663353025913
+      }
+    },
+    "0.60": {
+      "objective_mean": 0.7653900485061433,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9735057930420339,
+          "entry_standardized_partial_auc": 0.6340183999644107,
+          "entry_average_precision": 0.6513908893951591,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9687031270741678,
+          "entry_standardized_partial_auc": 0.752014098769354,
+          "entry_average_precision": 0.8456600159488088,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9596524201867304,
+          "entry_standardized_partial_auc": 0.7584204069483087,
+          "entry_average_precision": 0.9130610675907858,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9793517421278181,
+          "entry_standardized_partial_auc": 0.807746259961839,
+          "entry_average_precision": 0.9382202312942387,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9565655674954207,
+          "entry_standardized_partial_auc": 0.6999134682658337,
+          "entry_average_precision": 0.7059019839489504,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9697375013385959,
+          "entry_standardized_partial_auc": 0.7549938584347422,
+          "entry_average_precision": 0.9183534287539393,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9498604928016994,
+          "entry_standardized_partial_auc": 0.736854781799101,
+          "entry_average_precision": 0.9473714011743808,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9791591139055574,
+          "conditional_average_precision": 0.9993500874467275,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.05485886335372925,
+        "brier": 0.01556386984884739
+      }
+    },
+    "0.65": {
+      "objective_mean": 0.764855940442418,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9730668544523846,
+          "entry_standardized_partial_auc": 0.6320511526717099,
+          "entry_average_precision": 0.6456569198173199,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9685051268761676,
+          "entry_standardized_partial_auc": 0.7512620480717165,
+          "entry_average_precision": 0.8448694611430232,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.959432977859558,
+          "entry_standardized_partial_auc": 0.7577596062924301,
+          "entry_average_precision": 0.9126214189381073,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9791947332463823,
+          "entry_standardized_partial_auc": 0.8071399606440044,
+          "entry_average_precision": 0.9377663749001298,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9561712090260214,
+          "entry_standardized_partial_auc": 0.6993336097554819,
+          "entry_average_precision": 0.704806552586803,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9697637951871739,
+          "entry_standardized_partial_auc": 0.756145099344635,
+          "entry_average_precision": 0.9185581925071934,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9497398151083816,
+          "entry_standardized_partial_auc": 0.7365630517536581,
+          "entry_average_precision": 0.9472771879575583,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9785929950057084,
+          "conditional_average_precision": 0.9993318956825179,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.0567958727478981,
+        "brier": 0.01634611375629902
+      }
+    },
+    "0.70": {
+      "objective_mean": 0.7641643299327128,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9725847588311392,
+          "entry_standardized_partial_auc": 0.6305133915788905,
+          "entry_average_precision": 0.6396895980050447,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9682632261817781,
+          "entry_standardized_partial_auc": 0.7502590617889318,
+          "entry_average_precision": 0.8438936689834995,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9591323953510841,
+          "entry_standardized_partial_auc": 0.756752602202775,
+          "entry_average_precision": 0.9120172157343394,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9790118874604061,
+          "entry_standardized_partial_auc": 0.8064858617948881,
+          "entry_average_precision": 0.9372276100086657,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9556873349695535,
+          "entry_standardized_partial_auc": 0.698387097565242,
+          "entry_average_precision": 0.7030986406124718,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9697372144966115,
+          "entry_standardized_partial_auc": 0.7568393295653189,
+          "entry_average_precision": 0.9186084136973058,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9495333237839283,
+          "entry_standardized_partial_auc": 0.7361809576264283,
+          "entry_average_precision": 0.9470849357661087,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9778963373392277,
+          "conditional_average_precision": 0.999309590588775,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.0588095486164093,
+        "brier": 0.017210407182574272
+      }
+    },
+    "0.75": {
+      "objective_mean": 0.7631314221109058,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9720405591888162,
+          "entry_standardized_partial_auc": 0.6281163942741459,
+          "entry_average_precision": 0.6326840369980972,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9679848910618143,
+          "entry_standardized_partial_auc": 0.7488679910353546,
+          "entry_average_precision": 0.8427121824776918,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9587981469002873,
+          "entry_standardized_partial_auc": 0.7553994834608367,
+          "entry_average_precision": 0.911264378664566,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9787988323706602,
+          "entry_standardized_partial_auc": 0.805747484824828,
+          "entry_average_precision": 0.9365961229393984,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9551016981685824,
+          "entry_standardized_partial_auc": 0.6970412350262434,
+          "entry_average_precision": 0.7007448441073619,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.969662444352655,
+          "entry_standardized_partial_auc": 0.7573989740110028,
+          "entry_average_precision": 0.9185558440615488,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9491933081962719,
+          "entry_standardized_partial_auc": 0.7354363752820464,
+          "entry_average_precision": 0.9467483548664638,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9770434389727886,
+          "conditional_average_precision": 0.9992822537791317,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.060893189162015915,
+        "brier": 0.018156742677092552
+      }
+    },
+    "0.80": {
+      "objective_mean": 0.7617212511832098,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.971457412957004,
+          "entry_standardized_partial_auc": 0.6248374729115364,
+          "entry_average_precision": 0.6245962629253423,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9676405558758499,
+          "entry_standardized_partial_auc": 0.7472732383093802,
+          "entry_average_precision": 0.841253568240006,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9583752184998561,
+          "entry_standardized_partial_auc": 0.75377602507129,
+          "entry_average_precision": 0.9103197512386575,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9785420532886155,
+          "entry_standardized_partial_auc": 0.8045147600707245,
+          "entry_average_precision": 0.9358062907295173,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9544187521349023,
+          "entry_standardized_partial_auc": 0.6951464066916191,
+          "entry_average_precision": 0.6979538221692144,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9695122347667783,
+          "entry_standardized_partial_auc": 0.7579576502137009,
+          "entry_average_precision": 0.9183518987020449,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.948688616323252,
+          "entry_standardized_partial_auc": 0.7343343167576751,
+          "entry_average_precision": 0.9462149466126129,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.975930139439752,
+          "conditional_average_precision": 0.999246645466372,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.06304194778203964,
+        "brier": 0.019185123965144157
+      }
+    },
+    "0.85": {
+      "objective_mean": 0.75972246306436,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9707932157146332,
+          "entry_standardized_partial_auc": 0.6206315156113446,
+          "entry_average_precision": 0.6151958158152233,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9672645645496325,
+          "entry_standardized_partial_auc": 0.7452079152061969,
+          "entry_average_precision": 0.8393898952995864,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9578832047802833,
+          "entry_standardized_partial_auc": 0.7515223068596175,
+          "entry_average_precision": 0.9091563747890612,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9782302217253587,
+          "entry_standardized_partial_auc": 0.8028047947332464,
+          "entry_average_precision": 0.9347944291355954,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9536478492432814,
+          "entry_standardized_partial_auc": 0.6926935927906461,
+          "entry_average_precision": 0.6943541972842338,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9692426033013601,
+          "entry_standardized_partial_auc": 0.7578830955038088,
+          "entry_average_precision": 0.9177759043633125,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.947969863475535,
+          "entry_standardized_partial_auc": 0.7324935724032311,
+          "entry_average_precision": 0.945405373629562,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9745429114067885,
+          "conditional_average_precision": 0.9992024052272908,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.06524933129549026,
+        "brier": 0.02029554918408394
+      }
+    },
+    "0.90": {
+      "objective_mean": 0.7572949365283865,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9701127030090977,
+          "entry_standardized_partial_auc": 0.6168927696502131,
+          "entry_average_precision": 0.6054573365388639,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9668197360505052,
+          "entry_standardized_partial_auc": 0.7425789510101327,
+          "entry_average_precision": 0.8370697753154647,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.9573043960531592,
+          "entry_standardized_partial_auc": 0.748614180259596,
+          "entry_average_precision": 0.9077329876981346,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9778603564995964,
+          "entry_standardized_partial_auc": 0.8004867690425707,
+          "entry_average_precision": 0.9335879914424772,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9527140591577786,
+          "entry_standardized_partial_auc": 0.6892051964635441,
+          "entry_average_precision": 0.6890345291838889,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9688404508391084,
+          "entry_standardized_partial_auc": 0.7572837530957148,
+          "entry_average_precision": 0.916847117226573,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.947002513123881,
+          "entry_standardized_partial_auc": 0.7303606557647708,
+          "entry_average_precision": 0.9442860171756035,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9729372169405501,
+          "conditional_average_precision": 0.999150995677523,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.0675114244222641,
+        "brier": 0.0214880108833313
+      }
+    },
+    "0.95": {
+      "objective_mean": 0.7538954434221815,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9693521919035304,
+          "entry_standardized_partial_auc": 0.6136515734267823,
+          "entry_average_precision": 0.5949196664690255,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.9663275726624142,
+          "entry_standardized_partial_auc": 0.7399186104152025,
+          "entry_average_precision": 0.8346331938039995,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.956628271711508,
+          "entry_standardized_partial_auc": 0.7448800306443529,
+          "entry_average_precision": 0.9059792205116376,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9774336500838459,
+          "entry_standardized_partial_auc": 0.7974879773958532,
+          "entry_average_precision": 0.9321210770810635,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9515794156903457,
+          "entry_standardized_partial_auc": 0.6841697967103216,
+          "entry_average_precision": 0.6821722662352776,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9681991677757888,
+          "entry_standardized_partial_auc": 0.7544923085681952,
+          "entry_average_precision": 0.9151304725659659,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.9455584931621313,
+          "entry_standardized_partial_auc": 0.7256605442089852,
+          "entry_average_precision": 0.9425058406692086,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9709027060077593,
+          "conditional_average_precision": 0.9990857254975108,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.06982537358999252,
+        "brier": 0.02276252582669258
+      }
+    },
+    "1.00": {
+      "objective_mean": 0.7484044122149702,
+      "diagnostics": {
+        "Small/K": {
+          "entry_auc": 0.9685732601137451,
+          "entry_standardized_partial_auc": 0.6095434904387258,
+          "entry_average_precision": 0.5830018549328073,
+          "maximum_false_positive_rate": 0.005,
+          "positive_support": 266,
+          "negative_support": 7143
+        },
+        "Med-LM/K": {
+          "entry_auc": 0.965734766639744,
+          "entry_standardized_partial_auc": 0.736123578268031,
+          "entry_average_precision": 0.831244834225436,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1071,
+          "negative_support": 6253
+        },
+        "Med-RD/K": {
+          "entry_auc": 0.955823357606127,
+          "entry_standardized_partial_auc": 0.7399700589296263,
+          "entry_average_precision": 0.9037364860338326,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 2178,
+          "negative_support": 5237
+        },
+        "Heavy/K": {
+          "entry_auc": 0.9769110490031676,
+          "entry_standardized_partial_auc": 0.7929631228188516,
+          "entry_average_precision": 0.9302205107290731,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1789,
+          "negative_support": 5625
+        },
+        "Small/C": {
+          "entry_auc": 0.9501854664986803,
+          "entry_standardized_partial_auc": 0.6774177090942531,
+          "entry_average_precision": 0.6722679510254612,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 666,
+          "negative_support": 6743
+        },
+        "Med-LM/C": {
+          "entry_auc": 0.9671932129361911,
+          "entry_standardized_partial_auc": 0.747758178603263,
+          "entry_average_precision": 0.9120043323342121,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 1944,
+          "negative_support": 5380
+        },
+        "Med-RD/C": {
+          "entry_auc": 0.943296405085757,
+          "entry_standardized_partial_auc": 0.7151110904585698,
+          "entry_average_precision": 0.9394314935226311,
+          "maximum_false_positive_rate": 0.025,
+          "positive_support": 3627,
+          "negative_support": 3788
+        },
+        "Med-RD/M_L1_vs_L2": {
+          "conditional_auc": 0.9683480691084407,
+          "conditional_average_precision": 0.9990031432190805,
+          "level1_support": 212,
+          "level2_support": 6974
+        }
+      },
+      "error": {
+        "mae": 0.07218737155199051,
+        "brier": 0.02411908097565174
+      }
+    }
+  }
+}

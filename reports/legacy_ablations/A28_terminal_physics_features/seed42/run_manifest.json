@@ -1,0 +1,23 @@
+{
+  "schema": "stage0_ablation_run_manifest_v2",
+  "experiment_id": "A28_terminal_physics_features",
+  "description": "在A13训练设定上只增加可部署的终端几何与解析物理代理特征，不使用瞄准点、命中或部件毁伤元数据，用于隔离检验输入充分性。",
+  "seed": 42,
+  "smoke_test": false,
+  "config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\configs\\A28_terminal_physics_features.json",
+  "config_sha256": "05ec7e7e9af5cfec31453ceeba00e71c73363d820a2a22f9a7f1fe947a2b9abc",
+  "run_dir": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A28_terminal_physics_features\\seed42",
+  "runtime": {
+    "python_executable": "D:\\ProgramData\\Anaconda\\envs\\pytorch\\python.exe",
+    "python_version": "3.9.23",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "source_sha256": {
+    "nn_train.py": "380f975a518679560100239f62ab9da8ebe910df14331618a77749d820a56c70",
+    "nn_dataset.py": "49e19c9070335133ba6c8add98139db158a76790ec0a2ab35060094b0cc25708",
+    "nn_feature_engineering.py": "482a310be637d33d9492a4be5d0b5783aead41834defac7c24c970ac20b9c241",
+    "nn_model.py": "e1da2f95bafe88b881a2605a4a7f6658378a354dfabdcf211a307fbb63df4a1d",
+    "nn_eval_export.py": "40d6fd100855249d5968862ec05b460a41c46f1dc932e4736daa71796bee1860",
+    "abli_exp\\run_ablations.py": "981610ed0510753f8d2ba764618000ace0932a6c110658316200f4a48d569bd0"
+  }
+}

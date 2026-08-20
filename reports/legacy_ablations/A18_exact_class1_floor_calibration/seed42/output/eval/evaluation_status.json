@@ -1,0 +1,11 @@
+{
+  "schema": "stage0_nn_evaluation_status_v1",
+  "experiment_id": "A18_exact_class1_floor_calibration",
+  "seed": 42,
+  "status": "COMPLETE",
+  "metrics_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A18_exact_class1_floor_calibration\\seed42\\output\\eval\\test_metrics.json",
+  "metrics_sha256": "4b5ee55091a8e0a82407215b676ae8ca438c49880652ebd798f3052751cbcca4",
+  "deploy_config_path": "D:\\Desktop\\毕设\\代码\\abli_exp\\results\\A18_exact_class1_floor_calibration\\seed42\\output\\deploy\\deploy_config.json",
+  "deploy_config_sha256": "ab2ec95e0503ace3f59b518bb97dad8433e12de66417e4510085817b9a39d010",
+  "performance_gate_passed": false
+}
